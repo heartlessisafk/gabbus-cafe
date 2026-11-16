@@ -10121,7 +10121,7 @@ body.menu-open .global-back-btn {
 .bonfire-cinema-track {
   position: relative;
   width: 100%;
-  height: 220vh;
+  height: 240vh; /* 140vh scroll travel distance for compact, engaging cinematic pacing */
   margin: 0;
   padding: 0;
   background: transparent !important;
@@ -10129,10 +10129,10 @@ body.menu-open .global-back-btn {
 }
 
 .bonfire-sticky-viewport {
-  position: fixed !important;
+  position: sticky !important;
   top: 0 !important;
   left: 0 !important;
-  width: 100vw !important;
+  width: 100% !important;
   height: 100vh !important;
   height: 100dvh !important;
   overflow: hidden;
@@ -10391,6 +10391,8 @@ body.page-live,
   overflow-x: clip !important;
   overflow-y: visible !important;
   max-width: 100vw;
+  animation: none !important;
+  transform: none !important;
 }
 
 .page-live .container {
@@ -11283,7 +11285,7 @@ body.page-live,
 
 @media (max-width: 768px) {
   .bonfire-cinema-track {
-    height: 205vh;
+    height: 210vh !important;
   }
 
   .live-world-triptych,
@@ -12236,7 +12238,7 @@ body.page-live,
   }
 
   .bonfire-cinema-track {
-    height: 185vh !important;
+    height: 195vh !important;
   }
 
   .bonfire-sticky-viewport {
@@ -14079,7 +14081,7 @@ body.page-live,
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
+    transform: none;
   }
 }
 

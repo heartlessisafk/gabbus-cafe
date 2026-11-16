@@ -2620,13 +2620,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const pixelNotes = [];
 
     const PIXEL_CAST = [
-      { role: "jacket", dx: -64, dy: 2,  dir: 1,  mobile: true,  skin: "#EEBE9E", hair: "#6C3C24", top: "#E86235", bottom: "#1B9898" },
-      { role: "guitar", dx: -44, dy: -6, dir: 1,  mobile: true,  skin: "#E8B694", hair: "#58321E", top: "#7CA846", bottom: "#2B3342" },
-      { role: "drink",  dx: -25, dy: -12,dir: 1,  mobile: true,  skin: "#F2C4A4", hair: "#3E2820", top: "#D92B6B", bottom: "#EAE4D8", hat: "#D99B38" },
-      { role: "folded", dx: 24,  dy: -13,dir: -1, mobile: false, skin: "#E2B08E", hair: "#262024", top: "#344A70", bottom: "#4B729F" },
-      { role: "dress",  dx: 42,  dy: -7, dir: -1, mobile: true,  skin: "#F0C0A0", hair: "#5C3828", top: "#D9382E", bottom: "#D9382E", longHair: true },
-      { role: "yellow", dx: 58,  dy: 1,  dir: -1, mobile: true,  skin: "#EBBA98", hair: "#523422", top: "#F2D44E", bottom: "#C9483B" },
-      { role: "purple", dx: 75,  dy: -4, dir: -1, mobile: false, skin: "#EEBE9E", hair: "#A64B2A", top: "#7A428A", bottom: "#473B35" }
+      { role: "jacket", dx: -48, dy: 0,  dir: 1,  mobile: true,  skin: "#EEBE9E", hair: "#6C3C24", top: "#E86235", bottom: "#1B9898" },
+      { role: "guitar", dx: -28, dy: -6, dir: 1,  mobile: true,  skin: "#E8B694", hair: "#58321E", top: "#7CA846", bottom: "#2B3342" },
+      { role: "drink",  dx: 24,  dy: -6, dir: -1, mobile: true,  skin: "#F2C4A4", hair: "#3E2820", top: "#D92B6B", bottom: "#EAE4D8", hat: "#D99B38" },
+      { role: "yellow", dx: 46,  dy: 0,  dir: -1, mobile: true,  skin: "#EBBA98", hair: "#523422", top: "#F2D44E", bottom: "#C9483B" }
     ];
 
     const STARS = [
@@ -2731,17 +2728,20 @@ document.addEventListener("DOMContentLoaded", () => {
       const shoe = "#201C22";
       const faceDir = cfg.dir || 1;
 
-      // Scroll-controlled states:
-      // 0% - 19%: Calm sitting (or folded arms standing)
-      // 20% - 37%: Foot tap, head nod, guitarist starts strumming
-      // 38% - 55%: Characters stand up, raise drink, start clapping
-      // 56% - 100%: Full pixel-art party dance!
-      const standing = role === "folded" || p >= 0.38;
-      const party = p >= 0.56;
+      // Scroll-controlled states per creative direction:
+      // 0% - 15%: Quiet forest, friends relaxed, sitting comfortably
+      // 15% - 30%: Fire brightens, warm light spreads, gentle conversation
+      // 30% - 45%: Friends begin moving/singing, guitar strumming, foot tapping
+      // 45% - 65%: Party energy increases, standing, cheering, cups raised
+      // 65% - 80%: Energetic party lights, dancing sway and bounce
+      // 80% - 90%: Peak celebration, full harmony and laughter
+      // 90% - 100%: Smooth transition
+      const standing = p >= 0.45;
+      const party = p >= 0.65;
       const beat = Math.floor(tick / 2) % 2;
       const bounce = party && beat === 1 ? -1 : 0;
       const sway = party ? (beat === 0 ? 1 : -1) : 0;
-      const nod = p >= 0.18 && beat === 1 ? 1 : 0;
+      const nod = p >= 0.20 && beat === 1 ? 1 : 0;
 
       const bx = Math.round(x + sway);
       const by = Math.round(y + bounce);
@@ -2758,7 +2758,7 @@ document.addEventListener("DOMContentLoaded", () => {
           // Seated on cedar log bench
           pxBox(bx - 2, by - 6, bx + 2 * faceDir + 1, by - 4, bottom);
           const footX = bx + 3 * faceDir;
-          const footTap = p >= 0.18 && (role === "jacket" || role === "purple") && beat === 1 ? -1 : 0;
+          const footTap = p >= 0.25 && role === "jacket" && beat === 1 ? -1 : 0;
           pxBox(footX - 1, by - 4, footX + 1, by - 1, bottom);
           pxBox(footX - 1, by - 1 + footTap, footX + 2 * faceDir, by + footTap, shoe);
         }
@@ -2788,8 +2788,8 @@ document.addEventListener("DOMContentLoaded", () => {
           pxLine(bx - 1, by - 11, bx + 2 * faceDir, by - 8, top);
         }
       } else {
-        // STANDING / PIXEL PARTY DANCING POSE (inspired by reference image!)
-        if (party && (role === "jacket" || role === "yellow" || role === "purple")) {
+        // STANDING / PIXEL PARTY DANCING POSE
+        if (party && (role === "jacket" || role === "yellow")) {
           const step = beat === 0 ? 1 : -1;
           pxLine(bx - 1, by - 9, bx - 2, by - 4, bottom);
           pxLine(bx - 2, by - 4, bx - 3, by - (step > 0 ? 1 : 0), bottom);
@@ -2798,13 +2798,6 @@ document.addEventListener("DOMContentLoaded", () => {
           pxLine(bx + 1, by - 9, bx + 2, by - 4, bottom);
           pxLine(bx + 2, by - 4, bx + 3, by - (step < 0 ? 1 : 0), bottom);
           pxBox(bx + 2, by - (step < 0 ? 1 : 0), bx + 4, by, shoe);
-        } else if (role === "dress") {
-          const hipShift = party && beat === 0 ? 1 : 0;
-          pxBox(bx - 2 + hipShift, by - 10, bx + 2 + hipShift, by - 6, bottom);
-          pxLine(bx - 1, by - 5, bx - 2, by - 1, skin);
-          pxLine(bx + 1, by - 5, bx + 2, by - 1, skin);
-          pxRect(bx - 2, by, 1, 1, top);
-          pxRect(bx + 2, by, 1, 1, top);
         } else {
           pxBox(bx - 2, by - 9, bx - 1, by - 1, bottom);
           pxBox(bx + 1, by - 9, bx + 2, by - 1, bottom);
@@ -2825,14 +2818,11 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         pxRect(bx - 1, hy + 2, 1, 1, "#1C1618");
         pxRect(bx + 1, hy + 2, 1, 1, "#1C1618");
-        if (party || p >= 0.42) {
+        if (party || p >= 0.35) {
           pxRect(bx, hy + 4, 1, 1, "#A83434"); // Happy pixel laugh/sing mouth
         }
 
-        if (role === "folded" && p < 0.38) {
-          pxBox(bx - 3, by - 14, bx + 3, by - 13, top);
-          pxLine(bx - 2, by - 13, bx + 2, by - 13, skin);
-        } else if (role === "guitar") {
+        if (role === "guitar") {
           pxBox(bx - 1, by - 13, bx + 5, by - 10, "#CC823A");
           pxRect(bx + 2, by - 11, 1, 1, "#301C12");
           pxLine(bx + 5, by - 12, bx + 9, by - 15 - beat, "#8C5626");
@@ -2847,28 +2837,8 @@ document.addEventListener("DOMContentLoaded", () => {
           const wArm = beat === 0 ? 1 : 0;
           pxLine(bx - 2, by - 15, bx - 5 - wArm, by - 21, skin);
           pxLine(bx + 2, by - 15, bx + 5 + wArm, by - 21, skin);
-        } else if (role === "dress") {
-          const sArm = beat === 0 ? 1 : -1;
-          pxLine(bx - 2, by - 15, bx - 4 + sArm, by - 19, skin);
-          pxLine(bx - 4 + sArm, by - 19, bx - 2 + sArm, by - 22, skin);
-          pxLine(bx + 2, by - 15, bx + 4 + sArm, by - 19, skin);
-          pxLine(bx + 4 + sArm, by - 19, bx + 2 + sArm, by - 22, skin);
-        } else if (role === "purple") {
-          const lift = beat === 1 ? -1 : 1;
-          pxLine(bx - 2, by - 14, bx - 5, by - 14, top);
-          pxLine(bx - 5, by - 14, bx - 5, by - 18 + lift, skin);
-          pxLine(bx + 2, by - 14, bx + 5, by - 14, top);
-          pxLine(bx + 5, by - 14, bx + 5, by - 18 - lift, skin);
-        } else if (role === "folded") {
-          if (beat === 0) {
-            pxLine(bx - 2, by - 15, bx - 1, by - 19, skin);
-            pxLine(bx + 2, by - 15, bx + 1, by - 19, skin);
-            pxRect(bx, by - 21, 1, 1, "#FFF5C8");
-          } else {
-            pxLine(bx - 2, by - 15, bx - 4, by - 18, skin);
-            pxLine(bx + 2, by - 15, bx + 4, by - 18, skin);
-          }
         } else {
+          // Jacket friend clapping and cheering
           if (beat === 0) {
             pxLine(bx - 2, by - 15, bx - 4, by - 21, top);
             pxRect(bx - 4, by - 22, 1, 1, skin);
@@ -2892,9 +2862,10 @@ document.addEventListener("DOMContentLoaded", () => {
       const tanLight = "#EBBE88";
       const muzzle = "#181C24";
 
+      // 45–65%: Gentle tail wag; 65–100%: Energetic happy tail wag
       const wag =
-        p >= 0.35
-          ? (tick % 2 === 0 ? 1 : -1) * (p >= 0.60 ? 2 : 1)
+        p >= 0.45
+          ? (tick % 2 === 0 ? 1 : -1) * (p >= 0.65 ? 2 : 1)
           : 0;
       pxLine(x - 6, y - 2, x - 10, y - 5 + wag, saddle);
       pxLine(x - 6, y - 1, x - 9, y - 4 + wag, tan);
@@ -2903,17 +2874,19 @@ document.addEventListener("DOMContentLoaded", () => {
       pxBox(x - 5, y - 8, x + 1, y - 1, saddle);
       pxBox(x - 5, y - 4, x - 2, y, tan);
 
-      // Upright Chest & Front Paws
-      pxBox(x - 1, y - 11, x + 4, y - 4, tan);
-      pxBox(x + 1, y - 10, x + 4, y - 5, tanLight);
+      // Upright Chest & Front Paws (subtle breathing rise at rest)
+      const breath = p < 0.30 && Math.floor(tick / 4) % 2 === 0 ? 1 : 0;
+      pxBox(x - 1, y - 11 - breath, x + 4, y - 4, tan);
+      pxBox(x + 1, y - 10 - breath, x + 4, y - 5, tanLight);
       pxBox(x, y - 4, x + 1, y, tan);
       pxBox(x + 3, y - 4, x + 4, y, tan);
 
       // Head, Pointed Shepherd Ears & Snout
-      const tilt = p >= 0.60 && Math.floor(tick / 2) % 2 === 0 ? -1 : 0;
-      const lookLeft = p >= 0.35 && p < 0.60 && Math.floor(tick / 3) % 2 === 1;
+      // 45%+: Subtle inquisitive head tilt; 30–60%: Watches guitarist
+      const tilt = p >= 0.45 && Math.floor(tick / 2) % 2 === 0 ? -1 : 0;
+      const lookLeft = p >= 0.30 && p < 0.60 && Math.floor(tick / 3) % 2 === 1;
       const hx = x + 1;
-      const hy = y - 16 + tilt;
+      const hy = y - 16 + tilt - breath;
 
       pxBox(hx - 2, hy, hx + 3, hy + 4, tan);
       pxBox(hx - 2, hy, hx + 1, hy + 2, saddle);
@@ -2925,13 +2898,13 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         pxBox(hx + 3, hy + 1, hx + 6, hy + 3, muzzle);
         pxRect(hx + 6, hy + 1, 1, 1, "#0C0E12");
-        if (p >= 0.45) {
+        if (p >= 0.65) {
           pxRect(hx + 5, hy + 4, 1, 1, "#EE7686"); // Happy pink pixel tongue
         }
         pxRect(hx + 2, hy + 1, 1, 1, "#FFF6DA");
       }
 
-      const earLift = p >= 0.20 ? 1 : 0;
+      const earLift = p >= 0.25 ? 1 : 0;
       pxLine(hx - 2, hy, hx - 2, hy - 3 - earLift, saddle);
       pxRect(hx - 1, hy - 1, 1, 1, "#C68470");
       pxLine(hx + 1, hy, hx + 2, hy - 3 - earLift, saddle);
@@ -2947,14 +2920,18 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       // Stepped pixel flame columns
-      const boost = Math.floor(p * 8);
+      // 0–15%: gentle fire flickers
+      // 15–30%: bonfire becomes brighter, warmth spreads
+      // 30–80%: energetic flames
+      // 80–100%: peak flame celebration
+      const boost = p < 0.15 ? 0 : Math.floor(Math.min(8, (p - 0.15) * 11));
       const cols = [
-        [-5, 5 + Math.floor(boost * 0.45)],
-        [-3, 9 + boost],
-        [-1, 13 + boost],
-        [1, 12 + boost],
-        [3, 8 + boost],
-        [5, 4 + Math.floor(boost * 0.45)]
+        [-5, 4 + Math.floor(boost * 0.45)],
+        [-3, 8 + boost],
+        [-1, 11 + boost],
+        [1, 10 + boost],
+        [3, 7 + boost],
+        [5, 3 + Math.floor(boost * 0.45)]
       ];
       for (let i = 0; i < cols.length; i++) {
         const ox = cols[i][0];
@@ -3072,23 +3049,21 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       // Split Cedar Log Benches & Gabbu's Woven Mountain Rug
-      const logSpan = isCompact ? 28 : 38;
-      pxBox(cx - 32 - logSpan, groundCy - 3, cx - 32, groundCy + 1, "#5C3822");
-      pxLine(cx - 32 - logSpan, groundCy - 3, cx - 32, groundCy - 3, "#8E5A36");
-      pxBox(cx + 32, groundCy - 3, cx + 32 + logSpan, groundCy + 1, "#5C3822");
-      pxLine(cx + 32, groundCy - 3, cx + 32 + logSpan, groundCy - 3, "#8E5A36");
+      const logSpan = isCompact ? 22 : 30;
+      pxBox(cx - 24 - logSpan, groundCy - 3, cx - 24, groundCy + 1, "#5C3822");
+      pxLine(cx - 24 - logSpan, groundCy - 3, cx - 24, groundCy - 3, "#8E5A36");
+      pxBox(cx + 20, groundCy - 3, cx + 20 + logSpan, groundCy + 1, "#5C3822");
+      pxLine(cx + 20, groundCy - 3, cx + 20 + logSpan, groundCy - 3, "#8E5A36");
 
       // Gabbu's crimson & warm-beige rug right beside the bonfire
-      pxBox(cx - 21, groundCy - 1, cx - 5, groundCy + 2, "#8A362E");
-      pxLine(cx - 19, groundCy, cx - 7, groundCy, "#CDAA80");
+      pxBox(cx - 21, groundCy - 1, cx - 6, groundCy + 2, "#8A362E");
+      pxLine(cx - 19, groundCy, cx - 8, groundCy, "#CDAA80");
 
-      // 5. Draw Pixel-Art Cast (Sorted back-to-front by Y depth)
-      const activeCast = isCompact
-        ? PIXEL_CAST.filter((c) => c.mobile)
-        : PIXEL_CAST;
+      // 5. Draw Exactly Four Pixel-Art Friends (Sorted back-to-front by Y depth)
+      const sortedCast = [...PIXEL_CAST].sort((a, b) => a.dy - b.dy);
 
-      for (let i = 0; i < activeCast.length; i++) {
-        const c = activeCast[i];
+      for (let i = 0; i < sortedCast.length; i++) {
+        const c = sortedCast[i];
         const scaleX = isCompact ? 0.76 : 1;
         const px = cx + Math.round(c.dx * scaleX);
         const py = groundCy + c.dy;
@@ -3097,12 +3072,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // 6. Draw GABBU (Central German Shepherd sitting by the fire) & Central Bonfire
       drawPixelGabbu(cx - 13, groundCy - 1, scrollProgress, retroTick);
-      drawPixelBonfire(cx + 5, groundCy - 1, scrollProgress, retroTick);
+      drawPixelBonfire(cx + 3, groundCy - 1, scrollProgress, retroTick);
 
-      // 7. Floating Pixel Musical Notes from the Guitarist (20% -> 100%)
-      if (scrollProgress >= 0.18) {
-        const gx = cx + Math.round(-44 * (isCompact ? 0.76 : 1)) + 4;
-        const gy = groundCy - 24;
+      // 7. Floating Pixel Musical Notes from the Guitarist (30% -> 100%)
+      if (scrollProgress >= 0.28) {
+        const gx = cx + Math.round(-28 * (isCompact ? 0.76 : 1)) + 4;
+        const gy = groundCy - 22;
         for (let i = 0; i < pixelNotes.length; i++) {
           const n = pixelNotes[i];
           const progressY = ((retroTick * 2 + n.age) % 28);
@@ -3114,12 +3089,12 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
 
-      // 8. Rising Pixel-Art Embers
-      const emberCount = Math.floor(8 + scrollProgress * 16);
+      // 8. Rising Pixel-Art Embers (progressively expanding)
+      const emberCount = Math.floor(4 + scrollProgress * 18);
       for (let i = 0; i < emberCount; i++) {
         const e = pixelEmbers[i];
-        e.y = (e.y + e.speed * (0.6 + scrollProgress * 0.9)) % 56;
-        const ex = cx + 5 + e.ox + Math.round(Math.sin(retroTick * 0.25 + i) * 2);
+        e.y = (e.y + e.speed * (0.4 + scrollProgress * 1.0)) % 56;
+        const ex = cx + 3 + e.ox + Math.round(Math.sin(retroTick * 0.25 + i) * 2);
         const ey = groundCy - 8 - Math.floor(e.y);
         pxRect(ex, ey, e.size, e.size, e.col);
       }
@@ -3133,10 +3108,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // ------------------------------------------------------------------------
-    // 2. CONTINUOUS SCROLL-PINNED BONFIRE TIMELINE (2–3 NORMAL SCROLLS)
-    //    #bonfireStickyViewport is position:fixed in the viewport background
-    //    so the pixel-art party, bonfire, particles & Gabbu remain 100% visible
-    //    and actively animating while scrolling through the 220vh track.
+    // 2. CONTINUOUS SCROLL-PINNED BONFIRE TIMELINE (130–150vh COMPACT SCROLL)
+    //    #bonfireStickyViewport is position:sticky inside .bonfire-cinema-track
+    //    staying pinned for 140vh of scroll travel while the timeline progresses
+    //    from 0% Quiet Forest to 100% Gabbu's Live, unpinning naturally after.
     // ------------------------------------------------------------------------
     function updateBonfireScrollTimeline() {
       if (!cinemaTrack) return;
@@ -3147,8 +3122,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const rawP = -rect.top / totalScrollable;
       const clampedRaw = Math.max(0, Math.min(1, rawP));
 
-      // Keep canvas actively animating whenever the fixed stage is visible
-      const shouldBeActive = rect.bottom > -100;
+      // Keep canvas actively animating whenever the stage or track is visible
+      const shouldBeActive = rect.bottom > 0 && rect.top < vh + 100;
       if (shouldBeActive && !isBonfireInView) {
         isBonfireInView = true;
         if (!animFrameId) {
@@ -3158,45 +3133,69 @@ document.addEventListener("DOMContentLoaded", () => {
         isBonfireInView = false;
       }
 
-      // Start immediately with active baseline energy (0.15) and build to 1.0
-      const p = Math.min(1, 0.15 + clampedRaw * 0.85);
-      scrollProgress = p;
+      // Smooth scrubbed progress without artificial baseline offsets
+      scrollProgress = clampedRaw;
 
-      // Subtle camera push-in (1.0 -> 1.05) without blurring pixel edges
-      const camScale = clampedRaw < 0.78 ? 1 + clampedRaw * 0.05 : 1.04 - (clampedRaw - 0.78) * 0.14;
-      const camY = clampedRaw < 0.78 ? -clampedRaw * 6 : -5 * (1 - (clampedRaw - 0.78) / 0.22);
+      // Camera: subtle push-in from 1.0 to 1.045 during 0-85%, then gentle pull-back to 1.0 at 100%
+      let camScale = 1.0;
+      let camY = 0;
+      if (clampedRaw < 0.85) {
+        camScale = 1.0 + (clampedRaw / 0.85) * 0.045;
+        camY = -clampedRaw * 5;
+      } else {
+        const pullBack = (clampedRaw - 0.85) / 0.15;
+        camScale = 1.045 - pullBack * 0.045;
+        camY = -5 * (1 - pullBack);
+      }
       if (cameraRig) {
         cameraRig.style.setProperty("--cam-scale", camScale.toFixed(4));
         cameraRig.style.setProperty("--cam-x", "0px");
         cameraRig.style.setProperty("--cam-y", `${camY.toFixed(2)}px`);
       }
 
-      // 2–3 Scroll Timeline Labels
+      // Timeline percentage & creative narrative labels matching the 0–100% sequence:
       const pctNum = Math.round(clampedRaw * 100);
-      let stageBadge = `${pctNum}% • BONFIRE & FIRST CHORDS`;
-      let kicker = "01 • FRIENDS & GABBU BY THE FIRE";
+      let stageBadge = `${pctNum}% • QUIET FOREST BONFIRE`;
+      let kicker = "01 • PEACEFUL FOREST CLEARING";
       let line =
-        "The crackling bonfire warms the clearing — guitar chords strum with Gabbu right in the center.";
+        "Night settles over the pine forest — four friends relax around a gentle fire with Gabbu at the center.";
 
-      if (clampedRaw >= 0.18 && clampedRaw < 0.42) {
-        stageBadge = `${pctNum}% • THE PARTY STARTS`;
-        kicker = "02 • DRINKS RAISED & HANDS CLAPPING";
+      if (clampedRaw >= 0.15 && clampedRaw < 0.30) {
+        stageBadge = `${pctNum}% • FIRE GLOWS WARMER`;
+        kicker = "02 • WARMTH SPREADS ACROSS THE CLEARING";
         line =
-          "Friends stand up around the fire — raising drinks and clapping as Gabbu perks his ears.";
-      } else if (clampedRaw >= 0.42 && clampedRaw < 0.72) {
-        stageBadge = `${pctNum}% • FULL PIXEL PARTY`;
-        kicker = "03 • DANCING AROUND THE FIRE WITH GABBU";
+          "The bonfire brightens, casting a warm golden glow over the gathering as conversation starts.";
+      } else if (clampedRaw >= 0.30 && clampedRaw < 0.45) {
+        stageBadge = `${pctNum}% • GUITAR & CHORDS`;
+        kicker = "03 • MUSIC FILLS THE MOUNTAIN AIR";
         line =
-          "Everyone dances around the fire while Gabbu sits happily in the center, wagging his tail.";
-      } else if (clampedRaw >= 0.72) {
+          "Acoustic chords drift into the night as friends tap their feet and sing along.";
+      } else if (clampedRaw >= 0.45 && clampedRaw < 0.65) {
+        stageBadge = `${pctNum}% • GABBU & FRIENDS CELEBRATE`;
+        kicker = "04 • RISING PARTY ENERGY";
+        line =
+          "Friends raise their cups and dance while Gabbu wags his tail happily beside the hearth.";
+      } else if (clampedRaw >= 0.65 && clampedRaw < 0.80) {
+        stageBadge = `${pctNum}% • FESTIVE LIGHTS & MUSIC`;
+        kicker = "05 • ATMOSPHERIC FOREST NIGHT";
+        line =
+          "Warm string lights glow and embers drift upwards as the gathering reaches full swing.";
+      } else if (clampedRaw >= 0.80 && clampedRaw < 0.90) {
+        stageBadge = `${pctNum}% • PEAK CELEBRATION`;
+        kicker = "06 • NIGHTS WORTH STAYING FOR";
+        line =
+          "Music, laughter, crackling firelight and pure mountain camaraderie.";
+      } else if (clampedRaw >= 0.90) {
         stageBadge = "100% • GABBU’S LIVE";
+        kicker = "GABBU’S LIVE";
+        line = "Where Gabbu’s comes alive.";
       }
 
       if (stageLabelEl) stageLabelEl.textContent = stageBadge;
       if (whisperKicker) whisperKicker.textContent = kicker;
       if (whisperLine) whisperLine.textContent = line;
 
-      const showIdentity = clampedRaw >= 0.72;
+      const showIdentity = clampedRaw >= 0.88;
       if (whisperBox) whisperBox.classList.toggle("is-hidden", showIdentity);
       if (identityReveal) identityReveal.classList.toggle("is-revealed", showIdentity);
     }
