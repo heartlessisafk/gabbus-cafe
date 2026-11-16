@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gabbu’s Passport — A Little Reward for Every Good Time &bull; GABBU’S</title>
+  <meta name="description" content="Gabbu’s Passport — Collect stamps across your visits to Gabbu’s (Kitchen | Bar | Bakery) and unlock rewards on your 5th, 7th, and 10th stamps." />
+
+  <!-- Editorial Typography: Cormorant Garamond & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css?v=20261001_v5" />
+  <link rel="stylesheet" href="passport.css" />
+</head>
+<body>
+
+  <!-- Subtle Film Grain / Noise Texture Overlay -->
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- Subtle Architectural Vertical Hairlines -->
+  <div class="architectural-grid" aria-hidden="true">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- ========================================================================
+       1. SHARED BRAND NAVIGATION BAR
+       ======================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="nav-inner">
+      <a href="index.html" class="brand-logo" aria-label="Return to Gabbu's Cafe Home">
+        <img
+          src="assets/logo/gabbus-official-logo-nav.svg"
+          alt="GABBU’S — Kitchen | Bar | Bakery"
+          class="brand-logo-img"
+         width="150" height="42" />
+      </a>
+
+      <nav aria-label="Passport & Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="brewing.html">What’s Brewing</a></li>
+          <li><a href="locations.html">Stores</a></li>
+          <li><a href="passport.html" class="active" aria-current="page">Gabbu’s Passport</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="live.html">Gabbu’s Live</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="menu.html" class="btn btn-primary nav-reserve-btn">
+          OPEN MENU &rarr;
+        </a>
+        <button type="button" class="menu-toggle" id="menuToggle" aria-label="Toggle Menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <!-- Global Top-Left Back Control -->
+  <a href="index.html" class="global-back-btn" id="globalBackBtn" data-back-fallback="index.html" aria-label="Back">
+    <span class="global-back-arrow" aria-hidden="true">&larr;</span>
+    <span class="global-back-text">BACK</span>
+  </a>
+
+  <!-- Mobile Navigation Overlay -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay" aria-hidden="true">
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link"><span>Home</span><span class="nav-idx">01</span></a></li>
+      <li><a href="brewing.html" class="mobile-nav-link"><span>What’s Brewing</span><span class="nav-idx">02</span></a></li>
+      <li><a href="menu.html" class="mobile-nav-link"><span>Menu</span><span class="nav-idx">03</span></a></li>
+      <li><a href="locations.html" class="mobile-nav-link"><span>Stores</span><span class="nav-idx">04</span></a></li>
+      <li><a href="passport.html" class="mobile-nav-link active"><span>Gabbu’s Passport</span><span class="nav-idx">05</span></a></li>
+      <li><a href="blog.html" class="mobile-nav-link"><span>Blog</span><span class="nav-idx">06</span></a></li>
+      <li><a href="live.html" class="mobile-nav-link"><span>Gabbu’s Live</span><span class="nav-idx">07</span></a></li>
+      <li><a href="story.html" class="mobile-nav-link"><span>Gabbu’s Story</span><span class="nav-idx">08</span></a></li>
+    </ul>
+  </div>
+
+  <main>
+    <!-- ======================================================================
+         2. PASSPORT HERO & PHYSICAL PASSPORT ARTIFACT ("OPEN PASSPORT ->")
+         ====================================================================== -->
+    <section class="passport-hero-section" id="passport-cover">
+      <div class="section-container">
+        <div class="passport-hero-grid">
+          <!-- Left: Editorial Concept Introduction -->
+          <div>
+            <div class="passport-concept-pill">
+              <span>&#10022; GABBU’S PASSPORT &bull; PHYSICAL CAFE STAMP EXPERIENCE</span>
+            </div>
+
+            <h1 class="passport-hero-title">
+              GABBU’S <em class="editorial-italic">PASSPORT</em>
+            </h1>
+
+            <p class="passport-hero-subtitle">
+              &ldquo;A little reward for every good time.&rdquo;
+            </p>
+
+            <p class="passport-hero-lead">
+              You come to Gabbu’s. You have a good time. You collect a stamp. You come back, collect another—and along the way, Gabbu gives a little something back.
+            </p>
+
+            <!-- Core Philosophy Flow -->
+            <div class="philosophy-flow-strip" aria-label="Passport Philosophy">
+              <span>GOOD TIMES</span>
+              <span class="flow-arrow">&rarr;</span>
+              <span>MEMORIES</span>
+              <span class="flow-arrow">&rarr;</span>
+              <span>STAMPS</span>
+              <span class="flow-arrow">&rarr;</span>
+              <span style="color: var(--warm-beige); font-weight: 600;">REWARDS</span>
+            </div>
+
+            <div class="hero-cta-group">
+              <button type="button" class="btn btn-primary" data-action="open-passport">
+                OPEN PASSPORT &rarr;
+              </button>
+              <a href="#stamp-journey" class="btn btn-outline">
+                Explore 10-Stamp Journey
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Tactile Stitched Deep-Navy & Gold-Foil Physical Passport Book -->
+          <div class="passport-artifact-stage">
+            <div class="physical-passport-book" id="physicalPassportCover" role="button" tabindex="0" aria-label="Click to open Gabbu's Passport">
+              <div class="passport-stitch-frame">
+                <span class="passport-foil-top">REPUBLIC OF GOOD TIMES &bull; EST. MANALI</span>
+
+                <div class="passport-cover-emblem-wrap">
+                  <img
+                    src="assets/logo/gabbus-emblem-crop.png"
+                    alt="Gabbu in his red bow tie on the cover of Gabbu's Passport"
+                  />
+                </div>
+
+                <div>
+                  <h2 class="passport-foil-title">GABBU’S<br/>PASSPORT</h2>
+                  <p class="passport-foil-pillars">Kitchen &nbsp;|&nbsp; Bar &nbsp;|&nbsp; Bakery</p>
+                </div>
+
+                <p class="passport-foil-quote">
+                  &ldquo;A Dog Behind the Good Times.&rdquo;
+                </p>
+
+                <div class="passport-foil-bottom">
+                  <span>10 MILESTONE STAMPS</span>
+                  <span>TAP TO OPEN &rarr;</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ====================================================================
+             UNFOLDED INSIDE PASSPORT SPREAD (REVEALED ON "OPEN PASSPORT ->")
+             ==================================================================== -->
+        <div class="opened-passport-spread-modal is-open" id="openedPassportSpread" aria-label="Inside Pages of Gabbu's Passport">
+          <!-- Left Page: Page 01 — Bearer & Gabbu's Blessing -->
+          <div class="passport-page-left">
+            <div class="passport-page-header">
+              <span>PAGE 01 &mdash; OFFICIAL BEARER PAGE</span>
+              <span>GABBU’S &bull; KITCHEN | BAR | BAKERY</span>
+            </div>
+
+            <div class="passport-id-card-grid">
+              <div class="passport-bearer-photo">
+                <img
+                  src="assets/gabbu/gabbu-portrait-garden.jpg"
+                  alt="Authentic photograph of Gabbu, the German Shepherd soul of Gabbu's Cafe"
+                />
+                <div class="passport-rubber-seal">
+                  APPROVED<br/>BY<br/>GABBU
+                </div>
+              </div>
+
+              <div class="passport-metadata-fields">
+                <div class="passport-field-row">
+                  <span class="passport-field-label">Chief Host &amp; Guardian</span>
+                  <span class="passport-field-val">Gabbar (&ldquo;Gabbu&rdquo;)</span>
+                </div>
+                <div class="passport-field-row">
+                  <span class="passport-field-label">Sanctuary of Issue</span>
+                  <span class="passport-field-val">Gabbu’s Manali, Himachal Pradesh</span>
+                </div>
+                <div class="passport-field-row">
+                  <span class="passport-field-label">Confirmed Milestones</span>
+                  <span class="passport-field-val">5th Beverage &bull; 7th Dessert &bull; 10th Starter</span>
+                </div>
+                <p class="handwritten-note">
+                  &ldquo;Good times, approved by Gabbu.&rdquo;
+                </p>
+              </div>
+            </div>
+
+            <p style="font-size: 0.84rem; line-height: 1.65; color: #5A4334; border-top: 1px solid rgba(78, 54, 41, 0.2); padding-top: 0.9rem;">
+              This Passport belongs to a friend of the house. Bring it along whenever you visit Gabbu’s for coffee, bakery mornings, all-day kitchen plates, or evening bar pours.
+            </p>
+          </div>
+
+          <!-- Right Page: Page 02 — Live 10-Stamp Ledger Overview -->
+          <div class="passport-page-right">
+            <div class="passport-page-header">
+              <span>PAGE 02 &mdash; THE 10-STAMP LEDGER</span>
+              <span>STAMPED WITH A LITTLE GABBU LUCK</span>
+            </div>
+
+            <div class="mini-stamp-grid-10">
+              <div class="mini-stamp-cell" data-mini-stamp="1">
+                <span class="mini-stamp-num">01</span>
+                <span class="mini-stamp-tag">Visit</span>
+              </div>
+              <div class="mini-stamp-cell" data-mini-stamp="2">
+                <span class="mini-stamp-num">02</span>
+                <span class="mini-stamp-tag">Visit</span>
+              </div>
+              <div class="mini-stamp-cell" data-mini-stamp="3">
+                <span class="mini-stamp-num">03</span>
+                <span class="mini-stamp-tag">Visit</span>
+              </div>
+              <div class="mini-stamp-cell" data-mini-stamp="4">
+                <span class="mini-stamp-num">04</span>
+                <span class="mini-stamp-tag">Visit</span>
+              </div>
+              <div class="mini-stamp-cell is-milestone" data-mini-stamp="5">
+                <span class="mini-stamp-num">05</span>
+                <span class="mini-stamp-tag">Beverage</span>
+              </div>
+              <div class="mini-stamp-cell" data-mini-stamp="6">
+                <span class="mini-stamp-num">06</span>
+                <span class="mini-stamp-tag">Visit</span>
+              </div>
+              <div class="mini-stamp-cell is-milestone" data-mini-stamp="7">
+                <span class="mini-stamp-num">07</span>
+                <span class="mini-stamp-tag">Dessert</span>
+              </div>
+              <div class="mini-stamp-cell" data-mini-stamp="8">
+                <span class="mini-stamp-num">08</span>
+                <span class="mini-stamp-tag">Visit</span>
+              </div>
+              <div class="mini-stamp-cell" data-mini-stamp="9">
+                <span class="mini-stamp-num">09</span>
+                <span class="mini-stamp-tag">Visit</span>
+              </div>
+              <div class="mini-stamp-cell is-milestone" data-mini-stamp="10">
+                <span class="mini-stamp-num">10</span>
+                <span class="mini-stamp-tag">Starter</span>
+              </div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; border-top: 1px solid rgba(78, 54, 41, 0.2); padding-top: 0.9rem;">
+              <span style="font-family: var(--font-display); font-style: italic; font-size: 1.05rem; color: var(--passport-ink-crimson);">
+                &ldquo;Stamped with a little Gabbu luck.&rdquo;
+              </span>
+              <a href="#stamp-journey" style="font-size: 0.68rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--passport-ink-brown); text-decoration: none;">
+                Scroll Down to Watch Stamps Ink &darr;
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         3. HOW IT WORKS: 4-STEP VISUAL EXPLAINER
+         ====================================================================== -->
+    <section class="how-passport-works-section">
+      <div class="section-container">
+        <div class="eyebrow-label">
+          <span class="index-num">01</span>
+          <span>How the Passport Works &bull; Simple &amp; Personal</span>
+        </div>
+        <h2 class="section-title-large">
+          Four Steps to <em class="editorial-italic">Good Times.</em>
+        </h2>
+
+        <div class="four-step-ledger">
+          <article class="step-card-editorial">
+            <span class="step-index-badge">01</span>
+            <h3 class="step-title-caps">GET YOUR PASSPORT</h3>
+            <p class="step-desc-text">
+              Ask your host for your personal Gabbu’s Passport when you dine with us at Gabbu’s.
+            </p>
+          </article>
+
+          <article class="step-card-editorial">
+            <span class="step-index-badge">02</span>
+            <h3 class="step-title-caps">VISIT GABBU’S</h3>
+            <p class="step-desc-text">
+              Come by for morning coffee &amp; bakery treats, mountain lunches, or evening bar sessions.
+            </p>
+          </article>
+
+          <article class="step-card-editorial">
+            <span class="step-index-badge">03</span>
+            <h3 class="step-title-caps">COLLECT STAMPS</h3>
+            <p class="step-desc-text">
+              Each time you visit and share a good time, your Passport receives an official house stamp.
+            </p>
+          </article>
+
+          <article class="step-card-editorial">
+            <span class="step-index-badge">04</span>
+            <h3 class="step-title-caps">UNLOCK REWARDS</h3>
+            <p class="step-desc-text">
+              Your 5th, 7th, and 10th stamps unlock complimentary treats from our Bar, Bakery, and Kitchen.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         4. SCROLL-DRIVEN 10-STAMP JOURNEY & 3 CONFIRMED REWARDS
+         ====================================================================== -->
+    <section class="stamp-journey-section" id="stamp-journey">
+      <div class="section-container">
+        <div class="section-header-split">
+          <div>
+            <div class="eyebrow-label">
+              <span class="index-num">02</span>
+              <span>Interactive Scroll Walkthrough &bull; Stamps 01 to 10</span>
+            </div>
+            <h2 class="section-title-large">
+              The 10-Stamp <em class="editorial-italic">Journey.</em>
+            </h2>
+          </div>
+          <p class="section-header-desc">
+            Scroll down to experience each visit getting ink-stamped—and watch the 5th, 7th, and 10th milestone rewards unlock along the way.
+          </p>
+        </div>
+
+        <!-- Sticky Interactive 10-Stamp HUD Bar -->
+        <div class="journey-sticky-hud" role="region" aria-label="Live Stamp Progress">
+          <div class="hud-progress-track">
+            <button type="button" class="hud-stamp-dot" data-stamp-num="1" title="Jump to Stamp 01">01</button>
+            <button type="button" class="hud-stamp-dot" data-stamp-num="2" title="Jump to Stamp 02">02</button>
+            <button type="button" class="hud-stamp-dot" data-stamp-num="3" title="Jump to Stamp 03">03</button>
+            <button type="button" class="hud-stamp-dot" data-stamp-num="4" title="Jump to Stamp 04">04</button>
+            <button type="button" class="hud-stamp-dot milestone-dot" data-stamp-num="5" title="5th Stamp: Any Beverage Free">05★</button>
+            <button type="button" class="hud-stamp-dot" data-stamp-num="6" title="Jump to Stamp 06">06</button>
+            <button type="button" class="hud-stamp-dot milestone-dot" data-stamp-num="7" title="7th Stamp: Any Dessert Free">07★</button>
+            <button type="button" class="hud-stamp-dot" data-stamp-num="8" title="Jump to Stamp 08">08</button>
+            <button type="button" class="hud-stamp-dot" data-stamp-num="9" title="Jump to Stamp 09">09</button>
+            <button type="button" class="hud-stamp-dot milestone-dot" data-stamp-num="10" title="10th Stamp: Any Starter Free">10★</button>
+          </div>
+          <div class="hud-divider" aria-hidden="true"></div>
+          <span class="hud-status-readout" id="hudStatusReadout">Scroll Down to Begin Stamp Journey (00 / 10)</span>
+        </div>
+
+        <!-- ==================================================================
+             CHAPTER I: STAMPS 01 -> 05 (UNLOCKS: ANY BEVERAGE — FREE)
+             ================================================================== -->
+        <div class="journey-chapter-block">
+          <div class="journey-chapter-header">
+            <div>
+              <span style="font-size: 0.68rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--warm-beige);">First Milestone Arc &bull; Visits 01 – 05</span>
+              <h3 class="serif-display" style="font-size: 2.1rem; color: var(--ivory-light); margin-top: 0.25rem;">
+                Stamps 01 to 05 &rarr; <em class="editorial-italic">Any Beverage Free</em>
+              </h3>
+            </div>
+            <span style="font-family: var(--font-display); font-style: italic; color: var(--warm-beige); font-size: 1.1rem;">
+              &ldquo;Good times, approved by Gabbu.&rdquo;
+            </span>
+          </div>
+
+          <div class="stamp-slots-row">
+            <!-- Stamp 01 -->
+            <div class="passport-stamp-slot" data-stamp-slot="1">
+              <div class="slot-page-num"><span>STAMP</span><span>NO. 01</span></div>
+              <div class="rubber-ink-seal">
+                <span class="seal-number">01</span>
+                <span class="seal-stamp-word">GABBU’S</span>
+              </div>
+              <span class="slot-footer-caption">First Good Time</span>
+            </div>
+
+            <!-- Stamp 02 -->
+            <div class="passport-stamp-slot" data-stamp-slot="2">
+              <div class="slot-page-num"><span>STAMP</span><span>NO. 02</span></div>
+              <div class="rubber-ink-seal">
+                <span class="seal-number">02</span>
+                <span class="seal-stamp-word">GABBU’S</span>
+              </div>
+              <span class="slot-footer-caption">Familiar Table</span>
+            </div>
+
+            <!-- Stamp 03 -->
+            <div class="passport-stamp-slot" data-stamp-slot="3">
+              <div class="slot-page-num"><span>STAMP</span><span>NO. 03</span></div>
+              <div class="rubber-ink-seal">
+                <span class="seal-number">03</span>
+                <span class="seal-stamp-word">GABBU’S</span>
+              </div>
+              <span class="slot-footer-caption">Mountain Afternoon</span>
+            </div>
+
+            <!-- Stamp 04 -->
+            <div class="passport-stamp-slot" data-stamp-slot="4">
+              <div class="slot-page-num"><span>STAMP</span><span>NO. 04</span></div>
+              <div class="rubber-ink-seal">
+                <span class="seal-number">04</span>
+                <span class="seal-stamp-word">GABBU’S</span>
+              </div>
+              <span class="slot-footer-caption">Evening Stories</span>
+            </div>
+
+            <!-- Stamp 05 (MILESTONE) -->
+            <div class="passport-stamp-slot milestone-slot" data-stamp-slot="5">
+              <div class="slot-page-num"><span>MILESTONE</span><span>NO. 05 ★</span></div>
+              <div class="rubber-ink-seal">
+                <span class="seal-number">05</span>
+                <span class="seal-stamp-word">REWARD!</span>
+              </div>
+              <span class="slot-footer-caption" style="color: var(--passport-ink-crimson); font-weight: 600;">5th Stamp Unlocked</span>
+            </div>
+          </div>
+
+          <!-- 5TH STAMP REWARD UNLOCK CARD -->
+          <div class="reward-unlock-banner" data-reward-milestone="5">
+            <div>
+              <div class="reward-status-pill">
+                <span>&#10022; REWARD UNLOCKED &bull; 5TH STAMP</span>
+              </div>
+              <h4 class="reward-milestone-heading">5TH STAMP</h4>
+              <span class="reward-free-highlight">ANY BEVERAGE &mdash; FREE</span>
+              <p class="reward-editorial-note">
+                On your 5th visit, enjoy any beverage on the house—from our signature roasted coffee pours to refreshing mountain botanical elixirs.
+              </p>
+              <div class="reward-gabbu-signoff">
+                &ldquo;Good times, approved by Gabbu.&rdquo;
+              </div>
+            </div>
+
+            <!-- Strict Placeholder Rule: BEVERAGE IMAGE — IMAGE TO BE PROVIDED -->
+            <div class="editorial-asset-placeholder" style="min-height: 240px;">
+              <span class="placeholder-category-code">FOOD_IMAGES &bull; 5TH STAMP REWARD</span>
+              <h5 class="placeholder-title">BEVERAGE IMAGE &mdash; IMAGE TO BE PROVIDED</h5>
+              <p class="placeholder-sub">Dedicated slot ready for your official Gabbu’s beverage photograph.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================================================================
+             CHAPTER II: STAMPS 06 -> 07 (UNLOCKS: ANY DESSERT — FREE)
+             ================================================================== -->
+        <div class="journey-chapter-block">
+          <div class="journey-chapter-header">
+            <div>
+              <span style="font-size: 0.68rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--warm-beige);">Second Milestone Arc &bull; Visits 06 – 07</span>
+              <h3 class="serif-display" style="font-size: 2.1rem; color: var(--ivory-light); margin-top: 0.25rem;">
+                Stamps 06 to 07 &rarr; <em class="editorial-italic">Any Dessert Free</em>
+              </h3>
+            </div>
+            <span style="font-family: var(--font-display); font-style: italic; color: var(--warm-beige); font-size: 1.1rem;">
+              &ldquo;Stamped with a little Gabbu luck.&rdquo;
+            </span>
+          </div>
+
+          <div class="stamp-slots-row" style="max-width: 540px;">
+            <!-- Stamp 06 -->
+            <div class="passport-stamp-slot" data-stamp-slot="6">
+              <div class="slot-page-num"><span>STAMP</span><span>NO. 06</span></div>
+              <div class="rubber-ink-seal">
+                <span class="seal-number">06</span>
+                <span class="seal-stamp-word">GABBU’S</span>
+              </div>
+              <span class="slot-footer-caption">Sixth Visit</span>
+            </div>
+
+            <!-- Stamp 07 (MILESTONE) -->
+            <div class="passport-stamp-slot milestone-slot" data-stamp-slot="7">
+              <div class="slot-page-num"><span>MILESTONE</span><span>NO. 07 ★</span></div>
+              <div class="rubber-ink-seal">
+                <span class="seal-number">07</span>
+                <span class="seal-stamp-word">REWARD!</span>
+              </div>
+              <span class="slot-footer-caption" style="color: var(--passport-ink-crimson); font-weight: 600;">7th Stamp Unlocked</span>
+            </div>
+          </div>
+
+          <!-- 7TH STAMP REWARD UNLOCK CARD -->
+          <div class="reward-unlock-banner" data-reward-milestone="7">
+            <div>
+              <div class="reward-status-pill">
+                <span>&#10022; REWARD UNLOCKED &bull; 7TH STAMP</span>
+              </div>
+              <h4 class="reward-milestone-heading">7TH STAMP</h4>
+              <span class="reward-free-highlight">ANY DESSERT &mdash; FREE</span>
+              <p class="reward-editorial-note">
+                Just two stamps after your beverage treat, your 7th stamp unlocks any dessert from the Gabbu’s Bakery counter—free of charge.
+              </p>
+              <div class="reward-gabbu-signoff">
+                &ldquo;Stamped with a little Gabbu luck.&rdquo;
+              </div>
+            </div>
+
+            <!-- Strict Placeholder Rule: DESSERT IMAGE — IMAGE TO BE PROVIDED -->
+            <div class="editorial-asset-placeholder" style="min-height: 240px;">
+              <span class="placeholder-category-code">FOOD_IMAGES &bull; 7TH STAMP REWARD</span>
+              <h5 class="placeholder-title">DESSERT IMAGE &mdash; IMAGE TO BE PROVIDED</h5>
+              <p class="placeholder-sub">Dedicated slot ready for your official Gabbu’s Bakery dessert photograph.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================================================================
+             CHAPTER III: STAMPS 08 -> 10 (UNLOCKS: ANY STARTER — FREE)
+             ================================================================== -->
+        <div class="journey-chapter-block" style="margin-bottom: 0;">
+          <div class="journey-chapter-header">
+            <div>
+              <span style="font-size: 0.68rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--warm-beige);">Final Milestone Arc &bull; Visits 08 – 10</span>
+              <h3 class="serif-display" style="font-size: 2.1rem; color: var(--ivory-light); margin-top: 0.25rem;">
+                Stamps 08 to 10 &rarr; <em class="editorial-italic">Any Starter Free</em>
+              </h3>
+            </div>
+            <span style="font-family: var(--font-display); font-style: italic; color: var(--warm-beige); font-size: 1.1rem;">
+              &ldquo;A Dog Behind the Good Times.&rdquo;
+            </span>
+          </div>
+
+          <div class="stamp-slots-row" style="max-width: 780px;">
+            <!-- Stamp 08 -->
+            <div class="passport-stamp-slot" data-stamp-slot="8">
+              <div class="slot-page-num"><span>STAMP</span><span>NO. 08</span></div>
+              <div class="rubber-ink-seal">
+                <span class="seal-number">08</span>
+                <span class="seal-stamp-word">GABBU’S</span>
+              </div>
+              <span class="slot-footer-caption">Eighth Visit</span>
+            </div>
+
+            <!-- Stamp 09 -->
+            <div class="passport-stamp-slot" data-stamp-slot="9">
+              <div class="slot-page-num"><span>STAMP</span><span>NO. 09</span></div>
+              <div class="rubber-ink-seal">
+                <span class="seal-number">09</span>
+                <span class="seal-stamp-word">GABBU’S</span>
+              </div>
+              <span class="slot-footer-caption">Almost Home</span>
+            </div>
+
+            <!-- Stamp 10 (FINAL MILESTONE) -->
+            <div class="passport-stamp-slot milestone-slot" data-stamp-slot="10">
+              <div class="slot-page-num"><span>FINAL STAMP</span><span>NO. 10 ★</span></div>
+              <div class="rubber-ink-seal">
+                <span class="seal-number">10</span>
+                <span class="seal-stamp-word">COMPLETE</span>
+              </div>
+              <span class="slot-footer-caption" style="color: var(--passport-ink-crimson); font-weight: 600;">10th Stamp Unlocked!</span>
+            </div>
+          </div>
+
+          <!-- 10TH STAMP REWARD UNLOCK CARD -->
+          <div class="reward-unlock-banner" data-reward-milestone="10">
+            <div>
+              <div class="reward-status-pill">
+                <span>&#10022; REWARD UNLOCKED &bull; 10TH STAMP COMPLETED</span>
+              </div>
+              <h4 class="reward-milestone-heading">10TH STAMP</h4>
+              <span class="reward-free-highlight">ANY STARTER &mdash; FREE</span>
+              <p class="reward-editorial-note">
+                Ten stamps of shared conversations, music, and mountain memories. Your 10th stamp unlocks any starter from the Gabbu’s Kitchen—completely free.
+              </p>
+              <div class="reward-gabbu-signoff">
+                &ldquo;Thank you for being part of our story. &mdash; Gabbu&rdquo;
+              </div>
+            </div>
+
+            <!-- Strict Placeholder Rule: STARTER IMAGE — IMAGE TO BE PROVIDED -->
+            <div class="editorial-asset-placeholder" style="min-height: 240px;">
+              <span class="placeholder-category-code">FOOD_IMAGES &bull; 10TH STAMP REWARD</span>
+              <h5 class="placeholder-title">STARTER IMAGE &mdash; IMAGE TO BE PROVIDED</h5>
+              <p class="placeholder-sub">Dedicated slot ready for your official Gabbu’s Kitchen starter photograph.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         5. STORY BEHIND THE CAFE (GABBAR / GABBU — CENTRALIZED EDITABLE COPY)
+         Uses ONLY authentic `GABBU_IMAGES`
+         ====================================================================== -->
+    <section class="intro-section" id="gabbu-story" style="border-top: 1px solid var(--brown-taupe-border);">
+      <div class="oversized-watermark" aria-hidden="true">GABBAR</div>
+
+      <div class="section-container">
+        <div class="intro-asymmetric-grid">
+          <!-- Left Column: Authentic Gabbu Photographs -->
+          <div class="intro-left-column">
+            <div class="eyebrow-label">
+              <span class="index-num">03</span>
+              <span>STORY BEHIND THE CAFE &bull; GABBAR (&ldquo;GABBU&rdquo;)</span>
+            </div>
+
+            <h2 class="intro-heading">
+              Our Quiet <em class="editorial-italic">Miracle,</em> Our Luck &amp; Our Constant.
+            </h2>
+
+            <div class="intro-visual-composition">
+              <div class="intro-primary-frame" style="aspect-ratio: 4 / 4.2;">
+                <img
+                  src="assets/gabbu/gabbu-mountain-balcony.jpg"
+                  alt="Gabbu on the wooden mountain balcony in the quiet hills of Manali"
+                  style="object-position: center 35%;"
+                />
+              </div>
+              <div class="intro-secondary-frame">
+                <img
+                  src="assets/gabbu/gabbu-winter-snow.jpg"
+                  alt="Gabbu in fresh winter snow in Manali"
+                  style="object-position: center 55%;"
+                />
+              </div>
+            </div>
+
+            <div class="passport-story-photo-pair">
+              <img
+                src="assets/gabbu/gabbu-twilight-lights.jpg"
+                alt="Gabbu resting beneath warm evening string lights"
+                loading="lazy"
+                decoding="async"
+                style="width: 100%; aspect-ratio: 4/3; object-fit: cover; object-position: center 65%; border: 1px solid var(--brown-taupe-border);"
+              />
+              <img
+                src="assets/gabbu/gabbu-portrait-garden.jpg"
+                alt="Portrait of Gabbar (Gabbu)"
+                loading="lazy"
+                decoding="async"
+                style="width: 100%; aspect-ratio: 4/3; object-fit: cover; object-position: center 22%; border: 1px solid var(--brown-taupe-border);"
+              />
+            </div>
+          </div>
+
+          <!-- Right Column: Verbatim Editable Story Behind the Cafe (Injected from PASSPORT_CONFIG) -->
+          <div class="intro-right-column">
+            <div class="intro-prose" id="editableGabbuStoryContainer" style="gap: 1.15rem;">
+              <!-- Populated cleanly from PASSPORT_CONFIG.storyBehindTheCafe in passport.js -->
+            </div>
+
+            <div class="intro-signature-row" style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--brown-taupe-border);">
+              <div class="founder-signoff">
+                <span class="sign-script">&ldquo;A Dog Behind the Good Times.&rdquo;</span>
+                <span class="sign-role">GABBU’S &mdash; Kitchen | Bar | Bakery</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         6. CURRENT & UPCOMING LOCATIONS (MANALI CONFIRMED / ZIRAKPUR IN PROGRESS)
+         ====================================================================== -->
+    <section class="visit-section" id="locations" style="border-top: 1px solid var(--brown-taupe-border);">
+      <div class="section-container">
+        <div class="eyebrow-label">
+          <span class="index-num">04</span>
+          <span>Sanctuary Locations</span>
+        </div>
+        <h2 class="section-title-large">
+          Where to Begin Your <em class="editorial-italic">Passport.</em>
+        </h2>
+
+        <div class="locations-dual-grid">
+          <!-- Confirmed Location: Gabbu's Manali -->
+          <article class="location-status-card confirmed-branch">
+            <div>
+              <span class="branch-badge-live">&#9679; CURRENT CONFIRMED LOCATION</span>
+              <h3 class="serif-display" style="font-size: 2.3rem; color: var(--ivory-light); margin-bottom: 0.4rem;">
+                Gabbu’s Manali
+              </h3>
+              <p style="font-size: 0.78rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--warm-beige); margin-bottom: 1.25rem;">
+                Kitchen &nbsp;|&nbsp; Bar &nbsp;|&nbsp; Bakery &nbsp;&bull;&nbsp; Open Now in Manali
+              </p>
+
+              <div style="aspect-ratio: 16 / 9; overflow: hidden; border: 1px solid var(--brown-taupe-border); margin-bottom: 1.35rem;">
+                <img
+                  src="assets/cafe/manali-exterior-facade.jpg"
+                  alt="Gabbu's Manali exterior storefront and patio seating among the pine trees"
+                  style="width: 100%; height: 100%; object-fit: cover; object-position: center 42%;"
+                />
+              </div>
+
+              <p style="color: var(--ivory-soft); font-size: 0.94rem; font-weight: 300; line-height: 1.7; margin-bottom: 1.5rem;">
+                Our flagship sanctuary in the quiet, beautiful hills of Manali—where Gabbu first showed up and where your Passport stamp journey begins today.
+              </p>
+            </div>
+
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+              <a
+                href="https://share.google/vINamWOS2OMTypzUA"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-primary"
+              >
+                Visit Gabbu’s Manali (Google Maps) &nearr;
+              </a>
+            </div>
+          </article>
+
+          <!-- In Progress Location: Gabbu's Zirakpur -->
+          <article class="location-status-card">
+            <div>
+              <span class="branch-badge-upcoming">&#9675; IN PROGRESS &bull; UPCOMING LOCATION</span>
+              <h3 class="serif-display" style="font-size: 2.3rem; color: var(--ivory-light); margin-bottom: 0.4rem;">
+                Gabbu’s Zirakpur
+              </h3>
+              <p style="font-size: 0.78rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--brown-taupe); margin-bottom: 1.25rem;">
+                Kitchen &nbsp;|&nbsp; Bar &nbsp;|&nbsp; Bakery &nbsp;&bull;&nbsp; Currently In Progress
+              </p>
+
+              <div class="editorial-asset-placeholder" style="min-height: 220px; margin-bottom: 1.35rem;">
+                <span class="placeholder-category-code">UPCOMING SANCTUARY &bull; IN PROGRESS</span>
+                <h4 class="placeholder-title">Gabbu’s Zirakpur &mdash; Coming Soon</h4>
+                <p class="placeholder-sub">Currently in progress. Official photography and opening details to be unveiled upon completion.</p>
+              </div>
+
+              <p style="color: var(--ivory-muted); font-size: 0.94rem; font-weight: 300; line-height: 1.7; margin-bottom: 1.5rem;">
+                The next chapter of the Gabbu’s journey is currently being built in Zirakpur—bringing our Kitchen, Bar, and Bakery warmth to a new home soon.
+              </p>
+            </div>
+
+            <div>
+              <span style="font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--warm-beige);">
+                Status: Construction &amp; Curation In Progress
+              </span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         7. FINAL PASSPORT CULMINATION SECTION
+         ====================================================================== -->
+    <section class="reservation-cta-section" id="get-passport">
+      <div class="reservation-bg-media">
+        <img src="assets/cafe/manali-interior-dining.jpg" alt="Gabbu's Manali interior dining room" />
+        <div class="reservation-bg-overlay"></div>
+      </div>
+
+      <div class="reservation-inner">
+        <div class="eyebrow-label" style="justify-content: center;">
+          <span class="index-num">GABBU’S PASSPORT</span>
+          <span>Kitchen | Bar | Bakery</span>
+        </div>
+
+        <h2 class="reservation-headline" style="line-height: 1.08;">
+          10 STAMPS.<br/>
+          <em class="editorial-italic">GOOD TIMES.</em><br/>
+          A LITTLE SOMETHING BACK.
+        </h2>
+
+        <p class="reservation-subcopy">
+          5th Stamp: <strong>Any Beverage Free</strong> &nbsp;&bull;&nbsp;
+          7th Stamp: <strong>Any Dessert Free</strong> &nbsp;&bull;&nbsp;
+          10th Stamp: <strong>Any Starter Free</strong>
+        </p>
+
+        <div class="reservation-dual-buttons">
+          <a href="https://share.google/vINamWOS2OMTypzUA" target="_blank" rel="noopener" class="btn btn-primary">
+            GET YOUR PASSPORT &rarr;
+          </a>
+          <a href="locations.html" class="btn btn-outline">
+            VISIT GABBU’S &rarr;
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Shared Footer with Sleeping Gabbu Background -->
+  <footer class="site-footer">
+    <div class="footer-sleeping-gabbu-bg" aria-hidden="true">
+      <img
+        src="assets/gabbu/gabbu-sleeping-footer.jpg"
+        alt=""
+        class="footer-sleeping-gabbu-img"
+        loading="lazy"
+        decoding="async"
+      />
+      <div class="footer-sleeping-gabbu-scrim"></div>
+    </div>
+    <div class="section-container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-logo" style="margin-bottom: 1rem;">
+            <img src="assets/logo/gabbus-official-logo-nav.svg" alt="Gabbu's Logo" class="brand-logo-img"  width="150" height="42" />
+          </a>
+          <p data-editable-tagline>&ldquo;A Dog Behind the Good Times.&rdquo;</p>
+        </div>
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">Destinations</h4>
+          <ul class="footer-nav-list">
+            <li><a href="brewing.html">What’s Brewing</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="locations.html">Stores</a></li>
+            <li><a href="passport.html" class="active">Gabbu’s Passport &#10022;</a></li>
+            <li><a href="blog.html">Gabbu’s Journal (Blog)</a></li>
+            <li><a href="live.html">Gabbu’s Live</a></li>
+            <li><a href="story.html">Gabbu’s Story</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">Manali Sanctuary</h4>
+          <ul class="footer-hours-list">
+            <li><span>Open Daily</span>09:00 AM – 11:30 PM</li>
+            <li style="margin-top: 0.45rem;">
+              <a href="https://share.google/vINamWOS2OMTypzUA" target="_blank" rel="noopener" class="link-editorial">Google Maps Pin &nearr;</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom-bar">
+        <span>&copy; 2026 GABBU’S — Kitchen | Bar | Bakery.</span>
+        <span>In the Hills of Manali</span>
+      </div>
+      <div class="footer-developer-credit">
+        <span class="dev-credit-prefix">Crafted with creativity by</span>
+        <a href="https://www.linkedin.com/in/samarth123/" target="_blank" rel="noopener noreferrer" class="dev-credit-link" aria-label="Samarth Shukla on LinkedIn">
+          <svg class="dev-linkedin-icon" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+          </svg>
+          <span class="dev-author-name">Samarth Shukla</span>
+        </a>
+        <span class="dev-credit-dot" aria-hidden="true">&bull;</span>
+        <span class="dev-credit-role">Web Developer</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="passport.js"></script>
+  <script src="app.js?v=20261001_v5"></script>
+</body>
+</html>

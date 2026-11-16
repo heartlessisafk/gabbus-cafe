@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Gabbu&rsquo;s Stores &mdash; Manali &amp; Zirakpur | Where To, Man?</title>
+  <meta name="description" content="Where to, man? Choose your destination — visit Gabbu's flagship sanctuary in Old Manali (Now Brewing) or preview our upcoming house in Zirakpur (Opening Soon)." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20261001_v5" />
+</head>
+<body class="page-locations">
+
+  <!-- Film Grain Overlay -->
+  <div class="film-grain" aria-hidden="true"></div>
+
+  <!-- Global Navigation -->
+  <header class="site-header" id="siteHeader">
+    <div class="nav-inner">
+      <a href="index.html" class="brand-logo" aria-label="GABBU'S — Kitchen | Bar | Bakery Home">
+        <img src="assets/logo/gabbus-official-logo-nav.svg" alt="GABBU’S — Kitchen | Bar | Bakery" class="brand-logo-img"  width="150" height="42" />
+      </a>
+
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="brewing.html">What’s Brewing</a></li>
+          <li><a href="locations.html" class="active" aria-current="page">Stores</a></li>
+          <li><a href="passport.html">Gabbu&rsquo;s Passport</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="live.html">Gabbu&rsquo;s Live</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="menu.html" class="btn btn-primary nav-reserve-btn">
+          OPEN MENU &rarr;
+        </a>
+        <button type="button" class="menu-toggle" id="menuToggle" aria-label="Toggle Menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Global Top-Left Back Control -->
+  <a href="index.html" class="global-back-btn" id="globalBackBtn" data-back-fallback="index.html" aria-label="Back">
+    <span class="global-back-arrow" aria-hidden="true">&larr;</span>
+    <span class="global-back-text">BACK</span>
+  </a>
+
+  <!-- Mobile Navigation Overlay -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay" aria-hidden="true">
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link"><span>Home</span><span class="nav-idx">01</span></a></li>
+      <li><a href="brewing.html" class="mobile-nav-link"><span>What’s Brewing</span><span class="nav-idx">02</span></a></li>
+      <li><a href="menu.html" class="mobile-nav-link"><span>Menu</span><span class="nav-idx">03</span></a></li>
+      <li><a href="locations.html" class="mobile-nav-link active"><span>Stores</span><span class="nav-idx">04</span></a></li>
+      <li><a href="passport.html" class="mobile-nav-link"><span>Gabbu&rsquo;s Passport</span><span class="nav-idx">05</span></a></li>
+      <li><a href="blog.html" class="mobile-nav-link"><span>Blog</span><span class="nav-idx">06</span></a></li>
+      <li><a href="live.html" class="mobile-nav-link"><span>Gabbu&rsquo;s Live</span><span class="nav-idx">07</span></a></li>
+      <li><a href="story.html" class="mobile-nav-link"><span>Gabbu&rsquo;s Story</span><span class="nav-idx">08</span></a></li>
+    </ul>
+
+    <div style="margin: 1.5rem 0;">
+      <a href="menu.html" class="btn btn-primary" style="width: 100%; display: flex; justify-content: center;">
+        OPEN MENU &rarr;
+      </a>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       1. CINEMATIC CAR JOURNEY -> "WHERE TO, MAN?" -> DESTINATION SELECTION
+       ======================================================================== -->
+  <section class="stores-journey-hero" id="storesJourneyHero">
+    <div class="stores-journey-backdrop" aria-hidden="true">
+      <img
+        src="assets/cafe/manali-exterior-facade.jpg"
+        alt=""
+        class="stores-journey-bg-img"
+        id="storesJourneyBgImg"
+      />
+      <div class="stores-headlight-beam"></div>
+      <div class="stores-journey-vignette"></div>
+      <!-- Animated Mountain Highway Dash Line -->
+      <div class="stores-highway-horizon">
+        <span class="road-center-line"></span>
+      </div>
+    </div>
+
+    <div class="container stores-journey-container">
+      <div class="stores-journey-stage reveal-up">
+
+        <!-- Cinematic Car Journey Badge with Gabbu -->
+        <div class="journey-companion-pill">
+          <img src="assets/gabbu/gabbu-portrait-garden.jpg" alt="Gabbu" class="journey-gabbu-avatar" />
+          <span>GABBU&rsquo;S ROAD DISPATCH &bull; HIMALAYAN HIGHWAY TO THE PLAINS</span>
+        </div>
+
+        <h1 class="journey-where-to-title">&ldquo;WHERE TO, MAN?&rdquo;</h1>
+
+        <p class="journey-where-to-sub">
+          Choose your destination along the journey &mdash; climb into the pines of Old Manali or set course for our upcoming house in Zirakpur.
+        </p>
+
+        <!-- Interactive Destination Choice Controls -->
+        <div class="journey-destination-selector" role="tablist" aria-label="Choose Destination">
+          <button
+            type="button"
+            class="journey-dest-choice is-selected"
+            data-select-store="ALL"
+            role="tab"
+            aria-selected="true"
+          >
+            <span class="dest-choice-kicker">BOTH HOUSES</span>
+            <span class="dest-choice-name">ALL STORES</span>
+          </button>
+
+          <button
+            type="button"
+            class="journey-dest-choice"
+            data-select-store="manali"
+            role="tab"
+            aria-selected="false"
+          >
+            <span class="dest-choice-kicker">
+              <i class="status-dot-live"></i> NOW BREWING
+            </span>
+            <span class="dest-choice-name">MANALI</span>
+          </button>
+
+          <button
+            type="button"
+            class="journey-dest-choice"
+            data-select-store="zirakpur"
+            role="tab"
+            aria-selected="false"
+          >
+            <span class="dest-choice-kicker">
+              <i class="status-dot-soon"></i> OPENING SOON
+            </span>
+            <span class="dest-choice-name">ZIRAKPUR</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       2. COMPACT EDITORIAL LOCATION DIRECTORY
+       Controlled width, generous breathing space, scannable 8-point hierarchy:
+       1. LOCATION NAME  2. STATUS  3. SHORT DESCRIPTION  4. THIN RULE
+       5. ADDRESS  6. HOURS  7. CONTACT  8. PROPORTIONATE MAP + VIEW MENU ->
+       ======================================================================== -->
+  <section class="stores-directory-section" id="storesDirectorySection">
+    <div class="stores-compact-container">
+
+      <div class="stores-directory-grid" id="storesDirectoryGrid">
+
+        <!-- ================================================================
+             COMPACT CARD 1: MANALI (NOW BREWING)
+             ================================================================ -->
+        <article class="store-compact-card" id="location-manali" data-store-card="manali">
+          <div class="store-card-header-top">
+            <span class="store-index-label">01 / HIMACHAL PRADESH</span>
+            <span class="store-compact-status is-live">
+              <i class="dot"></i> NOW BREWING
+            </span>
+          </div>
+
+          <div class="store-compact-media">
+            <img
+              src="assets/cafe/manali-exterior-facade.jpg"
+              alt="Gabbu's Manali Sanctuary"
+              class="store-compact-img"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="store-compact-body">
+            <div class="store-title-row">
+              <h2 class="store-compact-name">MANALI</h2>
+              <span class="store-compact-status-sub">NOW BREWING</span>
+            </div>
+
+            <p class="store-compact-desc">
+              Our flagship mountain café, wood-fired kitchen, and evening sanctuary nestled in the cedar hills of Old Manali.
+            </p>
+
+            <hr class="store-thin-divider" />
+
+            <dl class="store-compact-meta">
+              <div class="store-meta-row">
+                <dt>ADDRESS</dt>
+                <dd data-field="manali-address">Old Manali, Manali, Himachal Pradesh 175131</dd>
+              </div>
+              <div class="store-meta-row">
+                <dt>HOURS</dt>
+                <dd data-field="manali-hours">Daily &bull; 9:00 AM &ndash; 11:30 PM</dd>
+              </div>
+              <div class="store-meta-row">
+                <dt>CONTACT</dt>
+                <dd data-field="manali-contact">
+                  Walk-ins Welcome &bull; <a href="https://www.instagram.com/gabbus.in" target="_blank" rel="noopener">@gabbus.in &nearr;</a>
+                </dd>
+              </div>
+            </dl>
+
+            <!-- Proportionate Compact Map Preview -->
+            <div class="store-compact-map-box">
+              <div class="store-compact-map-bar">
+                <span>MAP</span>
+                <a href="https://share.google/vINamWOS2OMTypzUA" target="_blank" rel="noopener" class="store-map-open-link">
+                  OPEN IN GOOGLE MAPS &rarr;
+                </a>
+              </div>
+              <div class="store-compact-map-frame">
+                <iframe
+                  title="Gabbu's Manali Map"
+                  src="https://www.google.com/maps?q=Old+Manali,+Manali,+Himachal+Pradesh+175131&output=embed"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
+
+            <div class="store-compact-footer">
+              <a href="menu.html" class="store-view-menu-btn">
+                <span>VIEW MENU &rarr;</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ================================================================
+             COMPACT CARD 2: ZIRAKPUR (OPENING SOON)
+             ================================================================ -->
+        <article class="store-compact-card" id="location-zirakpur" data-store-card="zirakpur">
+          <div class="store-card-header-top">
+            <span class="store-index-label">02 / CHANDIGARH TRICITY</span>
+            <span class="store-compact-status is-soon">
+              <i class="dot"></i> OPENING SOON
+            </span>
+          </div>
+
+          <div class="store-compact-media">
+            <img
+              src="assets/spaces/bar-space.jpg"
+              alt="Gabbu's Zirakpur Upcoming House"
+              class="store-compact-img"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="store-compact-body">
+            <div class="store-title-row">
+              <h2 class="store-compact-name">ZIRAKPUR</h2>
+              <span class="store-compact-status-sub is-soon-text">OPENING SOON</span>
+            </div>
+
+            <p class="store-compact-desc">
+              Our upcoming specialty coffee roastery bar, wood-fired dining room, and evening house in the Chandigarh&ndash;Zirakpur corridor.
+            </p>
+
+            <hr class="store-thin-divider" />
+
+            <dl class="store-compact-meta">
+              <div class="store-meta-row">
+                <dt>ADDRESS</dt>
+                <dd data-field="zirakpur-address">Zirakpur Hospitality Corridor, Chandigarh&ndash;Ambala Highway, Punjab</dd>
+              </div>
+              <div class="store-meta-row">
+                <dt>HOURS</dt>
+                <dd data-field="zirakpur-hours">Opening Soon &bull; 9:00 AM &ndash; 11:30 PM</dd>
+              </div>
+              <div class="store-meta-row">
+                <dt>CONTACT</dt>
+                <dd data-field="zirakpur-contact">
+                  Opening Updates &bull; <a href="https://www.instagram.com/gabbus.in" target="_blank" rel="noopener">@gabbus.in &nearr;</a>
+                </dd>
+              </div>
+            </dl>
+
+            <!-- Proportionate Compact Map Preview -->
+            <div class="store-compact-map-box">
+              <div class="store-compact-map-bar">
+                <span>MAP</span>
+                <a href="https://www.google.com/maps?q=Zirakpur,+Punjab" target="_blank" rel="noopener" class="store-map-open-link">
+                  OPEN IN GOOGLE MAPS &rarr;
+                </a>
+              </div>
+              <div class="store-compact-map-frame">
+                <iframe
+                  title="Gabbu's Zirakpur Map"
+                  src="https://www.google.com/maps?q=Zirakpur,+Punjab&output=embed"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
+
+            <div class="store-compact-footer">
+              <a href="menu.html" class="store-view-menu-btn">
+                <span>VIEW MENU &rarr;</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Shared Footer with Sleeping Gabbu Background -->
+    <footer class="site-footer">
+    <div class="footer-sleeping-gabbu-bg" aria-hidden="true">
+      <img
+        src="assets/gabbu/gabbu-sleeping-footer.jpg"
+        alt="Gabbu the German Shepherd sleeping peacefully in the warm evening glow"
+        class="footer-sleeping-gabbu-img"
+        loading="lazy"
+        decoding="async"
+      />
+      <div class="footer-sleeping-gabbu-scrim"></div>
+    </div>
+    <div class="section-container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-logo" aria-label="GABBU'S Home">
+            <img src="assets/logo/gabbus-official-logo-nav.svg" alt="Gabbu's Logo" class="brand-logo-img"  width="150" height="42" />
+          </a>
+          <p data-editable-tagline>&ldquo;A Dog Behind the Good Times.&rdquo;</p>
+          <p style="margin-top: 0.65rem; font-size: 0.84rem; color: var(--ivory-muted);">
+            A mountain sanctuary in the hills of Manali inspired by our German Shepherd, Gabbar (&ldquo;Gabbu&rdquo;).
+          </p>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">Destinations</h4>
+          <ul class="footer-nav-list">
+            <li><a href="brewing.html">What’s Brewing</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="locations.html" class="active">Stores</a></li>
+            <li><a href="passport.html">Gabbu’s Passport &#10022;</a></li>
+            <li><a href="blog.html">Gabbu’s Journal (Blog)</a></li>
+            <li><a href="live.html">Gabbu’s Live</a></li>
+            <li><a href="story.html">Gabbu’s Story</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">Sanctuary Hours &amp; Pin</h4>
+          <ul class="footer-hours-list">
+            <li>
+              <span>Manali Branch (Open Now)</span>
+              09:00 AM – 11:30 PM Daily
+            </li>
+            <li>
+              <span>Zirakpur Highway</span>
+              Upcoming Sanctuary (In Progress)
+            </li>
+            <li style="margin-top: 0.45rem;">
+              <a href="https://share.google/vINamWOS2OMTypzUA" target="_blank" rel="noopener" class="link-editorial">
+                Google Maps Pin &nearr;
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <span>&copy; 2026 GABBU’S — Kitchen | Bar | Bakery. Built with love &amp; loyalty for Gabbar (&ldquo;Gabbu&rdquo;).</span>
+        <span>In the Hills of Manali &amp; Beyond</span>
+      </div>
+      <div class="footer-developer-credit">
+        <span class="dev-credit-prefix">Crafted with creativity by</span>
+        <a href="https://www.linkedin.com/in/samarth123/" target="_blank" rel="noopener noreferrer" class="dev-credit-link" aria-label="Samarth Shukla on LinkedIn">
+          <svg class="dev-linkedin-icon" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+          </svg>
+          <span class="dev-author-name">Samarth Shukla</span>
+        </a>
+        <span class="dev-credit-dot" aria-hidden="true">&bull;</span>
+        <span class="dev-credit-role">Web Developer</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Structured Programmable Stores Data Layer -->
+  <script>
+    window.GABBUS_LOCATIONS_DATA = {
+      manali: {
+        id: "manali",
+        name: "MANALI",
+        statusBadge: "NOW BREWING",
+        isLive: true,
+        address: "Old Manali, Manali, Himachal Pradesh 175131",
+        hours: "Daily • 9:00 AM – 11:30 PM",
+        googleMapsUrl: "https://share.google/vINamWOS2OMTypzUA",
+        menuUrl: "menu.html"
+      },
+      zirakpur: {
+        id: "zirakpur",
+        name: "ZIRAKPUR",
+        statusBadge: "OPENING SOON",
+        isLive: false,
+        address: "Zirakpur Hospitality Corridor, Chandigarh–Ambala Highway, Punjab",
+        hours: "Opening Soon • 9:00 AM – 11:30 PM",
+        googleMapsUrl: "https://www.google.com/maps?q=Zirakpur,+Punjab",
+        menuUrl: "menu.html"
+      }
+    };
+  </script>
+  <script src="app.js?v=20261001_v5"></script>
+</body>
+</html>

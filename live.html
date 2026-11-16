@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Gabbu&rsquo;s Live &mdash; Where Gabbu&rsquo;s Comes Alive | Weekend Gatherings, Music &amp; Bonfire Nights</title>
+  <meta name="description" content="Where Gabbu's comes alive. Weekend nights, music, conversations, bonfire gatherings, and moments worth staying for in the hills of Manali." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20261001_v5" />
+</head>
+<body class="page-live">
+
+  <!-- Film Grain Overlay -->
+  <div class="film-grain" aria-hidden="true"></div>
+
+  <!-- ========================================================================
+       1. GLOBAL HEADER — EXACT ESTABLISHED LOGO PROPORTIONS & BALANCED NAV
+       (No extra left-side Menu button; single global OPEN MENU CTA on the right)
+       ======================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="nav-inner">
+      <a href="index.html" class="brand-logo" aria-label="GABBU'S — Kitchen | Bar | Bakery Home">
+        <img
+          src="assets/logo/gabbus-official-logo-nav.svg"
+          alt="GABBU’S — Kitchen | Bar | Bakery"
+          class="brand-logo-img"
+         width="150" height="42" />
+      </a>
+
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="brewing.html">What’s Brewing</a></li>
+          <li><a href="locations.html">Stores</a></li>
+          <li><a href="passport.html">Gabbu&rsquo;s Passport</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="live.html" class="active" aria-current="page">Gabbu&rsquo;s Live</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="menu.html" class="btn btn-primary nav-reserve-btn">
+          OPEN MENU &rarr;
+        </a>
+        <button type="button" class="menu-toggle" id="menuToggle" aria-label="Toggle Menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Global Top-Left Back Control -->
+  <a href="index.html" class="global-back-btn" id="globalBackBtn" data-back-fallback="index.html" aria-label="Back">
+    <span class="global-back-arrow" aria-hidden="true">&larr;</span>
+    <span class="global-back-text">BACK</span>
+  </a>
+
+  <!-- Full-Screen Animated Mobile Navigation Overlay -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay" aria-hidden="true">
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link"><span>Home</span><span class="nav-idx">01</span></a></li>
+      <li><a href="brewing.html" class="mobile-nav-link"><span>What’s Brewing</span><span class="nav-idx">02</span></a></li>
+      <li><a href="menu.html" class="mobile-nav-link"><span>Menu</span><span class="nav-idx">03</span></a></li>
+      <li><a href="locations.html" class="mobile-nav-link"><span>Stores</span><span class="nav-idx">04</span></a></li>
+      <li><a href="passport.html" class="mobile-nav-link"><span>Gabbu&rsquo;s Passport</span><span class="nav-idx">05</span></a></li>
+      <li><a href="blog.html" class="mobile-nav-link"><span>Blog</span><span class="nav-idx">06</span></a></li>
+      <li><a href="live.html" class="mobile-nav-link active"><span>Gabbu&rsquo;s Live</span><span class="nav-idx">07</span></a></li>
+      <li><a href="story.html" class="mobile-nav-link"><span>Gabbu&rsquo;s Story</span><span class="nav-idx">08</span></a></li>
+    </ul>
+
+    <div style="margin: 1.5rem 0;">
+      <a href="menu.html" class="btn btn-primary" style="width: 100%; display: flex; justify-content: center;">
+        OPEN MENU &rarr;
+      </a>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       2. OPENING SCROLL-DRIVEN PIXEL-ART BONFIRE PARTY SCENE (0% -> 100%)
+       Short, stylized retro pixel-art nighttime forest clearing with 7 distinct
+       pixel-art friends and Gabbu (our German Shepherd) sitting naturally
+       by the fire. Scroll drives 0% Calm -> 20% Foot Tap/Guitar -> 40% Standing
+       -> 60% Full Pixel Party -> 80% Peak -> 100% GABBU'S LIVE Reveal.
+       ======================================================================== -->
+  <section class="bonfire-cinema-track" id="liveBonfireCinemaTrack" aria-label="Gabbu's Live Pixel-Art Bonfire Party">
+    <div class="bonfire-sticky-viewport" id="bonfireStickyViewport">
+
+      <!-- Pixel-Art Camera Rig Controlled by Short Scroll Timeline -->
+      <div class="bonfire-camera-rig" id="bonfireCameraRig">
+        <canvas class="bonfire-pixel-canvas" id="bonfireFlameCanvas" aria-label="Pixel-art animation of friends and Gabbu the German Shepherd celebrating around a nighttime forest bonfire"></canvas>
+        <div class="bonfire-foreground-vignette" aria-hidden="true"></div>
+      </div>
+
+      <!-- Subtle Top-Right Scene Progress & Atmosphere Indicator -->
+      <div class="bonfire-hud-top" id="bonfireHudTop">
+        <div class="bonfire-hud-tags">
+          <span>PIXEL NIGHT</span>
+          <span class="dot">&bull;</span>
+          <span>BONFIRE</span>
+          <span class="dot">&bull;</span>
+          <span>GUITAR</span>
+          <span class="dot">&bull;</span>
+          <span>GABBU</span>
+        </div>
+        <div class="bonfire-progress-pill">
+          <span class="bonfire-live-dot"></span>
+          <span id="bonfireStageLabel">0% &bull; CALM BY THE BONFIRE</span>
+        </div>
+      </div>
+
+      <!-- Scroll Story Whisper Caption (0% -> 78%) -->
+      <div class="bonfire-narrative-whisper" id="bonfireNarrativeWhisper">
+        <span class="whisper-kicker" id="bonfireWhisperKicker">01 &bull; FRIENDS CHILLING BY THE FIRE</span>
+        <p class="whisper-line" id="bonfireWhisperLine">
+          A quiet forest clearing at night &mdash; friends sitting calmly around the crackling fire with Gabbu right in the center.
+        </p>
+        <div class="bonfire-scroll-cue" id="bonfireScrollCue">
+          <span class="scroll-cue-mouse"><i></i></span>
+          <span>SCROLL TO START THE PARTY</span>
+        </div>
+      </div>
+
+      <!-- ====================================================================
+           FINAL SCENE REVEAL (78% -> 100%): TRANSITION INTO GABBU'S LIVE IDENTITY
+           ==================================================================== -->
+      <div class="bonfire-identity-reveal" id="bonfireIdentityReveal">
+        <div class="bonfire-identity-card">
+          <div class="eyebrow-row">
+            <span class="eyebrow-line"></span>
+            <span class="eyebrow-text">GABBU&rsquo;S LIVE</span>
+            <span class="eyebrow-line"></span>
+          </div>
+
+          <h1 class="bonfire-identity-title">WHERE GABBU&rsquo;S COMES ALIVE.</h1>
+
+          <p class="bonfire-identity-subtitle">
+            &ldquo;Weekend nights, music, conversations, gatherings and moments worth staying for.&rdquo;
+          </p>
+
+          <div class="bonfire-identity-actions">
+            <a href="#whatIsGabbusLive" class="btn-gold">
+              <span>EXPLORE WEEKEND NIGHTS</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       3. MINIMAL EDITORIAL INTRO + 3 ESSENTIAL LIVE EXPERIENCES
+       Less content, more impact: short atmospheric intro + 3 spacious visual cards.
+       ======================================================================== -->
+  <section class="live-minimal-showcase" id="whatIsGabbusLive">
+    <div class="container">
+
+      <!-- Short Minimal Intro -->
+      <header class="live-minimal-header reveal-up" id="liveCategoriesSection">
+        <div class="eyebrow-row">
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-text">GABBU&rsquo;S LIVE &bull; WEEKEND NIGHTS</span>
+          <span class="eyebrow-line"></span>
+        </div>
+        <h2 class="live-minimal-title">Nights Around the Fire.</h2>
+        <p class="live-minimal-sub">
+          Acoustic sessions, vinyl selectors, and candlelit tables in the hills &mdash; with Gabbu at the heart of every gathering.
+        </p>
+      </header>
+
+      <!-- 3 Essential Visual-First Cards -->
+      <div class="live-minimal-cards-grid">
+
+        <!-- 01. LIVE MUSIC -->
+        <article class="live-pillar-card live-card-minimal reveal-up" data-category="LIVE MUSIC">
+          <div class="live-pillar-media" data-clip-reveal>
+            <img src="assets/live/live-acoustic-session.jpg" alt="Unplugged Fireside Music at Gabbu's" class="live-pillar-img" />
+            <div class="live-pillar-overlay"></div>
+            <span class="live-pillar-tag">01 &bull; LIVE MUSIC</span>
+          </div>
+          <div class="live-pillar-body">
+            <h3>Fireside Acoustic Sessions</h3>
+            <p>
+              Unplugged guitars, folk vocals, and live strings by the courtyard fire.
+            </p>
+            <div class="live-pillar-footer">
+              <span class="pillar-cadence">Fri &amp; Sat Dusk</span>
+              <a href="https://www.instagram.com/gabbus.in" target="_blank" rel="noopener" class="pillar-link">LINEUP &nearr;</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 02. DJ & VINYL NIGHTS -->
+        <article class="live-pillar-card live-card-minimal reveal-up" data-category="DJ NIGHTS">
+          <div class="live-pillar-media" data-clip-reveal>
+            <img src="assets/spaces/bar-space.jpg" alt="Analog Vinyl & DJ Nights at Gabbu's" class="live-pillar-img" />
+            <div class="live-pillar-overlay"></div>
+            <span class="live-pillar-tag">02 &bull; DJ NIGHTS</span>
+          </div>
+          <div class="live-pillar-body">
+            <h3>Vinyl &amp; After-Dark Grooves</h3>
+            <p>
+              Warm analog selectors and deep organic house late into the mountain night.
+            </p>
+            <div class="live-pillar-footer">
+              <span class="pillar-cadence">Weekend Nights</span>
+              <a href="https://www.instagram.com/gabbus.in" target="_blank" rel="noopener" class="pillar-link">RESERVE &nearr;</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 03. PRIVATE GATHERINGS -->
+        <article class="live-pillar-card live-card-minimal reveal-up" data-category="PRIVATE EVENTS">
+          <div class="live-pillar-media" data-clip-reveal>
+            <img src="assets/live/live-intimate-supper-drinks.jpg" alt="Private Suppers & Celebrations at Gabbu's" class="live-pillar-img" />
+            <div class="live-pillar-overlay"></div>
+            <span class="live-pillar-tag">03 &bull; PRIVATE GATHERINGS</span>
+          </div>
+          <div class="live-pillar-body">
+            <h3>Long-Table Suppers &amp; Buyouts</h3>
+            <p>
+              Intimate celebrations, wood-fired feasts, and private bonfire evenings.
+            </p>
+            <div class="live-pillar-footer">
+              <span class="pillar-cadence">By Inquiry</span>
+              <a href="https://www.instagram.com/gabbus.in" target="_blank" rel="noopener" class="pillar-link">INQUIRE &nearr;</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- ====================================================================
+           THE GABBU'S NOTICEBOARD — 3 COMPACT STACKED EVENT CARDS
+           ==================================================================== -->
+      <div class="gabbu-noticeboard-wrap reveal-up" id="liveNoticeboardSection">
+        <div class="gabbu-noticeboard-header">
+          <div class="gabbu-noticeboard-title-group">
+            <span class="gabbu-noticeboard-eyebrow">
+              <i class="noticeboard-paw-dot" aria-hidden="true"></i>
+              THE GABBU&rsquo;S NOTICEBOARD
+            </span>
+            <h2 class="gabbu-noticeboard-heading">Upcoming at Gabbu&rsquo;s.</h2>
+            <p class="gabbu-noticeboard-sub">A few things worth staying for.</p>
+          </div>
+          <span class="gabbu-noticeboard-stamp">
+            <i></i>
+            <span>Concept &amp; Upcoming Editions</span>
+          </span>
+        </div>
+
+        <div class="gabbu-noticeboard-list">
+
+          <!-- EVENT 01 -->
+          <article class="gabbu-notice-card">
+            <div class="gabbu-notice-thumb">
+              <img src="assets/live/live-acoustic-session.jpg" alt="Paws & Acoustic Evenings at Gabbu's Manali" loading="lazy" />
+            </div>
+            <div class="gabbu-notice-content">
+              <div class="gabbu-notice-meta">
+                <span class="notice-pill notice-pill--category">LIVE MUSIC</span>
+                <span class="notice-pill notice-pill--status">Coming Soon</span>
+                <span class="notice-location">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Manali
+                </span>
+              </div>
+              <h3 class="gabbu-notice-title">Paws &amp; Acoustic Evenings</h3>
+              <p class="gabbu-notice-desc">
+                An easy evening of acoustic music, coffee and good company.
+              </p>
+              <div class="gabbu-notice-action-row">
+                <a href="https://www.instagram.com/gabbus.in" target="_blank" rel="noopener" class="gabbu-notice-cta">
+                  <span>KEEP ME POSTED</span>
+                  <span aria-hidden="true">&rarr;</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- EVENT 02 -->
+          <article class="gabbu-notice-card">
+            <div class="gabbu-notice-thumb">
+              <img src="assets/live/live-gabbu-among-guests.jpg" alt="Sunday at Gabbu's Manali" loading="lazy" />
+            </div>
+            <div class="gabbu-notice-content">
+              <div class="gabbu-notice-meta">
+                <span class="notice-pill notice-pill--category">COMMUNITY</span>
+                <span class="notice-pill notice-pill--status">Coming Soon</span>
+                <span class="notice-location">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Manali
+                </span>
+              </div>
+              <h3 class="gabbu-notice-title">Sunday at Gabbu&rsquo;s</h3>
+              <p class="gabbu-notice-desc">
+                A relaxed afternoon of food, conversations and time well spent.
+              </p>
+              <div class="gabbu-notice-action-row">
+                <a href="https://www.instagram.com/gabbus.in" target="_blank" rel="noopener" class="gabbu-notice-cta">
+                  <span>KEEP ME POSTED</span>
+                  <span aria-hidden="true">&rarr;</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- EVENT 03 -->
+          <article class="gabbu-notice-card">
+            <div class="gabbu-notice-thumb">
+              <img src="assets/spaces/bar-space.jpg" alt="Gabbu's After Dark in Manali" loading="lazy" />
+            </div>
+            <div class="gabbu-notice-content">
+              <div class="gabbu-notice-meta">
+                <span class="notice-pill notice-pill--category">SPECIAL NIGHT</span>
+                <span class="notice-pill notice-pill--status">Coming Soon</span>
+                <span class="notice-location">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Manali
+                </span>
+              </div>
+              <h3 class="gabbu-notice-title">Gabbu&rsquo;s After Dark</h3>
+              <p class="gabbu-notice-desc">
+                An intimate night of music, drinks and mountain evenings.
+              </p>
+              <div class="gabbu-notice-action-row">
+                <a href="https://www.instagram.com/gabbus.in" target="_blank" rel="noopener" class="gabbu-notice-cta">
+                  <span>KEEP ME POSTED</span>
+                  <span aria-hidden="true">&rarr;</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Shared Footer with Sleeping Gabbu Background -->
+    <footer class="site-footer">
+    <div class="footer-sleeping-gabbu-bg" aria-hidden="true">
+      <img
+        src="assets/gabbu/gabbu-sleeping-footer.jpg"
+        alt="Gabbu the German Shepherd sleeping peacefully in the warm evening glow"
+        class="footer-sleeping-gabbu-img"
+        loading="lazy"
+        decoding="async"
+      />
+      <div class="footer-sleeping-gabbu-scrim"></div>
+    </div>
+    <div class="section-container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-logo" aria-label="GABBU'S Home">
+            <img src="assets/logo/gabbus-official-logo-nav.svg" alt="Gabbu's Logo" class="brand-logo-img"  width="150" height="42" />
+          </a>
+          <p data-editable-tagline>&ldquo;A Dog Behind the Good Times.&rdquo;</p>
+          <p style="margin-top: 0.65rem; font-size: 0.84rem; color: var(--ivory-muted);">
+            A mountain sanctuary in the hills of Manali inspired by our German Shepherd, Gabbar (&ldquo;Gabbu&rdquo;).
+          </p>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">Destinations</h4>
+          <ul class="footer-nav-list">
+            <li><a href="brewing.html">What’s Brewing</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="locations.html">Stores</a></li>
+            <li><a href="passport.html">Gabbu’s Passport &#10022;</a></li>
+            <li><a href="blog.html">Gabbu’s Journal (Blog)</a></li>
+            <li><a href="live.html" class="active">Gabbu’s Live</a></li>
+            <li><a href="story.html">Gabbu’s Story</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">Sanctuary Hours &amp; Pin</h4>
+          <ul class="footer-hours-list">
+            <li>
+              <span>Manali Branch (Open Now)</span>
+              09:00 AM – 11:30 PM Daily
+            </li>
+            <li>
+              <span>Zirakpur Highway</span>
+              Upcoming Sanctuary (In Progress)
+            </li>
+            <li style="margin-top: 0.45rem;">
+              <a href="https://share.google/vINamWOS2OMTypzUA" target="_blank" rel="noopener" class="link-editorial">
+                Google Maps Pin &nearr;
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <span>&copy; 2026 GABBU’S — Kitchen | Bar | Bakery. Built with love &amp; loyalty for Gabbar (&ldquo;Gabbu&rdquo;).</span>
+        <span>In the Hills of Manali &amp; Beyond</span>
+      </div>
+      <div class="footer-developer-credit">
+        <span class="dev-credit-prefix">Crafted with creativity by</span>
+        <a href="https://www.linkedin.com/in/samarth123/" target="_blank" rel="noopener noreferrer" class="dev-credit-link" aria-label="Samarth Shukla on LinkedIn">
+          <svg class="dev-linkedin-icon" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+          </svg>
+          <span class="dev-author-name">Samarth Shukla</span>
+        </a>
+        <span class="dev-credit-dot" aria-hidden="true">&bull;</span>
+        <span class="dev-credit-role">Web Developer</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js?v=20261001_v5"></script>
+</body>
+</html>

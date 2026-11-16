@@ -1,0 +1,1895 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>What’s Brewing — The Story &amp; Craft of Coffee &bull; GABBU’S</title>
+  <meta name="description" content="What’s Brewing at Gabbu’s — An immersive, focused coffee journey from high-altitude shade-grown origins to 2,050m Himalayan mountain extraction in Old Manali." />
+
+  <!-- Editorial Typography: Cinzel, Cormorant Garamond & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css?v=20261002_v7" />
+  <!-- Scoped Styles for Gabbu's Brew & Signature Blends Experience -->
+  <style>
+    /* --- 1. Introduction Section --- */
+    .brew-intro-section {
+      position: relative;
+      padding: 5rem 0 3.5rem;
+      background: linear-gradient(180deg, #070605 0%, #120e0b 50%, #0d0a08 100%);
+      border-bottom: 1px solid rgba(205, 170, 128, 0.15);
+      overflow: hidden;
+    }
+
+    .brew-intro-editorial-card {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: clamp(2.5rem, 5vw, 4.5rem);
+      align-items: center;
+      background: rgba(22, 17, 13, 0.72);
+      border: 1px solid rgba(205, 170, 128, 0.22);
+      border-radius: 20px;
+      padding: clamp(2rem, 4vw, 3.5rem);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .brew-eyebrow-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--gold-primary, #cdaa80);
+      background: rgba(205, 170, 128, 0.1);
+      border: 1px solid rgba(205, 170, 128, 0.25);
+      padding: 0.4rem 0.95rem;
+      border-radius: 999px;
+      margin-bottom: 1.25rem;
+      font-weight: 600;
+    }
+
+    .brew-pill-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #d4a56a;
+      box-shadow: 0 0 8px #d4a56a;
+    }
+
+    .brew-intro-title {
+      font-family: var(--font-serif, "Cinzel", serif);
+      font-size: clamp(2.4rem, 4.2vw, 3.8rem);
+      line-height: 1.08;
+      color: #fdfaf6;
+      margin: 0 0 0.75rem;
+      letter-spacing: 0.04em;
+    }
+
+    .brew-intro-tagline {
+      font-family: var(--font-display, "Cormorant Garamond", serif);
+      font-size: clamp(1.35rem, 2vw, 1.85rem);
+      font-style: italic;
+      color: var(--warm-beige, #e2cfb8);
+      margin: 0 0 1.25rem;
+      line-height: 1.3;
+    }
+
+    .brew-intro-separator {
+      width: 54px;
+      height: 2px;
+      background: linear-gradient(90deg, #cdaa80, transparent);
+      margin-bottom: 1.5rem;
+    }
+
+    .brew-intro-desc {
+      font-size: clamp(0.98rem, 1.2vw, 1.08rem);
+      line-height: 1.8;
+      color: rgba(253, 250, 246, 0.82);
+      margin: 0 0 1.2rem;
+      font-weight: 300;
+    }
+
+    .brew-intro-punchline {
+      font-family: var(--font-display, "Cormorant Garamond", serif);
+      font-style: italic;
+      font-size: 1.22rem;
+      color: var(--warm-beige, #e2cfb8);
+      border-left: 2px solid #cdaa80;
+      padding-left: 1rem;
+      margin-top: 1.25rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .brew-intro-anchors {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+    }
+
+    .brew-intro-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #cdaa80;
+    }
+
+    .brew-intro-media-frame {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      aspect-ratio: 16 / 10;
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.6);
+      border: 1px solid rgba(205, 170, 128, 0.25);
+      cursor: pointer;
+    }
+
+    .brew-intro-media-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .brew-intro-media-frame:hover img {
+      transform: scale(1.05);
+    }
+
+    .brew-media-overlay-badge {
+      position: absolute;
+      bottom: 1rem;
+      left: 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(14, 11, 9, 0.82);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(205, 170, 128, 0.3);
+      padding: 0.38rem 0.85rem;
+      border-radius: 999px;
+      font-size: 0.74rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #fdfaf6;
+    }
+
+    .media-zoom-hint {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(14, 11, 9, 0.75);
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(205, 170, 128, 0.35);
+      color: #cdaa80;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .brew-intro-media-frame:hover .media-zoom-hint {
+      background: #cdaa80;
+      color: #0e0b09;
+      transform: scale(1.1);
+    }
+
+    /* --- 2. Blends Section & Cards --- */
+    .brew-blends-section {
+      position: relative;
+      padding: 5.5rem 0 6rem;
+      background: radial-gradient(circle at 50% 20%, rgba(38, 28, 20, 0.4) 0%, #0a0807 70%);
+      border-bottom: 1px solid rgba(205, 170, 128, 0.15);
+    }
+
+    .brew-section-heading-wrap {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 3.8rem;
+    }
+
+    .brew-section-title {
+      font-family: var(--font-serif, "Cinzel", serif);
+      font-size: clamp(2.3rem, 4vw, 3.5rem);
+      line-height: 1.15;
+      color: #fdfaf6;
+      margin: 0.5rem 0 1rem;
+      letter-spacing: 0.02em;
+    }
+
+    .brew-section-subtitle {
+      font-size: clamp(0.98rem, 1.2vw, 1.12rem);
+      line-height: 1.7;
+      color: rgba(253, 250, 246, 0.75);
+      margin: 0 auto;
+    }
+
+    .brew-blends-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(2rem, 3.5vw, 3rem);
+      align-items: stretch;
+    }
+
+    .blend-card {
+      position: relative;
+      background: linear-gradient(155deg, rgba(28, 22, 17, 0.88) 0%, rgba(16, 12, 10, 0.95) 100%);
+      border: 1px solid rgba(205, 170, 128, 0.22);
+      border-radius: 20px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 16px 45px rgba(0, 0, 0, 0.5);
+      cursor: pointer;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                  box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                  border-color 0.4s ease;
+      outline: none;
+    }
+
+    .blend-card:hover,
+    .blend-card:focus-visible {
+      transform: translateY(-8px);
+      box-shadow: 0 28px 60px -10px rgba(0, 0, 0, 0.85), 0 0 35px rgba(205, 170, 128, 0.16);
+      border-color: rgba(225, 184, 132, 0.65);
+    }
+
+    .blend-card-ambient-glow {
+      position: absolute;
+      top: -20%;
+      left: 20%;
+      width: 60%;
+      height: 40%;
+      background: radial-gradient(circle, rgba(205, 170, 128, 0.12) 0%, transparent 70%);
+      filter: blur(40px);
+      pointer-events: none;
+      transition: opacity 0.4s ease;
+      opacity: 0.5;
+    }
+
+    .blend-card:hover .blend-card-ambient-glow {
+      opacity: 1;
+    }
+
+    .blend-card-badge-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.4rem 1.6rem 0.8rem;
+      z-index: 2;
+    }
+
+    .blend-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: 0.68rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      font-weight: 700;
+      padding: 0.35rem 0.85rem;
+      border-radius: 999px;
+    }
+
+    .blend-badge-mountain {
+      color: #e5c292;
+      background: rgba(205, 170, 128, 0.15);
+      border: 1px solid rgba(205, 170, 128, 0.35);
+    }
+
+    .blend-badge-signature {
+      color: #79d799;
+      background: rgba(65, 138, 90, 0.18);
+      border: 1px solid rgba(100, 180, 128, 0.4);
+    }
+
+    .blend-card-action-cue {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(244, 234, 220, 0.65);
+      transition: all 0.25s ease;
+    }
+
+    .blend-card:hover .blend-card-action-cue {
+      color: #dfbe95;
+      transform: translateX(3px);
+    }
+
+    .blend-image-viewport {
+      position: relative;
+      width: calc(100% - 2.4rem);
+      margin: 0.4rem auto 0;
+      aspect-ratio: 16 / 11;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(205, 170, 128, 0.2);
+    }
+
+    .blend-image-viewport img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .blend-card:hover .blend-image-viewport img {
+      transform: scale(1.05);
+    }
+
+    .blend-image-scrim {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 60%, rgba(14, 11, 9, 0.75) 100%);
+      pointer-events: none;
+    }
+
+    .blend-image-meta-pill {
+      position: absolute;
+      bottom: 0.85rem;
+      left: 0.85rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #fdfaf6;
+      background: rgba(16, 12, 10, 0.85);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+      border: 1px solid rgba(205, 170, 128, 0.3);
+    }
+
+    .blend-card-body {
+      padding: 1.6rem 1.6rem 1.8rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .blend-series-kicker {
+      font-size: 0.68rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold-primary, #cdaa80);
+      font-weight: 600;
+      display: block;
+      margin-bottom: 0.35rem;
+    }
+
+    .blend-card-title {
+      font-family: var(--font-serif, "Cinzel", serif);
+      font-size: clamp(1.6rem, 2.2vw, 2.15rem);
+      line-height: 1.2;
+      color: #fdfaf6;
+      margin: 0 0 0.4rem;
+      letter-spacing: 0.02em;
+      transition: color 0.3s ease;
+    }
+
+    .blend-card:hover .blend-card-title {
+      color: #eed6b6;
+    }
+
+    .blend-roast-pill {
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      color: var(--warm-beige, #e2cfb8);
+      margin: 0 0 1rem;
+      font-weight: 500;
+    }
+
+    .blend-short-desc {
+      font-size: 0.92rem;
+      line-height: 1.65;
+      color: rgba(253, 250, 246, 0.76);
+      margin: 0 0 1.4rem;
+      flex-grow: 0;
+    }
+
+    /* Specifications Grid */
+    .blend-spec-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.65rem;
+      margin-bottom: 1.6rem;
+      margin-top: auto;
+    }
+
+    .blend-spec-chip {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      background: rgba(14, 11, 9, 0.65);
+      border: 1px solid rgba(205, 170, 128, 0.16);
+      padding: 0.65rem 0.85rem;
+      border-radius: 10px;
+      transition: border-color 0.25s ease, background 0.25s ease;
+    }
+
+    .blend-card:hover .blend-spec-chip {
+      border-color: rgba(205, 170, 128, 0.28);
+      background: rgba(20, 16, 12, 0.85);
+    }
+
+    .spec-chip-wide {
+      grid-column: span 2;
+    }
+
+    .spec-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      background: rgba(205, 170, 128, 0.12);
+      color: #dfbe95;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .spec-meta {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .spec-label {
+      font-size: 0.62rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(244, 234, 220, 0.55);
+      line-height: 1;
+      margin-bottom: 0.25rem;
+    }
+
+    .spec-val {
+      font-size: 0.84rem;
+      color: #fdfaf6;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .blend-action-row {
+      margin-top: 0.5rem;
+    }
+
+    .btn-blend-discover {
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      padding: 0.95rem 1.5rem;
+      border-radius: 999px;
+      background: linear-gradient(135deg, rgba(205, 170, 128, 0.2) 0%, rgba(145, 98, 49, 0.25) 100%);
+      border: 1px solid rgba(205, 170, 128, 0.45);
+      color: #fdfaf6;
+      font-family: inherit;
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .blend-card:hover .btn-blend-discover {
+      background: linear-gradient(135deg, #cdaa80 0%, #a8794c 100%);
+      color: #0e0b09;
+      border-color: #cdaa80;
+      box-shadow: 0 8px 24px rgba(205, 170, 128, 0.35);
+    }
+
+    .btn-blend-discover .btn-arrow {
+      transition: transform 0.3s ease;
+    }
+
+    .blend-card:hover .btn-blend-discover .btn-arrow {
+      transform: translateX(4px);
+    }
+
+    /* --- 3. Closing Section --- */
+    .brew-closing-section {
+      position: relative;
+      padding: 5rem 0 6rem;
+      background: #070605;
+      overflow: hidden;
+    }
+
+    .brew-closing-card {
+      position: relative;
+      border-radius: 22px;
+      overflow: hidden;
+      border: 1px solid rgba(205, 170, 128, 0.25);
+      padding: clamp(3rem, 6vw, 5.5rem) clamp(1.8rem, 4vw, 4rem);
+      text-align: center;
+      box-shadow: 0 25px 65px rgba(0, 0, 0, 0.65);
+    }
+
+    .brew-closing-bg-media {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+
+    .brew-closing-bg-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.42) contrast(1.1);
+      transform: scale(1.02);
+    }
+
+    .brew-closing-scrim {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 50%, rgba(14, 11, 9, 0.7) 0%, rgba(7, 6, 5, 0.94) 85%);
+    }
+
+    .brew-closing-content {
+      position: relative;
+      z-index: 2;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .brew-closing-kicker {
+      display: inline-block;
+      font-size: 0.72rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: #dfbe95;
+      margin-bottom: 0.85rem;
+      font-weight: 600;
+    }
+
+    .brew-closing-title {
+      font-family: var(--font-serif, "Cinzel", serif);
+      font-size: clamp(2.4rem, 4.5vw, 4.2rem);
+      line-height: 1.12;
+      color: #fdfaf6;
+      margin: 0 0 1.25rem;
+      letter-spacing: 0.02em;
+    }
+
+    .brew-closing-desc {
+      font-size: clamp(1rem, 1.3vw, 1.15rem);
+      line-height: 1.75;
+      color: rgba(253, 250, 246, 0.84);
+      margin: 0 0 1.25rem;
+    }
+
+    .brew-closing-punchline {
+      font-family: var(--font-display, "Cormorant Garamond", serif);
+      font-style: italic;
+      font-size: 1.35rem;
+      color: #e5c292;
+      margin-bottom: 2.2rem;
+    }
+
+    .brew-closing-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+    }
+
+    /* --- 4. Interactive Modals & Lightbox --- */
+    .blend-modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(6, 5, 4, 0.88);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.35s ease, visibility 0.35s ease;
+    }
+
+    .blend-modal-backdrop.is-active {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    .blend-modal-dialog {
+      position: relative;
+      background: linear-gradient(160deg, #18130f 0%, #0e0b09 100%);
+      border: 1px solid rgba(205, 170, 128, 0.38);
+      border-radius: 20px;
+      max-width: 920px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: 0 35px 80px rgba(0, 0, 0, 0.85), 0 0 50px rgba(205, 170, 128, 0.12);
+      transform: scale(0.94) translateY(15px);
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      padding: clamp(1.8rem, 3.5vw, 2.75rem);
+    }
+
+    .blend-modal-backdrop.is-active .blend-modal-dialog {
+      transform: scale(1) translateY(0);
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 1.25rem;
+      right: 1.25rem;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid rgba(205, 170, 128, 0.3);
+      background: rgba(18, 14, 11, 0.85);
+      color: #dfbe95;
+      font-size: 1.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 10;
+      transition: all 0.2s ease;
+    }
+
+    .modal-close-btn:hover {
+      background: #cdaa80;
+      color: #0e0b09;
+      transform: rotate(90deg);
+    }
+
+    .modal-content-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: clamp(1.75rem, 3.5vw, 2.75rem);
+      align-items: start;
+    }
+
+    .modal-image-col {
+      position: sticky;
+      top: 0;
+    }
+
+    .modal-image-frame {
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(205, 170, 128, 0.3);
+      aspect-ratio: 4 / 3;
+      cursor: pointer;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+    }
+
+    .modal-image-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .modal-image-frame:hover img {
+      transform: scale(1.04);
+    }
+
+    .modal-zoom-pill {
+      position: absolute;
+      bottom: 0.85rem;
+      right: 0.85rem;
+      background: rgba(14, 11, 9, 0.85);
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(205, 170, 128, 0.3);
+      color: #dfbe95;
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    /* Roast Gauge */
+    .roast-meter-box {
+      margin-top: 1.25rem;
+      background: rgba(14, 11, 9, 0.65);
+      border: 1px solid rgba(205, 170, 128, 0.18);
+      border-radius: 12px;
+      padding: 1rem 1.15rem;
+    }
+
+    .roast-meter-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(244, 234, 220, 0.6);
+      margin-bottom: 0.65rem;
+    }
+
+    .roast-meter-val {
+      color: #dfbe95;
+      font-weight: 700;
+    }
+
+    .roast-track {
+      height: 6px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 999px;
+      position: relative;
+      overflow: visible;
+    }
+
+    .roast-fill-medium {
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(90deg, #dfbe95 0%, #cdaa80 100%);
+      border-radius: 999px;
+    }
+
+    .roast-marker {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #fdfaf6;
+      border: 2px solid #cdaa80;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 0 10px rgba(205, 170, 128, 0.8);
+    }
+
+    .roast-scale-labels {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 0.5rem;
+      font-size: 0.64rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(244, 234, 220, 0.45);
+    }
+
+    .modal-details-col {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .modal-badge-row {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .modal-blend-title {
+      font-family: var(--font-serif, "Cinzel", serif);
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      line-height: 1.15;
+      color: #fdfaf6;
+      margin: 0 0 0.4rem;
+    }
+
+    .modal-blend-meta {
+      font-size: 0.85rem;
+      color: #dfbe95;
+      letter-spacing: 0.08em;
+      margin: 0 0 1.25rem;
+      font-weight: 500;
+    }
+
+    .modal-story-box {
+      margin-bottom: 1.5rem;
+    }
+
+    .modal-story-heading {
+      font-size: 0.7rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(205, 170, 128, 0.85);
+      font-weight: 600;
+      margin-bottom: 0.6rem;
+      display: block;
+    }
+
+    .modal-story-text {
+      font-size: 0.94rem;
+      line-height: 1.75;
+      color: rgba(253, 250, 246, 0.85);
+      margin-bottom: 0.85rem;
+      font-weight: 300;
+    }
+
+    .modal-spec-tiles {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.75rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .modal-spec-tile {
+      background: rgba(14, 11, 9, 0.7);
+      border: 1px solid rgba(205, 170, 128, 0.22);
+      border-radius: 10px;
+      padding: 0.75rem 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .modal-spec-tile .spec-label {
+      font-size: 0.64rem;
+      color: rgba(205, 170, 128, 0.75);
+    }
+
+    .modal-spec-tile .spec-val {
+      font-size: 0.9rem;
+      color: #ffffff;
+    }
+
+    .modal-actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-top: auto;
+    }
+
+    /* Image Lightbox */
+    .image-lightbox-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(4, 3, 2, 0.94);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      z-index: 10000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .image-lightbox-overlay.is-active {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    .lightbox-img-wrap {
+      position: relative;
+      max-width: 90vw;
+      max-height: 80vh;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(205, 170, 128, 0.35);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.9);
+      transform: scale(0.92);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .image-lightbox-overlay.is-active .lightbox-img-wrap {
+      transform: scale(1);
+    }
+
+    .lightbox-img-wrap img {
+      max-width: 100%;
+      max-height: 80vh;
+      display: block;
+      object-fit: contain;
+    }
+
+    .lightbox-caption {
+      margin-top: 1rem;
+      font-size: 0.84rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #dfbe95;
+      text-align: center;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 992px) {
+      .brew-intro-editorial-card {
+        grid-template-columns: 1fr;
+      }
+      .modal-content-grid {
+        grid-template-columns: 1fr;
+      }
+      .modal-image-col {
+        position: relative;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .brew-blends-grid {
+        grid-template-columns: 1fr;
+        max-width: 580px;
+        margin: 0 auto;
+      }
+    }
+
+    @media (max-width: 540px) {
+      .blend-spec-grid {
+        grid-template-columns: 1fr;
+      }
+      .spec-chip-wide {
+        grid-column: span 1;
+      }
+      .modal-spec-tiles {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body class="page-brewing">
+
+  <!-- Subtle Film Grain Texture Overlay -->
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- Architectural Vertical Hairlines -->
+  <div class="architectural-grid" aria-hidden="true">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- ========================================================================
+       1. SHARED BRAND NAVIGATION BAR
+       ======================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="nav-inner">
+      <a href="index.html" class="brand-logo" aria-label="Return to Gabbu's Cafe Home">
+        <img
+          src="assets/logo/gabbus-official-logo-nav.svg"
+          alt="GABBU’S — Kitchen | Bar | Bakery"
+          class="brand-logo-img"
+          width="150" height="42" />
+      </a>
+
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="brewing.html" class="active" aria-current="page">What’s Brewing</a></li>
+          <li><a href="locations.html">Stores</a></li>
+          <li><a href="passport.html">Gabbu’s Passport</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="live.html">Gabbu’s Live</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="menu.html" class="btn btn-primary nav-reserve-btn">
+          OPEN MENU &rarr;
+        </a>
+        <button type="button" class="menu-toggle" id="menuToggle" aria-label="Toggle Menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Global Top-Left Back Control -->
+  <a href="index.html" class="global-back-btn" id="globalBackBtn" data-back-fallback="index.html" aria-label="Back to Home">
+    <span class="global-back-arrow" aria-hidden="true">&larr;</span>
+    <span class="global-back-text">BACK</span>
+  </a>
+
+  <!-- Mobile Navigation Overlay -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay" aria-hidden="true">
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link"><span>Home</span><span class="nav-idx">01</span></a></li>
+      <li><a href="brewing.html" class="mobile-nav-link active"><span>What’s Brewing</span><span class="nav-idx">02</span></a></li>
+      <li><a href="menu.html" class="mobile-nav-link"><span>Menu</span><span class="nav-idx">03</span></a></li>
+      <li><a href="locations.html" class="mobile-nav-link"><span>Stores</span><span class="nav-idx">04</span></a></li>
+      <li><a href="passport.html" class="mobile-nav-link"><span>Gabbu’s Passport</span><span class="nav-idx">05</span></a></li>
+      <li><a href="blog.html" class="mobile-nav-link"><span>Blog</span><span class="nav-idx">06</span></a></li>
+      <li><a href="live.html" class="mobile-nav-link"><span>Gabbu’s Live</span><span class="nav-idx">07</span></a></li>
+      <li><a href="story.html" class="mobile-nav-link"><span>Gabbu’s Story</span><span class="nav-idx">08</span></a></li>
+    </ul>
+
+    <div style="margin: 1.5rem 0;">
+      <a href="menu.html" class="btn btn-primary" style="width: 100%; display: flex; justify-content: center;">
+        OPEN MENU &rarr;
+      </a>
+    </div>
+
+    <div class="mobile-nav-footer">
+      <div>
+        <h5>Gabbu’s Manali Sanctuary</h5>
+        <p>Kitchen | Bar | Bakery &bull; Music<br/><a href="https://share.google/vINamWOS2OMTypzUA" target="_blank" rel="noopener" style="color: var(--warm-beige);">View on Google Maps &nearr;</a></p>
+      </div>
+      <div>
+        <h5>Working Tagline</h5>
+        <p>&ldquo;A Dog Behind the Good Times.&rdquo;</p>
+      </div>
+    </div>
+  </div>
+
+  <main id="brewingStandaloneRoot">
+
+    <!-- ======================================================================
+         ACT I: WHAT'S BREWING — 3D COFFEE BEAN SPLIT OPENING (FOCUSED 170VH)
+         ====================================================================== -->
+    <section class="brew-bean-cinema-track" id="gabbus-brew" aria-label="What's Brewing Cinematic Coffee Bean Opening">
+      <div class="brew-bean-sticky-stage" id="brewBeanStickyStage">
+
+        <div class="bean-stage-ambient-glow" id="beanStageAmbientGlow" aria-hidden="true"></div>
+
+        <!-- Inner Portal Revealed when Coffee Bean Splits -->
+        <div class="bean-inner-portal-world" id="beanInnerPortalWorld">
+          <div class="bean-portal-bg-media" id="beanPortalBgMedia">
+            <img
+              src="assets/spaces/coffee-room.jpg"
+              alt="Gabbu's Roastery & Espresso Bar Sanctuary"
+              decoding="async"
+            />
+            <div class="bean-portal-scrim"></div>
+          </div>
+
+          <div class="bean-revealed-editorial-copy" id="beanRevealedCopy">
+            <div class="bean-reveal-kicker">
+              <span class="bean-kicker-line"></span>
+              <span>SPECIALTY COFFEE &bull; CRAFT &bull; TERROIR &bull; SANCTUARY</span>
+              <span class="bean-kicker-line"></span>
+            </div>
+            <h1 class="bean-reveal-brand-title">WHAT’S <em class="editorial-italic">BREWING</em></h1>
+            <p class="bean-reveal-tagline">
+              &ldquo;FROM HIGH-ALTITUDE CHERRY TO THE PERFECT MOUNTAIN CUP.&rdquo;
+            </p>
+            <div class="bean-reveal-meta-pills">
+              <span>4 Story Acts</span>
+              <span>&bull;</span>
+              <span>Origins &bull; Processing &bull; Roasting &bull; Extraction</span>
+              <span>&bull;</span>
+              <span>Elev. 2,050m</span>
+            </div>
+            <a href="#chapter-origins" class="bean-reveal-scroll-cue">
+              <span>Enter The Story</span>
+              <span class="cue-arrow">&darr;</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Unified Centered 3D Coffee Bean Assembly -->
+        <div class="bean-3d-assembly" id="bean3dAssembly" aria-hidden="true">
+          <div class="bean-fissure-light" id="beanFissureLight"></div>
+          <div class="bean-hemisphere bean-hemisphere-left" id="beanLeftHalf">
+            <img src="assets/brew/coffee-bean-left.png" alt="" decoding="async" />
+          </div>
+          <div class="bean-hemisphere bean-hemisphere-right" id="beanRightHalf">
+            <img src="assets/brew/coffee-bean-right.png" alt="" decoding="async" />
+          </div>
+        </div>
+
+        <!-- Opening Stage Whisper -->
+        <div class="bean-opening-whisper" id="beanOpeningWhisper">
+          <span class="whisper-eyebrow">WHAT’S BREWING &bull; GABBU’S ROASTERY</span>
+          <p class="whisper-sub">Scroll down to split the coffee bean &amp; enter the roastery journey</p>
+        </div>
+
+        <div class="bean-scroll-progress-rail">
+          <div class="bean-scroll-progress-bar" id="beanProgressBar"></div>
+        </div>
+      </div>
+    </section>
+
+        <!-- ======================================================================
+         SECTION 1: INTRODUCTION — GABBU’S BREW
+         ====================================================================== -->
+    <section class="brew-intro-section" id="gabbus-brew-intro" aria-label="Introduction to Gabbu’s Brew">
+      <!-- Anchor alias for hero scroll cue -->
+      <div id="chapter-origins" style="position: absolute; top: -80px; left: 0;"></div>
+
+      <div class="section-container">
+        <div class="brew-intro-editorial-card reveal-up">
+          <div class="brew-intro-text-col">
+            <div class="brew-eyebrow-pill">
+              <span class="brew-pill-dot"></span>
+              <span>SPECIALTY ROASTERY &bull; OLD MANALI &bull; ELEV. 2,050M</span>
+            </div>
+            <h2 class="brew-intro-title">
+              GABBU’S <em class="editorial-italic">BREW</em>
+            </h2>
+            <p class="brew-intro-tagline">
+              Good coffee. Happier people.
+            </p>
+            <div class="brew-intro-separator" aria-hidden="true"></div>
+            <p class="brew-intro-desc">
+              At Gabbu’s, coffee is more than a daily ritual, it’s a reason to slow down, explore, and savour the little things. Our beans are selected for their distinctive character and roasted to a balanced medium profile, bringing warmth, aroma, and flavour to every cup.
+            </p>
+            <p class="brew-intro-desc brew-intro-punchline">
+              Two blends, two distinct stories, one shared love for good coffee.
+            </p>
+            <div class="brew-intro-anchors">
+              <a href="#signature-blends" class="btn btn-primary">
+                EXPLORE THE BLENDS &darr;
+              </a>
+              <span class="brew-intro-badge">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                100% Arabica
+              </span>
+            </div>
+          </div>
+
+          <div class="brew-intro-media-col">
+            <div class="brew-intro-media-frame" data-zoom-img="assets/brew/brew-intro-showcase.jpg" data-zoom-caption="Specialty Coffee Brewing Bar — Gabbu’s Old Manali" role="button" tabindex="0" aria-label="Enlarge specialty coffee photo">
+              <img
+                src="assets/brew/brew-intro-showcase.jpg"
+                alt="Artisanal pour-over coffee brewing setup with glowing steam and freshly roasted beans in Gabbu’s roastery"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="brew-media-overlay-badge">
+                <span class="badge-icon">☕</span>
+                <span>Craft Roastery &bull; 93.2°C Mountain Boil</span>
+              </div>
+              <div class="media-zoom-hint" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 2: THE TWO SIGNATURE COFFEE BLENDS
+         ====================================================================== -->
+    <section class="brew-blends-section" id="signature-blends" aria-label="Signature Coffee Blends">
+      <div class="section-container">
+        
+        <div class="brew-section-heading-wrap reveal-up">
+          <span class="brew-chapter-kicker">TWO DISTINCT BLENDS &bull; TWO STORIES</span>
+          <h2 class="brew-section-title">
+            Our Two Signature <em class="editorial-italic">Blends.</em>
+          </h2>
+          <p class="brew-section-subtitle">
+            Selected for distinctive character and roasted to balanced medium profiles. Click any blend card to explore its story, origin terroir, and complete bean specifications.
+          </p>
+        </div>
+
+        <div class="brew-blends-grid">
+
+          <!-- PRODUCT 01 — GABBU’S HIMALAYAN BLEND -->
+          <article class="blend-card blend-card-himalayan reveal-up" data-blend-target="himalayan" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Discover Gabbu’s Himalayan Blend">
+            <div class="blend-card-ambient-glow" aria-hidden="true"></div>
+            
+            <div class="blend-card-badge-row">
+              <span class="blend-badge blend-badge-mountain">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 20h18L15 6l-4 6-3-4-5 12z"/></svg>
+                MOUNTAIN TERROIR
+              </span>
+              <span class="blend-card-action-cue">
+                <span>Click to explore</span>
+                <span class="cue-icon">&rarr;</span>
+              </span>
+            </div>
+
+            <div class="blend-image-viewport" data-zoom-img="assets/brew/blend-himalayan.jpg" data-zoom-caption="Gabbu’s Himalayan Blend — 100% Arabica, Kodai, India">
+              <img
+                src="assets/brew/blend-himalayan.jpg"
+                alt="Gabbu’s Himalayan Blend — Roasted Arabica beans overflowing from burlap sack on rustic wood with misty Himalayan mountains"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="blend-image-scrim"></div>
+              <div class="blend-image-meta-pill">
+                <span>100% Arabica &bull; Medium Roast &bull; 250 g</span>
+              </div>
+            </div>
+
+            <div class="blend-card-body">
+              <div class="blend-header">
+                <span class="blend-series-kicker">PRODUCT 01 &bull; SPECIALTY ORIGIN</span>
+                <h3 class="blend-card-title">Gabbu’s Himalayan Blend</h3>
+                <p class="blend-roast-pill">100% Arabica &bull; Medium Roast &bull; 250 g</p>
+              </div>
+
+              <p class="blend-short-desc">
+                A coffee inspired by the mountains and the simple pleasure of a well-brewed cup. Clean, balanced, and crafted for slow mornings.
+              </p>
+
+              <!-- Specifications Chips Grid -->
+              <div class="blend-spec-grid" aria-label="Himalayan Blend Specifications">
+                <div class="blend-spec-chip">
+                  <div class="spec-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  </div>
+                  <div class="spec-meta">
+                    <span class="spec-label">ORIGIN</span>
+                    <strong class="spec-val">Kodai, India</strong>
+                  </div>
+                </div>
+
+                <div class="blend-spec-chip">
+                  <div class="spec-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/></svg>
+                  </div>
+                  <div class="spec-meta">
+                    <span class="spec-label">SPECIES</span>
+                    <strong class="spec-val">100% Arabica</strong>
+                  </div>
+                </div>
+
+                <div class="blend-spec-chip">
+                  <div class="spec-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+                  </div>
+                  <div class="spec-meta">
+                    <span class="spec-label">PROCESS</span>
+                    <strong class="spec-val">Washed</strong>
+                  </div>
+                </div>
+
+                <div class="blend-spec-chip">
+                  <div class="spec-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 20h18L15 6l-4 6-3-4-5 12z"/></svg>
+                  </div>
+                  <div class="spec-meta">
+                    <span class="spec-label">ALTITUDE</span>
+                    <strong class="spec-val">1,200–1,600 MASL</strong>
+                  </div>
+                </div>
+
+                <div class="blend-spec-chip spec-chip-wide">
+                  <div class="spec-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+                  </div>
+                  <div class="spec-meta">
+                    <span class="spec-label">ROAST PROFILE</span>
+                    <strong class="spec-val">Medium &bull; Clean &amp; Balanced Character</strong>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card Action Button -->
+              <div class="blend-action-row">
+                <button type="button" class="btn-blend-discover" aria-label="Discover Gabbu’s Himalayan Blend">
+                  <span>DISCOVER THIS BLEND</span>
+                  <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+
+          <!-- PRODUCT 02 — GABBU’S SIGNATURE BLEND -->
+          <article class="blend-card blend-card-signature reveal-up" data-blend-target="signature" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Discover Gabbu’s Signature Blend">
+            <div class="blend-card-ambient-glow" aria-hidden="true"></div>
+            
+            <div class="blend-card-badge-row">
+              <span class="blend-badge blend-badge-signature">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                HANDPICKED &bull; SUN-DRIED
+              </span>
+              <span class="blend-card-action-cue">
+                <span>Click to explore</span>
+                <span class="cue-icon">&rarr;</span>
+              </span>
+            </div>
+
+            <div class="blend-image-viewport" data-zoom-img="assets/brew/blend-signature.jpg" data-zoom-caption="Gabbu’s Signature Blend — Handpicked, Sun-dried Arabica">
+              <img
+                src="assets/brew/blend-signature.jpg"
+                alt="Gabbu’s Signature Blend — Premium artisanal coffee pouch with roasted beans and sun-dried cherries in luxury studio lighting"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="blend-image-scrim"></div>
+              <div class="blend-image-meta-pill">
+                <span>100% Arabica &bull; Medium Roast &bull; 250 g</span>
+              </div>
+            </div>
+
+            <div class="blend-card-body">
+              <div class="blend-header">
+                <span class="blend-series-kicker">PRODUCT 02 &bull; RESERVE SERIES</span>
+                <h3 class="blend-card-title">Gabbu’s Signature Blend</h3>
+                <p class="blend-roast-pill">100% Arabica &bull; Handpicked &bull; Sun-dried &bull; Medium Roast &bull; 250 g</p>
+              </div>
+
+              <p class="blend-short-desc">
+                Celebrates the care that goes into every bean. Handpicked and sun-dried to bring out a balanced, approachable, velvety character.
+              </p>
+
+              <!-- Specifications Chips Grid -->
+              <div class="blend-spec-grid" aria-label="Signature Blend Specifications">
+                <div class="blend-spec-chip">
+                  <div class="spec-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/></svg>
+                  </div>
+                  <div class="spec-meta">
+                    <span class="spec-label">SPECIES</span>
+                    <strong class="spec-val">100% Arabica</strong>
+                  </div>
+                </div>
+
+                <div class="blend-spec-chip">
+                  <div class="spec-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.83L7 15"/></svg>
+                  </div>
+                  <div class="spec-meta">
+                    <span class="spec-label">SELECTION</span>
+                    <strong class="spec-val">Handpicked</strong>
+                  </div>
+                </div>
+
+                <div class="blend-spec-chip">
+                  <div class="spec-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                  </div>
+                  <div class="spec-meta">
+                    <span class="spec-label">DRYING</span>
+                    <strong class="spec-val">Sun-dried</strong>
+                  </div>
+                </div>
+
+                <div class="blend-spec-chip">
+                  <div class="spec-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+                  </div>
+                  <div class="spec-meta">
+                    <span class="spec-label">ROAST</span>
+                    <strong class="spec-val">Medium</strong>
+                  </div>
+                </div>
+
+                <div class="blend-spec-chip spec-chip-wide">
+                  <div class="spec-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  </div>
+                  <div class="spec-meta">
+                    <span class="spec-label">CHARACTER</span>
+                    <strong class="spec-val">Refined &bull; Velvety Comfort &bull; Approchable</strong>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card Action Button -->
+              <div class="blend-action-row">
+                <button type="button" class="btn-blend-discover" aria-label="Discover Gabbu’s Signature Blend">
+                  <span>DISCOVER THIS BLEND</span>
+                  <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 3: FINAL CLOSING SECTION
+         ====================================================================== -->
+    <section class="brew-closing-section" id="brew-closing" aria-label="Brew, Explore, Be Kind">
+      <div class="section-container">
+        <div class="brew-closing-card reveal-up">
+          <div class="brew-closing-bg-media" aria-hidden="true">
+            <img
+              src="assets/brew/closing-cup.jpg"
+              alt="Artisanal ceramic cup filled with latte art coffee and whole beans with warm mountain morning lighting"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="brew-closing-scrim"></div>
+          </div>
+
+          <div class="brew-closing-content">
+            <span class="brew-closing-kicker">✦ THE GABBU’S JOURNEY</span>
+            <h2 class="brew-closing-title">
+              Brew. Explore. <em class="editorial-italic">Be Kind.</em>
+            </h2>
+            <div class="editorial-line-draw" data-draw-line></div>
+            <p class="brew-closing-desc">
+              Whether you’re starting your morning, taking a break, or discovering somewhere new, there’s always room for a good cup of coffee.
+            </p>
+            <p class="brew-closing-desc brew-closing-punchline">
+              Find your blend, make it your own, and let Gabbu be part of the journey.
+            </p>
+
+            <div class="brew-closing-actions">
+              <a href="menu.html" class="btn btn-primary">
+                OPEN MENU &rarr;
+              </a>
+              <a href="locations.html" class="btn btn-outline">
+                VISIT OLD MANALI &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         INTERACTIVE EXPANDED PRODUCT PRESENTATION MODALS
+         ====================================================================== -->
+
+    <!-- Modal 01: Himalayan Blend -->
+    <div class="blend-modal-backdrop" id="modal-blend-himalayan" role="dialog" aria-modal="true" aria-labelledby="modal-title-himalayan" aria-hidden="true">
+      <div class="blend-modal-dialog">
+        <button type="button" class="modal-close-btn" data-modal-close aria-label="Close details dialog">&times;</button>
+        
+        <div class="modal-content-grid">
+          <div class="modal-image-col">
+            <div class="modal-image-frame" data-zoom-img="assets/brew/blend-himalayan.jpg" data-zoom-caption="Gabbu’s Himalayan Blend — 100% Arabica, Kodai, India" role="button" tabindex="0" aria-label="View high-res photo">
+              <img
+                src="assets/brew/blend-himalayan.jpg"
+                alt="Gabbu’s Himalayan Blend — Whole roasted Arabica beans overflowing from burlap sack"
+              />
+              <div class="modal-zoom-pill">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                <span>Click to enlarge</span>
+              </div>
+            </div>
+
+            <!-- Visual Roast Level Gauge -->
+            <div class="roast-meter-box">
+              <div class="roast-meter-header">
+                <span>ROAST PROFILE</span>
+                <span class="roast-meter-val">MEDIUM ROAST</span>
+              </div>
+              <div class="roast-track" aria-hidden="true">
+                <div class="roast-fill-medium"></div>
+                <div class="roast-marker"></div>
+              </div>
+              <div class="roast-scale-labels" aria-hidden="true">
+                <span>Light</span>
+                <span>Medium</span>
+                <span>Dark</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-details-col">
+            <div class="modal-badge-row">
+              <span class="blend-badge blend-badge-mountain">MOUNTAIN TERROIR</span>
+              <span class="blend-series-kicker" style="margin: 0;">PRODUCT 01</span>
+            </div>
+
+            <h3 class="modal-blend-title" id="modal-title-himalayan">Gabbu’s Himalayan Blend</h3>
+            <p class="modal-blend-meta">100% Arabica &bull; Medium Roast &bull; 250 g</p>
+
+            <div class="modal-story-box">
+              <span class="modal-story-heading">THE STORY</span>
+              <p class="modal-story-text">
+                A coffee inspired by the mountains and the simple pleasure of a well-brewed cup.
+              </p>
+              <p class="modal-story-text">
+                Gabbu’s Himalayan Blend brings together 100% Arabica beans, washed processing, and a medium roast to create a clean, balanced coffee that lets the natural character of the beans shine.
+              </p>
+              <p class="modal-story-text">
+                Thoughtfully roasted for an enjoyable everyday brew, it’s made for slow mornings, long conversations, and little moments worth savouring.
+              </p>
+            </div>
+
+            <!-- Bean Details Specification Tiles -->
+            <span class="modal-story-heading">BEAN SPECIFICATIONS</span>
+            <div class="modal-spec-tiles">
+              <div class="modal-spec-tile">
+                <div class="spec-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div class="spec-meta">
+                  <span class="spec-label">ORIGIN</span>
+                  <strong class="spec-val">Kodai, India</strong>
+                </div>
+              </div>
+
+              <div class="modal-spec-tile">
+                <div class="spec-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/></svg>
+                </div>
+                <div class="spec-meta">
+                  <span class="spec-label">SPECIES</span>
+                  <strong class="spec-val">100% Arabica</strong>
+                </div>
+              </div>
+
+              <div class="modal-spec-tile">
+                <div class="spec-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+                </div>
+                <div class="spec-meta">
+                  <span class="spec-label">PROCESS</span>
+                  <strong class="spec-val">Washed</strong>
+                </div>
+              </div>
+
+              <div class="modal-spec-tile">
+                <div class="spec-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 20h18L15 6l-4 6-3-4-5 12z"/></svg>
+                </div>
+                <div class="spec-meta">
+                  <span class="spec-label">ALTITUDE</span>
+                  <strong class="spec-val">1,200–1,600 MASL</strong>
+                </div>
+              </div>
+
+              <div class="modal-spec-tile" style="grid-column: span 2;">
+                <div class="spec-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+                </div>
+                <div class="spec-meta">
+                  <span class="spec-label">ROAST</span>
+                  <strong class="spec-val">Medium &bull; Clean, Balanced, Everyday Brew</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal-actions">
+              <button type="button" class="btn btn-primary" data-modal-close>
+                CLOSE PRESENTATION &times;
+              </button>
+              <a href="menu.html" class="btn btn-outline">
+                ORDER AT CAFE &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Modal 02: Signature Blend -->
+    <div class="blend-modal-backdrop" id="modal-blend-signature" role="dialog" aria-modal="true" aria-labelledby="modal-title-signature" aria-hidden="true">
+      <div class="blend-modal-dialog">
+        <button type="button" class="modal-close-btn" data-modal-close aria-label="Close details dialog">&times;</button>
+        
+        <div class="modal-content-grid">
+          <div class="modal-image-col">
+            <div class="modal-image-frame" data-zoom-img="assets/brew/blend-signature.jpg" data-zoom-caption="Gabbu’s Signature Blend — Handpicked, Sun-dried 100% Arabica" role="button" tabindex="0" aria-label="View high-res photo">
+              <img
+                src="assets/brew/blend-signature.jpg"
+                alt="Gabbu’s Signature Blend — Luxury artisanal specialty coffee pouch on dark slate with roasted beans"
+              />
+              <div class="modal-zoom-pill">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                <span>Click to enlarge</span>
+              </div>
+            </div>
+
+            <!-- Visual Roast Level Gauge -->
+            <div class="roast-meter-box">
+              <div class="roast-meter-header">
+                <span>ROAST PROFILE</span>
+                <span class="roast-meter-val">MEDIUM ROAST</span>
+              </div>
+              <div class="roast-track" aria-hidden="true">
+                <div class="roast-fill-medium"></div>
+                <div class="roast-marker"></div>
+              </div>
+              <div class="roast-scale-labels" aria-hidden="true">
+                <span>Light</span>
+                <span>Medium</span>
+                <span>Dark</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-details-col">
+            <div class="modal-badge-row">
+              <span class="blend-badge blend-badge-signature">RESERVE SERIES</span>
+              <span class="blend-series-kicker" style="margin: 0;">PRODUCT 02</span>
+            </div>
+
+            <h3 class="modal-blend-title" id="modal-title-signature">Gabbu’s Signature Blend</h3>
+            <p class="modal-blend-meta">100% Arabica &bull; Handpicked &bull; Sun-dried &bull; Medium Roast &bull; 250 g</p>
+
+            <div class="modal-story-box">
+              <span class="modal-story-heading">THE STORY</span>
+              <p class="modal-story-text">
+                Our Signature Blend celebrates the care that goes into every bean.
+              </p>
+              <p class="modal-story-text">
+                Handpicked and sun-dried, these 100% Arabica beans receive extra attention before being medium-roasted to bring out a balanced, approachable character.
+              </p>
+              <p class="modal-story-text">
+                Crafted for those who appreciate the finer details of their daily coffee, this blend brings together thoughtful selection, careful preparation, and the familiar comfort of a great cup.
+              </p>
+            </div>
+
+            <!-- Bean Details Specification Tiles -->
+            <span class="modal-story-heading">BEAN SPECIFICATIONS</span>
+            <div class="modal-spec-tiles">
+              <div class="modal-spec-tile">
+                <div class="spec-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/></svg>
+                </div>
+                <div class="spec-meta">
+                  <span class="spec-label">SPECIES</span>
+                  <strong class="spec-val">100% Arabica</strong>
+                </div>
+              </div>
+
+              <div class="modal-spec-tile">
+                <div class="spec-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.83L7 15"/></svg>
+                </div>
+                <div class="spec-meta">
+                  <span class="spec-label">SELECTION</span>
+                  <strong class="spec-val">Handpicked</strong>
+                </div>
+              </div>
+
+              <div class="modal-spec-tile">
+                <div class="spec-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                </div>
+                <div class="spec-meta">
+                  <span class="spec-label">DRYING</span>
+                  <strong class="spec-val">Sun-dried</strong>
+                </div>
+              </div>
+
+              <div class="modal-spec-tile">
+                <div class="spec-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+                </div>
+                <div class="spec-meta">
+                  <span class="spec-label">ROAST</span>
+                  <strong class="spec-val">Medium</strong>
+                </div>
+              </div>
+
+              <div class="modal-spec-tile" style="grid-column: span 2;">
+                <div class="spec-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <div class="spec-meta">
+                  <span class="spec-label">PROFILE</span>
+                  <strong class="spec-val">Refined &bull; Velvety Comfort &bull; Approchable</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal-actions">
+              <button type="button" class="btn btn-primary" data-modal-close>
+                CLOSE PRESENTATION &times;
+              </button>
+              <a href="menu.html" class="btn btn-outline">
+                ORDER AT CAFE &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Fullscreen Image Lightbox Viewer -->
+    <div class="image-lightbox-overlay" id="brewImageViewerModal" role="dialog" aria-modal="true" aria-label="Image Viewer" aria-hidden="true">
+      <button type="button" class="modal-close-btn" id="lightboxCloseBtn" aria-label="Close image viewer">&times;</button>
+      <div class="lightbox-img-wrap" id="lightboxImgWrap">
+        <img src="" alt="" id="lightboxImg" />
+      </div>
+      <p class="lightbox-caption" id="lightboxCaption"></p>
+    </div>
+
+    <!-- Interactive Script for Blends, Modals and Image Viewer -->
+    <script>
+      (function initGabbusBrewExperience() {
+        // 1. Modals Controller
+        const blendCards = document.querySelectorAll('.blend-card');
+        const modalBackdrops = document.querySelectorAll('.blend-modal-backdrop');
+        const closeButtons = document.querySelectorAll('[data-modal-close]');
+
+        function openModal(modalId) {
+          const modal = document.getElementById(modalId);
+          if (!modal) return;
+          modal.classList.add('is-active');
+          modal.setAttribute('aria-hidden', 'false');
+          document.body.style.overflow = 'hidden';
+          const firstFocusable = modal.querySelector('button, [tabindex="0"], a');
+          if (firstFocusable) firstFocusable.focus();
+        }
+
+        function closeAllModals() {
+          modalBackdrops.forEach(m => {
+            m.classList.remove('is-active');
+            m.setAttribute('aria-hidden', 'true');
+          });
+          document.body.style.overflow = '';
+        }
+
+        blendCards.forEach(card => {
+          card.addEventListener('click', (e) => {
+            // If user clicked directly on zoom frame, don't trigger card modal
+            if (e.target.closest('[data-zoom-img]')) return;
+            const target = card.getAttribute('data-blend-target');
+            if (target) openModal('modal-blend-' + target);
+          });
+
+          card.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              const target = card.getAttribute('data-blend-target');
+              if (target) openModal('modal-blend-' + target);
+            }
+          });
+        });
+
+        closeButtons.forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            closeAllModals();
+          });
+        });
+
+        modalBackdrops.forEach(backdrop => {
+          backdrop.addEventListener('click', (e) => {
+            if (e.target === backdrop) closeAllModals();
+          });
+        });
+
+        // 2. Lightbox Image Viewer
+        const zoomElements = document.querySelectorAll('[data-zoom-img]');
+        const lightbox = document.getElementById('brewImageViewerModal');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const lightboxCaption = document.getElementById('lightboxCaption');
+        const lightboxCloseBtn = document.getElementById('lightboxCloseBtn');
+
+        function openLightbox(src, caption) {
+          if (!lightbox || !lightboxImg) return;
+          lightboxImg.src = src;
+          lightboxImg.alt = caption || 'Gabbu’s Coffee';
+          if (lightboxCaption) lightboxCaption.textContent = caption || '';
+          lightbox.classList.add('is-active');
+          lightbox.setAttribute('aria-hidden', 'false');
+          document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+          if (!lightbox) return;
+          lightbox.classList.remove('is-active');
+          lightbox.setAttribute('aria-hidden', 'true');
+          // If a blend modal is still open, keep overflow hidden
+          const anyActiveModal = document.querySelector('.blend-modal-backdrop.is-active');
+          if (!anyActiveModal) {
+            document.body.style.overflow = '';
+          }
+        }
+
+        zoomElements.forEach(el => {
+          el.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const src = el.getAttribute('data-zoom-img');
+            const caption = el.getAttribute('data-zoom-caption') || el.querySelector('img')?.alt || '';
+            if (src) openLightbox(src, caption);
+          });
+
+          el.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              e.stopPropagation();
+              const src = el.getAttribute('data-zoom-img');
+              const caption = el.getAttribute('data-zoom-caption') || el.querySelector('img')?.alt || '';
+              if (src) openLightbox(src, caption);
+            }
+          });
+        });
+
+        if (lightboxCloseBtn) {
+          lightboxCloseBtn.addEventListener('click', closeLightbox);
+        }
+
+        if (lightbox) {
+          lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox || e.target.id === 'lightboxImgWrap') {
+              closeLightbox();
+            }
+          });
+        }
+
+        // Global ESC handler
+        window.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') {
+            if (lightbox && lightbox.classList.contains('is-active')) {
+              closeLightbox();
+            } else {
+              closeAllModals();
+            }
+          }
+        });
+      })();
+    </script>
+  </main>
+
+  <!-- ========================================================================
+       SHARED BRAND FOOTER (WITH SLEEPING GABBU BACKGROUND)
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="footer-sleeping-gabbu-bg" aria-hidden="true">
+      <img
+        src="assets/gabbu/gabbu-sleeping-footer.jpg"
+        alt=""
+        class="footer-sleeping-gabbu-img"
+        loading="lazy"
+        decoding="async"
+      />
+      <div class="footer-sleeping-gabbu-scrim"></div>
+    </div>
+    <div class="section-container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-logo" aria-label="GABBU'S Home">
+            <img src="assets/logo/gabbus-official-logo-nav.svg" alt="Gabbu's Logo" class="brand-logo-img" width="150" height="42" />
+          </a>
+          <p data-editable-tagline>&ldquo;A Dog Behind the Good Times.&rdquo;</p>
+        </div>
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">Destinations</h4>
+          <ul class="footer-nav-list">
+            <li><a href="brewing.html" class="active">What’s Brewing</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="locations.html">Stores</a></li>
+            <li><a href="passport.html">Gabbu’s Passport &#10022;</a></li>
+            <li><a href="blog.html">Gabbu’s Journal (Blog)</a></li>
+            <li><a href="live.html">Gabbu’s Live</a></li>
+            <li><a href="story.html">Gabbu’s Story</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">Manali Sanctuary</h4>
+          <ul class="footer-hours-list">
+            <li><span>Open Daily</span>09:00 AM – 11:30 PM</li>
+            <li style="margin-top: 0.45rem;">
+              <a href="https://share.google/vINamWOS2OMTypzUA" target="_blank" rel="noopener" class="link-editorial">Google Maps Pin &nearr;</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom-bar">
+        <span>&copy; 2026 GABBU’S — Kitchen | Bar | Bakery. Built with love for Gabbu.</span>
+        <span>In the Hills of Manali &bull; Elev. 2,050m</span>
+      </div>
+      <div class="footer-developer-credit">
+        <span class="dev-credit-prefix">Crafted with creativity by</span>
+        <a href="https://www.linkedin.com/in/samarth123/" target="_blank" rel="noopener noreferrer" class="dev-credit-link" aria-label="Samarth Shukla on LinkedIn">
+          <svg class="dev-linkedin-icon" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+          </svg>
+          <span class="dev-author-name">Samarth Shukla</span>
+        </a>
+        <span class="dev-credit-dot" aria-hidden="true">&bull;</span>
+        <span class="dev-credit-role">Web Developer</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js?v=20261002_v7"></script>
+</body>
+</html>

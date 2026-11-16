@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GABBU’S RESTAURANT — Food • Kitchen • Restaurant | Manali</title>
+  <meta
+    name="description"
+    content="GABBU’S RESTAURANT ('Good Food. Good Company. Good Dog.') — Explore 142 photographed dishes across 18 culinary chapters: wood-fired pizzas, clay tandoor, gourmet burgers, Himalayan bowls, and Indian mains."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <meta http-equiv="refresh" content="0; url=assets/menu/gabbus-food-menu.pdf" />
+  <script>window.location.replace("assets/menu/gabbus-food-menu.pdf");</script>
+  <link rel="stylesheet" href="styles.css?v=20261001_v5" />
+</head>
+<body class="menu-page-body standalone-restaurant-body">
+
+  <div class="page-transition-curtain" id="pageTransitionCurtain" aria-hidden="true"></div>
+
+  <!-- ========================================================================
+       GLOBAL HEADER NAVIGATION
+       ======================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="nav-inner">
+      <a href="index.html" class="brand-logo" aria-label="GABBU'S Home">
+        <img
+          src="assets/logo/gabbus-official-logo-nav.svg"
+          alt="GABBU’S — Kitchen | Bar | Bakery"
+          class="brand-logo-img"
+         width="150" height="42" />
+      </a>
+
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="brewing.html">What’s Brewing</a></li>
+          <li><a href="locations.html">Stores</a></li>
+          <li><a href="passport.html">Gabbu’s Passport</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="live.html">Gabbu’s Live</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="menu.html" class="btn btn-primary nav-reserve-btn">
+          OPEN MENU &rarr;
+        </a>
+        <button type="button" class="menu-toggle" id="menuToggle" aria-label="Toggle Menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <!-- Global Top-Left Back Control -->
+  <a href="menu.html" class="global-back-btn" id="globalBackBtn" data-back-fallback="menu.html" aria-label="Back">
+    <span class="global-back-arrow" aria-hidden="true">&larr;</span>
+    <span class="global-back-text">BACK</span>
+  </a>
+
+  <!-- Mobile Navigation Overlay -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay" aria-hidden="true">
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link"><span>Home</span><span class="nav-idx">01</span></a></li>
+      <li><a href="brewing.html" class="mobile-nav-link"><span>What’s Brewing</span><span class="nav-idx">02</span></a></li>
+      <li><a href="menu.html" class="mobile-nav-link active"><span>Menu</span><span class="nav-idx">03</span></a></li>
+      <li><a href="story.html" class="mobile-nav-link"><span>Gabbu’s Story</span><span class="nav-idx">04</span></a></li>
+      <li><a href="passport.html" class="mobile-nav-link"><span>Gabbu’s Passport</span><span class="nav-idx">05</span></a></li>
+      <li><a href="blog.html" class="mobile-nav-link"><span>Blog</span><span class="nav-idx">06</span></a></li>
+      <li><a href="live.html" class="mobile-nav-link"><span>Gabbu’s Live</span><span class="nav-idx">07</span></a></li>
+      <li><a href="locations.html" class="mobile-nav-link"><span>Stores</span><span class="nav-idx">08</span></a></li>
+    </ul>
+  </div>
+
+  <main id="restaurantStandaloneRoot">
+
+
+
+    <!-- ======================================================================
+         ACT II: GABBU’S RESTAURANT — 4-PRODUCTS-PER-ROW FOOD CATALOGUE
+         ====================================================================== -->
+    <section class="catalogue-grid-section restaurant-catalogue-section" id="restaurantCatalogueAnchor" aria-label="Gabbu's Restaurant Product Grid">
+      <div class="catalogue-container">
+
+        <!-- Editorial White & Deep Blue Section Intro Strip -->
+        <div class="editorial-white-accent-strip">
+          <div class="white-strip-left">
+            <span class="white-strip-kicker">GABBU’S RESTAURANT &bull; ALL-DAY KITCHEN &amp; BAKERY</span>
+            <h2 class="white-strip-title">The Complete 18-Chapter Culinary Menu</h2>
+          </div>
+          <div class="white-strip-right">
+            <p class="white-strip-copy">
+              Wood-fired sourdough pizzas, charcoal clay-oven tandoor platters, artisanal burgers, hand-rolled shawarmas, copper-handi Indian curries, and freshly cooked meals for visiting dogs.
+            </p>
+          </div>
+        </div>
+
+        <!-- Sticky Filter, Dietary & Search Header -->
+        <div class="catalogue-sticky-toolbar" id="restaurantStickyToolbar">
+          <div class="toolbar-top-row">
+            <div class="toolbar-brand-col">
+              <span class="toolbar-domain-badge restaurant-badge">GABBU’S RESTAURANT</span>
+              <h3 class="toolbar-domain-heading">Restaurant &amp; Kitchen Catalogue</h3>
+              <span class="toolbar-result-count" id="restaurantResultCount">142 Dishes &bull; 18 Categories</span>
+            </div>
+
+            <div class="toolbar-controls-col">
+              <div class="toolbar-diet-group" role="group" aria-label="Dietary Filter">
+                <button type="button" class="toolbar-diet-btn active" data-restro-diet="all">All (142)</button>
+                <button type="button" class="toolbar-diet-btn" data-restro-diet="veg">Veg</button>
+                <button type="button" class="toolbar-diet-btn" data-restro-diet="non-veg">Non-Veg</button>
+                <button type="button" class="toolbar-diet-btn" data-restro-diet="pet">Pet Bowl</button>
+              </div>
+
+              <div class="toolbar-search-wrap">
+                <input
+                  type="search"
+                  id="restaurantSearchInput"
+                  class="toolbar-search-input"
+                  placeholder="Search 142 dishes (Pizza, Burger, Pasta, Tandoor, Biryani, Momo)..."
+                  aria-label="Search Gabbu's Restaurant Dishes"
+                />
+                <button type="button" id="restaurantSearchClear" class="toolbar-search-clear" hidden>&times;</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="toolbar-category-ribbon" id="restaurantCategoryRibbon" role="tablist" aria-label="Restaurant Categories">
+            <!-- Populated dynamically with ALL + 18 Restaurant Categories -->
+          </div>
+        </div>
+
+        <!-- 4-Column Product Grid Container -->
+        <div class="catalogue-chapters-mount" id="restaurantChaptersDeck">
+          <!-- Populated dynamically: 4 products per row on desktop -->
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-sleeping-gabbu-bg" aria-hidden="true">
+      <img
+        src="assets/gabbu/gabbu-sleeping-footer.jpg"
+        alt=""
+        class="footer-sleeping-gabbu-img"
+        loading="lazy"
+        decoding="async"
+      />
+      <div class="footer-sleeping-gabbu-scrim"></div>
+    </div>
+    <div class="section-container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-logo" aria-label="GABBU'S Home">
+            <img src="assets/logo/gabbus-official-logo-nav.svg" alt="Gabbu's Logo" class="brand-logo-img"  width="150" height="42" />
+          </a>
+          <p data-editable-tagline>&ldquo;A Dog Behind the Good Times.&rdquo;</p>
+        </div>
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">Destinations</h4>
+          <ul class="footer-nav-list">
+            <li><a href="brewing.html">What’s Brewing</a></li>
+            <li><a href="menu.html" class="active">Menu</a></li>
+            <li><a href="locations.html">Stores</a></li>
+            <li><a href="passport.html">Gabbu’s Passport &#10022;</a></li>
+            <li><a href="blog.html">Gabbu’s Journal (Blog)</a></li>
+            <li><a href="live.html">Gabbu’s Live</a></li>
+            <li><a href="story.html">Gabbu’s Story</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">Manali Sanctuary</h4>
+          <ul class="footer-hours-list">
+            <li><span>Open Daily</span>09:00 AM – 11:30 PM</li>
+            <li style="margin-top: 0.45rem;">
+              <a href="https://share.google/vINamWOS2OMTypzUA" target="_blank" rel="noopener" class="link-editorial">Google Maps Pin &nearr;</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom-bar">
+        <span>&copy; 2026 GABBU’S — Kitchen | Bar | Bakery.</span>
+        <span>In the Hills of Manali</span>
+      </div>
+      <div class="footer-developer-credit">
+        <span class="dev-credit-prefix">Crafted with creativity by</span>
+        <a href="https://www.linkedin.com/in/samarth123/" target="_blank" rel="noopener noreferrer" class="dev-credit-link" aria-label="Samarth Shukla on LinkedIn">
+          <svg class="dev-linkedin-icon" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+          </svg>
+          <span class="dev-author-name">Samarth Shukla</span>
+        </a>
+        <span class="dev-credit-dot" aria-hidden="true">&bull;</span>
+        <span class="dev-credit-role">Web Developer</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="menu-data.js?v=7"></script>
+  <script src="app.js?v=20261001_v5"></script>
+</body>
+</html>

@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GABBU’S — Kitchen | Bar | Bakery &bull; A Dog Behind the Good Times</title>
+  <meta name="description" content="GABBU'S — Kitchen | Bar | Bakery. A Dog Behind the Good Times. Experience warm mountain hospitality, Bar, Listening Room, Kitchen Room, and Coffee Room in Manali." />
+
+  <!-- Editorial Typography: Cormorant Garamond (High-Contrast Display Serif) & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css?v=20261001_v5" />
+  <link rel="stylesheet" href="passport.css" />
+</head>
+<body>
+
+  <!-- Subtle Film Grain / Noise Texture Overlay -->
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- Subtle Architectural Vertical Hairlines -->
+  <div class="architectural-grid" aria-hidden="true">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- ========================================================================
+       1. NAVIGATION (FIXED / STICKY NAVBAR WITH OFFICIAL GABBU'S LOGO)
+       ======================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="nav-inner">
+      <a href="index.html" class="brand-logo" aria-label="GABBU'S — Kitchen | Bar | Bakery Home">
+        <img
+          src="assets/logo/gabbus-official-logo-nav.svg"
+          alt="GABBU’S — Kitchen | Bar | Bakery"
+          class="brand-logo-img"
+         width="150" height="42" />
+      </a>
+
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="brewing.html">What’s Brewing</a></li>
+          <li><a href="locations.html">Stores</a></li>
+          <li><a href="passport.html">Gabbu’s Passport</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="live.html">Gabbu’s Live</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="menu.html" class="btn btn-primary nav-reserve-btn">
+          OPEN MENU &rarr;
+        </a>
+        <button type="button" class="menu-toggle" id="menuToggle" aria-label="Toggle Menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Full-Screen Animated Mobile Navigation Overlay -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay" aria-hidden="true">
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link active"><span>Home</span><span class="nav-idx">01</span></a></li>
+      <li><a href="brewing.html" class="mobile-nav-link"><span>What’s Brewing</span><span class="nav-idx">02</span></a></li>
+      <li><a href="menu.html" class="mobile-nav-link"><span>Menu</span><span class="nav-idx">03</span></a></li>
+      <li><a href="locations.html" class="mobile-nav-link"><span>Stores</span><span class="nav-idx">04</span></a></li>
+      <li><a href="passport.html" class="mobile-nav-link"><span>Gabbu’s Passport</span><span class="nav-idx">05</span></a></li>
+      <li><a href="blog.html" class="mobile-nav-link"><span>Blog</span><span class="nav-idx">06</span></a></li>
+      <li><a href="live.html" class="mobile-nav-link"><span>Gabbu’s Live</span><span class="nav-idx">07</span></a></li>
+      <li><a href="story.html" class="mobile-nav-link"><span>Gabbu’s Story</span><span class="nav-idx">08</span></a></li>
+    </ul>
+
+    <div style="margin: 1.5rem 0;">
+      <a href="menu.html" class="btn btn-primary" style="width: 100%; display: flex; justify-content: center;">
+        OPEN MENU &rarr;
+      </a>
+    </div>
+
+    <div class="mobile-nav-footer">
+      <div>
+        <h5>Gabbu’s Manali Branch</h5>
+        <p>Kitchen | Bar | Bakery &bull; Music<br/><a href="https://share.google/vINamWOS2OMTypzUA" target="_blank" rel="noopener" style="color: var(--warm-beige);">View on Google Maps &nearr;</a></p>
+      </div>
+      <div>
+        <h5>Working Tagline</h5>
+        <p id="mobileTaglineDisplay">&ldquo;A Dog Behind the Good Times.&rdquo;</p>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ======================================================================
+         SECTION 1: HERO / FIRST SCREEN ("A cafe run by a dog.")
+         Dog photography shifted upward so Gabbu's head/body is never cropped by
+         the hoarding below, with natural warm colors and zero blue tint wash.
+         ====================================================================== -->
+    <section class="hero-section hero-world-stage" id="home" aria-label="Gabbu's World — The Hills, The Café, and Gabbu">
+
+      <!-- CINEMATIC OPENING FILM & DEPTH STAGE -->
+      <div class="hero-cinema-viewport" id="heroCinemaViewport">
+
+        <!-- ACT I LAYER: THE HILLS (Manali Pine Valley & Gabbu on the Balcony) -->
+        <div class="hero-film-plane plane-hills" id="heroPlaneHills">
+          <img
+            src="assets/gabbu/gabbu-mountain-balcony.jpg"
+            alt="The quiet, mist-wrapped deodar hills of Manali with Gabbu watching over the valley"
+            fetchpriority="high"
+            decoding="async"
+          />
+        </div>
+
+        <!-- ACT II LAYER: THE CAFÉ (Pine-Framed Manali Sanctuary & Warm Dining Glow) -->
+        <div class="hero-film-plane plane-cafe" id="heroPlaneCafe">
+          <img
+            src="assets/cafe/manali-exterior-facade.jpg"
+            alt="Gabbu's Cafe sanctuary nestled among the pine trees in Manali"
+            decoding="async"
+          />
+        </div>
+
+        <!-- ACT III / SETTLED COMPOSITE WORLD: GABBU + THE HILLS + THE CAFÉ -->
+        <div class="hero-film-plane plane-settled-world" id="heroPlaneWorld">
+          <!-- Background Depth Plane: Gabbu Resting Under Warm Evening String Lights & Manali Hills -->
+          <div class="hero-parallax-bg" id="heroParallaxBg">
+            <img
+              src="assets/gabbu/gabbu-twilight-lights.jpg"
+              alt="Gabbu resting peacefully beneath warm cafe string lights with the hills of Manali in the background"
+              fetchpriority="high"
+              decoding="async"
+            />
+          </div>
+
+          <!-- Secondary Depth Vignette: Natural Warm Portrait of Gabbu -->
+          <div class="hero-parallax-portrait" id="heroParallaxPortrait">
+            <div class="portrait-aperture-frame">
+              <img
+                src="assets/gabbu/gabbu-portrait-garden.jpg"
+                alt="Gabbu — the German Shepherd soul behind Gabbu's"
+                decoding="async"
+              />
+              <span class="portrait-frame-caption">Gabbar (&ldquo;Gabbu&rdquo;) &bull; Manali</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Natural Warm Bottom Edge Vignette (Zero Blue Tint Over Dog Photography) -->
+        <div class="hero-world-vignette" aria-hidden="true"></div>
+
+        <!-- Opening Film Chapter Whisper Indicator -->
+        <div class="hero-prologue-caption" id="heroPrologueCaption" aria-hidden="true">
+          <span class="prologue-step" id="prologueStepLabel">I &mdash; THE HILLS</span>
+        </div>
+      </div>
+
+      <!-- SETTLED MINIMAL HERO INTERFACE -->
+      <div class="hero-minimal-interface" id="heroMinimalInterface">
+        <div class="hero-minimal-inner">
+          <div class="hero-identity-lockup">
+            <img
+              src="assets/logo/gabbus-official-logo-nav.svg"
+              alt="GABBU’S — Kitchen | Bar | Bakery"
+              class="hero-identity-logo-svg"
+             width="286" height="80" />
+          </div>
+
+          <h1 class="hero-minimal-headline">
+            A cafe run by <em class="editorial-italic">a dog.</em>
+          </h1>
+
+          <p class="hero-minimal-subcopy">
+            <span data-editable-tagline>&ldquo;A Dog Behind the Good Times.&rdquo;</span>
+            <span class="subcopy-location">In the hills of Manali.</span>
+          </p>
+
+          <div class="hero-minimal-actions">
+            <a href="brewing.html" class="btn btn-primary hero-action-primary" id="heroEnterBrewingBtn">
+              See what’s brewing &rarr;
+            </a>
+            <a href="story.html" class="link-editorial hero-action-secondary">
+              Gabbu’s Story <span aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 2: OFFICIAL BRAND SIGNAGE & SCROLL-REACTIVE TAIL ANIMATION
+         Showcases the official Gabbu's signage identity with the subtle,
+         organic scroll-driven wagging tail inside the 'A' of GABBU'S.
+         ====================================================================== -->
+    <section class="hoarding-scroll-section" id="hoarding-showcase" aria-label="Official Gabbu’s Brand Identity and Signage">
+      <div class="hoarding-stage-wrapper">
+        <div class="hoarding-header-meta">
+          <span>&#10022; OFFICIAL BRAND IDENTITY &bull; HIMALAYAN SANCTUARY</span>
+          <span class="hoarding-heritage-tag">OLD MANALI &bull; ELEV. 2,050M</span>
+        </div>
+
+        <div class="hoarding-frame-outer" id="hoardingInteractiveStage">
+          <div class="hoarding-signage-stage">
+            <!-- Architectural Signage Corner Marks -->
+            <div class="signage-corner-mark top-left" aria-hidden="true"></div>
+            <div class="signage-corner-mark top-right" aria-hidden="true"></div>
+            <div class="signage-corner-mark bottom-left" aria-hidden="true"></div>
+            <div class="signage-corner-mark bottom-right" aria-hidden="true"></div>
+
+            <div class="gabbus-animated-signboard-wrapper">
+              <canvas
+                id="gabbusSignboardCanvas"
+                class="gabbus-official-signage-horizontal"
+                width="1024"
+                height="302"
+                role="img"
+                aria-label="GABBU’S — German Shepherd Official Dog Logo, Bar | Bakery | Kitchen"
+              >
+                <img
+                  src="assets/logo/gabbus-dog-horizontal-logo.png"
+                  alt="GABBU’S — German Shepherd Official Dog Logo, Bar | Bakery | Kitchen"
+                  class="gabbus-official-signage-horizontal"
+                  width="1024"
+                  height="302"
+                />
+              </canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="hoarding-tagline-bar">
+          <span class="hoarding-tagline-quote" data-editable-tagline>&ldquo;A Dog Behind the Good Times.&rdquo;</span>
+          <span class="hoarding-location-meta">BAR &bull; BAKERY &bull; KITCHEN</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 3: "SEE WHAT’S BREWING INSIDE GABBU’S" (`#brewing`)
+         Showcases the spatial entrance + the 4 AI-generated Spaces at Gabbu's:
+         - Bar (`assets/spaces/bar-space.jpg`)
+         - Listening Room (`assets/spaces/listening-room.jpg`)
+         - Kitchen Room (`assets/spaces/kitchen-room.jpg`)
+         - Coffee Room (`assets/spaces/coffee-room.jpg`)
+         Zero menu item cards, zero menu grids, and zero menu photos on the homepage.
+         ====================================================================== -->
+    <section class="brewing-experience-section" id="brewing" aria-label="See What's Brewing Inside Gabbu's">
+
+      <!-- 3A. COMPACT BREWING THRESHOLD INTRO -->
+      <div class="brewing-teaser-portal" id="brewingTeaserPortal">
+        <div class="section-container">
+          <div class="brewing-teaser-card reveal-up">
+            <div class="brewing-teaser-visual" aria-hidden="true">
+              <img
+                src="assets/cafe/manali-exterior-facade.jpg"
+                alt="The pine-framed entrance of Gabbu's Cafe in Manali"
+                class="teaser-img-outer"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="teaser-door-window">
+                <img
+                  src="assets/spaces/coffee-room.jpg"
+                  alt="Warm glowing Coffee Room inside Gabbu's Cafe"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <span class="teaser-threshold-badge">THRESHOLD &bull; MANALI SANCTUARY</span>
+            </div>
+
+            <div class="brewing-teaser-copy">
+              <div class="eyebrow-label">
+                <span class="index-num">BREWING</span>
+                <span>Signature Spatial Experience &bull; Step Inside</span>
+              </div>
+              <h2 class="brewing-teaser-title">
+                See What’s <em class="editorial-italic">Brewing</em> Inside Gabbu’s.
+              </h2>
+              <p class="brewing-teaser-desc">
+                Cross the cedar doorway out of the crisp Manali mountain air and step through the four rooms of our sanctuary—the <strong>Bar</strong>, the <strong>Listening Room</strong>, the <strong>Kitchen Room</strong>, and the <strong>Coffee Room</strong>.
+              </p>
+              <div class="brewing-teaser-actions">
+                <a href="#brewingSpatialTrack" class="btn btn-primary" id="startSpatialWalkBtn">
+                  Step Inside the Café &darr;
+                </a>
+                <a href="menu.html" class="btn btn-outline">
+                  OPEN MENU &rarr;
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3B. PINNED 2.5D/3D SPATIAL CAMERA WALK INTO GABBU'S -->
+      <div class="brewing-spatial-track" id="brewingSpatialTrack" aria-label="Scroll-Driven Spatial Walk Into Gabbu's Cafe">
+        <div class="brewing-sticky-camera" id="brewingStickyCamera">
+
+          <div class="brewing-camera-hud">
+            <div class="hud-stage-indicator">
+              <span class="hud-stage-pill" id="brewingHudStep">STAGE 01 / 04</span>
+              <span class="hud-stage-name" id="brewingHudTitle">OUTSIDE &rarr; CROSSING THE THRESHOLD</span>
+            </div>
+
+            <div class="hud-progress-track" aria-hidden="true">
+              <div class="hud-progress-fill" id="brewingHudProgressBar"></div>
+            </div>
+
+            <div class="hud-quick-actions">
+              <a href="menu.html" class="hud-skip-btn">
+                OPEN MENU &rarr;
+              </a>
+            </div>
+          </div>
+
+          <div class="brewing-3d-world" id="brewing3dWorld">
+
+            <!-- SCENE PLANE 01: OUTSIDE -> ENTERING THE CAFÉ -->
+            <div class="spatial-scene-plane scene-outside" id="brewingSceneOutside">
+              <div class="outside-facade-layer" id="outsideFacadeLayer">
+                <img
+                  src="assets/cafe/manali-exterior-facade.jpg"
+                  alt="Stepping toward the glowing stone and timber facade of Gabbu's Manali"
+                  decoding="async"
+                />
+                <div class="doorway-portal-aperture" id="doorwayPortalAperture"></div>
+              </div>
+              <div class="spatial-floating-title outside-title-block" id="outsideTitleBlock">
+                <span class="spatial-kicker">ACT I &bull; THE MOUNTAIN THRESHOLD</span>
+                <h3 class="spatial-display-line">
+                  Leave the cold pines behind.<br/><em class="editorial-italic">Step inside Gabbu’s.</em>
+                </h3>
+                <span class="spatial-scroll-cue">Scroll to walk through the timber doors &darr;</span>
+              </div>
+            </div>
+
+            <!-- SCENE PLANE 02: INSIDE THE WARM SANCTUARY -->
+            <div class="spatial-scene-plane scene-interior" id="brewingSceneInterior">
+              <div class="interior-deep-room" id="interiorDeepRoom">
+                <img
+                  src="assets/spaces/listening-room.jpg"
+                  alt="Inside the warm wood and acoustic cedar Listening Room of Gabbu's Manali"
+                  decoding="async"
+                />
+              </div>
+              <div class="interior-foreground-pendants" id="interiorForegroundPendants">
+                <img
+                  src="assets/spaces/bar-space.jpg"
+                  alt="Warm glowing Bar space inside Gabbu's"
+                  decoding="async"
+                />
+              </div>
+
+              <div class="spatial-gabbu-guide" id="spatialGabbuGuide">
+                <img
+                  src="assets/gabbu/gabbu-twilight-lights.jpg"
+                  alt="Gabbu welcoming guests under warm string lights"
+                  style="object-position: center 28%; filter: none;"
+                  decoding="async"
+                />
+                <div class="gabbu-guide-note">
+                  <span class="guide-tag">HOST AT THE DOOR &bull; GABBU</span>
+                  <p>&ldquo;First rule of the hills: warm your hands before you choose your room.&rdquo;</p>
+                </div>
+              </div>
+
+              <div class="spatial-floating-title interior-title-block" id="interiorTitleBlock">
+                <span class="spatial-kicker">ACT II &bull; INSIDE THE SANCTUARY</span>
+                <h3 class="spatial-display-line">
+                  Cedar warmth, amber light,<br/>and four spaces of <em class="editorial-italic">hospitality.</em>
+                </h3>
+              </div>
+            </div>
+
+            <!-- SCENE PLANE 03: THE FOUR SPACES OF GABBU'S (BAR, LISTENING ROOM, KITCHEN ROOM, COFFEE ROOM) -->
+            <div class="spatial-scene-plane scene-brew-world" id="brewingSceneBrewWorld">
+              <div class="brew-counter-backdrop" id="brewCounterBackdrop">
+                <img
+                  src="assets/spaces/bar-space.jpg"
+                  alt="The warm Bar and lounge atmosphere at Gabbu's"
+                  decoding="async"
+                />
+              </div>
+
+              <div class="kinetic-brewing-manifesto" id="kineticBrewingManifesto">
+                <span class="manifesto-eyebrow">ACT III &bull; THE GABBU’S EXPERIENCE</span>
+                <div class="manifesto-split-words">
+                  <span class="word-left" id="brewWordLeft">THIS IS WHAT</span>
+                  <span class="word-right" id="brewWordRight">WE ARE <em class="editorial-italic">BREWING.</em></span>
+                </div>
+                <p class="manifesto-sub">
+                  Coffee &amp; brewing, all-day kitchen dining, freshly baked offerings, and live music &amp; gatherings.
+                </p>
+              </div>
+
+              <div class="spatial-pillar-corridor" id="spatialPillarCorridor">
+                <article class="spatial-pillar-plane plane-p1">
+                  <span class="p-index">01 &bull; COFFEE &amp; BREWING</span>
+                  <h4>Coffee &amp; Brewing</h4>
+                  <p>Coffee, specialty brews, beans, etc.</p>
+                  <span class="p-meta">Coffee &amp; Brewing</span>
+                </article>
+
+                <article class="spatial-pillar-plane plane-p2">
+                  <span class="p-index">02 &bull; KITCHEN</span>
+                  <h4>Kitchen</h4>
+                  <p>Food / all-day dining from the actual Gabbu’s menu.</p>
+                  <span class="p-meta">All-Day Dining</span>
+                </article>
+
+                <article class="spatial-pillar-plane plane-p3">
+                  <span class="p-index">03 &bull; BAKERY &amp; BAKES</span>
+                  <h4>Bakery &amp; Bakes</h4>
+                  <p>Freshly baked offerings from Gabbu’s.</p>
+                  <span class="p-meta">Freshly Baked</span>
+                </article>
+
+                <article class="spatial-pillar-plane plane-p4">
+                  <span class="p-index">04 &bull; GABBU’S LIVE</span>
+                  <h4>Gabbu’s Live</h4>
+                  <p>Music, gatherings, nights and events.</p>
+                  <span class="p-meta">Nights &amp; Events</span>
+                </article>
+              </div>
+            </div>
+
+            <!-- SCENE PLANE 04 (STAGE 05): SHUTTER TRANSITION TO THE FOUR SPACES & NAVIGATION HUB -->
+            <div class="spatial-scene-plane scene-menu-shutter" id="brewingSceneShutter">
+              <div class="shutter-mountain-backdrop" id="shutterMountainBackdrop" aria-hidden="true">
+                <img
+                  src="assets/cafe/manali-himalayan-panorama.jpg"
+                  alt=""
+                  class="shutter-mountain-img"
+                  id="shutterMountainImg"
+                  decoding="async"
+                />
+                <div class="shutter-mountain-overlay"></div>
+              </div>
+              <div class="shutter-parchment-gate shutter-gate-with-gabbu" id="shutterParchmentGate">
+                <div class="shutter-gate-copy">
+                  <span class="shutter-kicker">GABBU’S SANCTUARY &bull; MANALI</span>
+                  <h3 class="shutter-headline">
+                    Step Into the Four <em class="editorial-italic">Spaces</em> of Gabbu’s
+                  </h3>
+                  <p class="shutter-sub">
+                    Guided by the warm, loyal spirit of Gabbar (&ldquo;Gabbu&rdquo;)—explore our four signature rooms below or open the complete illustrated house menu.
+                  </p>
+                  <div style="margin-top: 1.4rem; display: flex; align-items: center; gap: 0.85rem; flex-wrap: wrap;">
+                    <a href="brewing.html" class="btn btn-primary">
+                      SEE WHAT’S BREWING &rarr;
+                    </a>
+                    <a href="menu.html" class="btn btn-outline" style="border-color: rgba(80, 49, 27, 0.4); color: #50311B;">
+                      OPEN MENU &rarr;
+                    </a>
+                  </div>
+                </div>
+                <figure class="shutter-gate-dog-portrait">
+                  <div class="shutter-dog-img-wrap">
+                    <img
+                      src="assets/gabbu/gabbu-stage5-sanctuary.jpg"
+                      alt="Photorealistic editorial portrait of Gabbu the German Shepherd welcoming guests at the warm timber and navy doorway of Gabbu's Manali"
+                      loading="eager"
+                      decoding="async"
+                    />
+                  </div>
+                  <figcaption class="shutter-dog-caption">
+                    <span>GABBAR (&ldquo;GABBU&rdquo;)</span>
+                    <span>THE HOST OF THE SANCTUARY</span>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 4: ELEGANT NAVIGATION / DESTINATION HUB
+         Provides direct, streamlined access to:
+         1. GABBU'S STORY (story.html) & WHAT'S BREWING (brewing.html)
+         2. GABBU'S PASSPORT (passport.html)
+         3. OPEN MENU (menu.html)
+         ====================================================================== -->
+    <section class="homepage-destination-hub" id="destination-hub" aria-label="Explore Gabbu's Story, Passport, and Complete Menu">
+      <div class="section-container">
+        <div class="destination-hub-shell reveal-up">
+          <div class="destination-hub-header">
+            <div class="eyebrow-label" style="justify-content: center;">
+              <span class="index-num">CONTINUE THE JOURNEY</span>
+              <span>What’s Brewing &rarr; Gabbu’s Story &rarr; Complete Menu</span>
+            </div>
+            <h2 class="section-title-large" style="text-align: center;">
+              Choose Your <em class="editorial-italic">Destination.</em>
+            </h2>
+            <p class="destination-hub-sub">
+              Meet the German Shepherd who inspired our sanctuary, step into our coffee roastery, collect stamps in your passport, or open the house menu.
+            </p>
+          </div>
+
+          <!-- 3-Destination Architectural Cards -->
+          <div class="destination-hub-grid">
+            <!-- Destination 01: GABBU'S STORY + WHAT'S BREWING -->
+            <div class="destination-portal-card">
+              <span class="portal-step-tag">01 &bull; THE EMOTIONAL SOUL</span>
+              <h3 class="portal-card-title">Gabbu’s <em class="editorial-italic">Story</em></h3>
+              <p class="portal-card-desc">
+                Discover how Gabbar (&ldquo;Gabbu&rdquo;) arrived in the hills of Manali and became the quiet miracle behind everything we build.
+              </p>
+              <div style="display: flex; flex-direction: column; gap: 0.65rem; margin-top: auto;">
+                <a href="brewing.html" class="btn btn-primary portal-card-cta" style="background: var(--warm-beige); color: #0F1E3F;">
+                  SEE WHAT’S BREWING &rarr;
+                </a>
+                <a href="story.html" class="btn btn-outline portal-card-cta">
+                  GABBU’S STORY &rarr;
+                </a>
+              </div>
+            </div>
+
+            <!-- Destination 02: GABBU'S PASSPORT -->
+            <a href="passport.html" class="destination-portal-card">
+              <span class="portal-step-tag">02 &bull; 10-STAMP CAFE EXPERIENCE</span>
+              <h3 class="portal-card-title">Gabbu’s <em class="editorial-italic">Passport</em></h3>
+              <p class="portal-card-desc">
+                A physical booklet stamped at the table—unlocking free beverages, desserts, and starters across 10 visits.
+              </p>
+              <span class="btn btn-outline portal-card-cta">
+                GABBU’S PASSPORT &#10022;
+              </span>
+            </a>
+
+            <!-- Destination 03: OPEN MENU (Featured Primary Destination) -->
+            <a href="menu.html" class="destination-portal-card portal-card-featured">
+              <span class="portal-step-tag">03 &bull; RESTAURANT SANCTUARIES</span>
+              <h3 class="portal-card-title">Restaurant <em class="editorial-italic">Menu</em></h3>
+              <p class="portal-card-desc">
+                Select your dining sanctuary—Manali or Zirakpur—featuring wood-fired pizzas, clay tandoori platters, gourmet burgers, curries, and dog meals.
+              </p>
+              <span class="btn btn-primary portal-card-cta">
+                SELECT LOCATION &rarr;
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 5: LOCATIONS / VISIT US (`locations.html`)
+         ====================================================================== -->
+    <!-- ======================================================================
+         SECTION 4.5: GABBU'S — GOOGLE REVIEWS ULTRA-CINEMATIC SCROLL EXPERIENCE
+         Pinned scroll-driven sequence revealing REAL Google Reviews for
+         Place ID: ChIJJb47dDqHBDkRX1vRrMeMFCQ (Gabbu's Cafe, Old Manali)
+         ====================================================================== -->
+    <section class="greviews-cinematic-section" id="gabbus-google-reviews" aria-labelledby="greviewsHeading">
+      <!-- Editorial Lead-In Header -->
+      <div class="greviews-intro-header">
+        <div class="section-container">
+          <div class="greviews-intro-inner reveal-up">
+            <div class="eyebrow-label" style="justify-content: center;">
+              <span class="index-num">GOOGLE REVIEWS</span>
+              <span>Verified Guest Voices &bull; Place ID: ChIJJb47dDqHBDkRX1vRrMeMFCQ</span>
+            </div>
+
+            <h2 class="greviews-main-heading" id="greviewsHeading">
+              GUESTS HAVE LEFT THEIR MARK.
+            </h2>
+
+            <p class="greviews-supporting-line">
+              &ldquo;Real words from people who found their way to Gabbu’s.&rdquo;
+            </p>
+
+            <!-- Official Google Place Summary Attribution Pill -->
+            <div class="greviews-place-attribution-bar">
+              <div class="greviews-google-badge">
+                <span class="greviews-g-wordmark" aria-label="Google">Google</span>
+                <span class="greviews-aggregate-score" id="greviewsAggregateScore">4.8</span>
+                <span class="greviews-aggregate-stars" aria-label="4.8 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span class="greviews-aggregate-count" id="greviewsAggregateCount">(264 Reviews &bull; Old Manali)</span>
+              </div>
+              <div class="greviews-place-actions">
+                <a
+                  href="https://www.google.com/maps/place/Gabbu's+Cafe,+Clubhouse+Rd,+Old+Manali,+Manali,+Himachal+Pradesh+175131,+India/@32.2522276,77.1825287,17z/data=!4m2!3m1!1s0x3904873a743bbe25:0x24148cc7acd15b5f"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="greviews-place-map-link"
+                  id="greviewsMasterMapLink"
+                >
+                  VERIFY PLACE ON GOOGLE MAPS &nearr;
+                </a>
+                <button
+                  type="button"
+                  class="greviews-api-config-trigger"
+                  id="greviewsApiConfigBtn"
+                  title="Configure Google Places API (New) Key for live 5-review author &amp; timestamp sync"
+                >
+                  <span class="api-status-dot" id="greviewsApiStatusDot"></span>
+                  <span id="greviewsApiStatusLabel">Places API (New) Status</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Collapsible Google Places API (New) Key Configuration Drawer -->
+            <div class="greviews-api-drawer" id="greviewsApiDrawer" hidden>
+              <div class="greviews-api-drawer-inner">
+                <div class="greviews-api-drawer-copy">
+                  <strong>Google Places API (New) Live Connection &mdash; Place ID: <code>ChIJJb47dDqHBDkRX1vRrMeMFCQ</code></strong>
+                  <p>
+                    Currently displaying the <strong>3 real verbatim Google Reviews</strong> retrieved directly from Google Maps’ live database for <em>Gabbu’s Cafe, Clubhouse Rd, Old Manali</em> (with exact Google Review IDs, 5&#9733; ratings, official contributor avatars, and direct Google Maps review links). To unlock all 5 live reviews with full <code>authorAttribution.displayName</code> and <code>relativePublishTimeDescription</code> from <code>places.googleapis.com/v1</code>, enter your Google Places API (New) key below or set <code>GOOGLE_PLACES_API_KEY</code> in your server environment:
+                  </p>
+                </div>
+                <form class="greviews-api-form" id="greviewsApiForm">
+                  <input
+                    type="password"
+                    id="greviewsApiKeyInput"
+                    class="greviews-api-input"
+                    placeholder="Paste Google Places API (New) Key (AIza...)"
+                    autocomplete="off"
+                  />
+                  <button type="submit" class="btn btn-primary greviews-api-submit">
+                    Connect Live API &rarr;
+                  </button>
+                </form>
+                <p class="greviews-api-feedback" id="greviewsApiFeedback" role="status"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- LONG CINEMATIC PINNED SCROLL TRACK -->
+      <div class="greviews-scroll-track" id="greviewsScrollTrack">
+        <div class="greviews-pinned-stage" id="greviewsPinnedStage">
+
+          <!-- Subtle Atmospheric Background Layers (#0F1E3F / #213A56 / #CDAA80) -->
+          <div class="greviews-bg-atmosphere" aria-hidden="true">
+            <div class="greviews-bg-photo-layer" id="greviewsBgPhotoLayer">
+              <img
+                src="assets/cafe/manali-exterior-facade.jpg"
+                alt=""
+                class="greviews-bg-img greviews-bg-img-1"
+                loading="lazy"
+                decoding="async"
+              />
+              <img
+                src="assets/gabbu/gabbu-twilight-lights.jpg"
+                alt=""
+                class="greviews-bg-img greviews-bg-img-2"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="greviews-bokeh-orb greviews-orb-1" id="greviewsOrb1"></div>
+            <div class="greviews-bokeh-orb greviews-orb-2" id="greviewsOrb2"></div>
+            <div class="greviews-architectural-lines">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="greviews-stage-scrim"></div>
+          </div>
+
+          <!-- Fixed Vertical Editorial Side Label (Left) -->
+          <div class="greviews-vertical-side-label" aria-hidden="true">
+            <span class="side-label-line"></span>
+            <span class="side-label-text">GOOGLE REVIEWS</span>
+            <span class="side-label-sub">MANALI SANCTUARY</span>
+          </div>
+
+          <!-- Minimal Editorial Progress Indicator (Right: 01 ──── 03 / 05) -->
+          <div class="greviews-editorial-progress" aria-label="Review Sequence Progress">
+            <span class="greviews-progress-current" id="greviewsProgressCurrent">01</span>
+            <div class="greviews-progress-rail" aria-hidden="true">
+              <div class="greviews-progress-fill" id="greviewsProgressFill"></div>
+            </div>
+            <span class="greviews-progress-total" id="greviewsProgressTotal">03</span>
+          </div>
+
+          <!-- Active Cinematic Review Shots Stage -->
+          <div class="greviews-shots-viewport" id="greviewsShotsStage" role="region" aria-live="polite">
+
+            <!-- SHOT 01: Centered Monumental Editorial Composition (Real Google Review #1) -->
+            <article
+              class="greview-shot is-active-shot"
+              data-shot-index="0"
+              data-layout="centered-monumental"
+            >
+              <a
+                href="https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2psVlkwVTRSbXB1Tm5kRFRVcFpXVk0yZFVaTmVXYxAB!2m1!1s0x3904873a743bbe25:0x24148cc7acd15b5f!3m1!1s2@1:CAIQACodChtycF9oOjlVY0U4RmpuNndDTUpZWVM2dUZNeWc%7C%7C?hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="greview-shot-card"
+                aria-label="Read this verified 5-star Google Review on Google Maps (opens in new tab)"
+              >
+                <div class="greview-oversized-quote-mark" aria-hidden="true">&ldquo;</div>
+
+                <div class="greview-shot-meta-top">
+                  <span class="greview-shot-index-tag">REVIEW 01 &bull; VERIFIED GOOGLE REVIEW</span>
+                  <div class="greview-google-stars-pill">
+                    <span class="g-pill-word">Google</span>
+                    <span class="g-pill-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                  </div>
+                </div>
+
+                <div class="greview-quote-mask">
+                  <blockquote class="greview-quote-text">
+                    &ldquo;Best coffee place in town with mind blowing soul fulling food❤️❤️&rdquo;
+                  </blockquote>
+                </div>
+
+                <div class="greview-author-footer">
+                  <div class="greview-author-identity">
+                    <img
+                      src="https://lh3.googleusercontent.com/a/ACg8ocKRpFocMjcHe3jZml0XluebZRwEBkiaCe0bKgq4GrZj0X7G7Q=s120-k-cc-rp-mo"
+                      alt="Google Reviewer Avatar"
+                      class="greview-author-avatar"
+                      loading="lazy"
+                      decoding="async"
+                      referrerpolicy="no-referrer"
+                    />
+                    <div class="greview-author-text">
+                      <span class="greview-author-name">Google Maps Reviewer</span>
+                      <span class="greview-author-sub">
+                        Google Contributor #104287327 &bull; Gabbu’s Cafe, Old Manali
+                      </span>
+                    </div>
+                  </div>
+
+                  <span class="greview-cta-link">
+                    <span>READ ON GOOGLE MAPS</span>
+                    <span class="greview-cta-arrow" aria-hidden="true">&nearr;</span>
+                  </span>
+                </div>
+              </a>
+            </article>
+
+            <!-- SHOT 02: Asymmetric Left Quote / Right Author Ledger (Real Google Review #2) -->
+            <article
+              class="greview-shot"
+              data-shot-index="1"
+              data-layout="asymmetric-split"
+            >
+              <a
+                href="https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25OaVJEbHBOMk42UkhBdGFUQlJaVzR4VmxsTmIwRRAB!2m1!1s0x3904873a743bbe25:0x24148cc7acd15b5f!3m1!1s2@1:CAIQACodChtycF9oOnNiRDlpN2N6RHAtaTBRZW4xVllNb0E%7C%7C?hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="greview-shot-card"
+                aria-label="Read this verified 5-star Google Review on Google Maps (opens in new tab)"
+              >
+                <div class="greview-oversized-quote-mark" aria-hidden="true">&ldquo;</div>
+
+                <div class="greview-asymmetric-grid">
+                  <div class="greview-asym-quote-col">
+                    <div class="greview-shot-meta-top">
+                      <span class="greview-shot-index-tag">REVIEW 02 &bull; VERIFIED GOOGLE REVIEW</span>
+                    </div>
+                    <div class="greview-quote-mask">
+                      <blockquote class="greview-quote-text">
+                        &ldquo;🐾 Delicious food, warm service, and an atmosphere that feels lovingly curated.&rdquo;
+                      </blockquote>
+                    </div>
+                  </div>
+
+                  <div class="greview-asym-ledger-col">
+                    <div class="greview-google-stars-pill">
+                      <span class="g-pill-word">Google</span>
+                      <span class="g-pill-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                    </div>
+
+                    <div class="greview-author-identity">
+                      <img
+                        src="https://lh3.googleusercontent.com/a/ACg8ocJLS5QwsTc3kgNiTvX1vAagUGRNVDleC3iaDGQkMgSACVMdvJk=s120-k-cc-rp-mo"
+                        alt="Google Reviewer Avatar"
+                        class="greview-author-avatar"
+                        loading="lazy"
+                        decoding="async"
+                        referrerpolicy="no-referrer"
+                      />
+                      <div class="greview-author-text">
+                        <span class="greview-author-name">Google Maps Reviewer</span>
+                        <span class="greview-author-sub">
+                          Google Contributor #102948124 &bull; Gabbu’s Cafe, Old Manali
+                        </span>
+                      </div>
+                    </div>
+
+                    <span class="greview-cta-link">
+                      <span>READ ON GOOGLE MAPS</span>
+                      <span class="greview-cta-arrow" aria-hidden="true">&nearr;</span>
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <!-- SHOT 03: Architectural Offset & Minimalist Negative Space (Real Google Review #3) -->
+            <article
+              class="greview-shot"
+              data-shot-index="2"
+              data-layout="editorial-offset"
+            >
+              <a
+                href="https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21KZll6WllNR05zVFZkaVp6Y3RlRkIyUWpaak0wRRAB!2m1!1s0x3904873a743bbe25:0x24148cc7acd15b5f!3m1!1s2@1:CAIQACodChtycF9oOmJfYzZYMGNsTVdiZzcteFB2QjZjM0E%7C%7C?hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="greview-shot-card"
+                aria-label="Read this verified 5-star Google Review on Google Maps (opens in new tab)"
+              >
+                <div class="greview-oversized-quote-mark" aria-hidden="true">&ldquo;</div>
+
+                <div class="greview-shot-meta-top">
+                  <span class="greview-shot-index-tag">REVIEW 03 &bull; VERIFIED GOOGLE REVIEW</span>
+                  <div class="greview-google-stars-pill">
+                    <span class="g-pill-word">Google</span>
+                    <span class="g-pill-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                  </div>
+                </div>
+
+                <div class="greview-quote-mask">
+                  <blockquote class="greview-quote-text">
+                    &ldquo;Great Food, Great Service, Lovely Ambiance, special thanks to dev!!!&rdquo;
+                  </blockquote>
+                </div>
+
+                <div class="greview-author-footer">
+                  <div class="greview-author-identity">
+                    <img
+                      src="https://lh3.googleusercontent.com/a/ACg8ocIPWiOEBllUMC0lvjeRnjRUfrqWUauVZcRDU5zwy5cm5rdTPA=s120-k-cc-rp-mo"
+                      alt="Google Reviewer Avatar"
+                      class="greview-author-avatar"
+                      loading="lazy"
+                      decoding="async"
+                      referrerpolicy="no-referrer"
+                    />
+                    <div class="greview-author-text">
+                      <span class="greview-author-name">Google Maps Reviewer</span>
+                      <span class="greview-author-sub">
+                        Google Contributor #109724147 &bull; Gabbu’s Cafe, Old Manali
+                      </span>
+                    </div>
+                  </div>
+
+                  <span class="greview-cta-link">
+                    <span>READ ON GOOGLE MAPS</span>
+                    <span class="greview-cta-arrow" aria-hidden="true">&nearr;</span>
+                  </span>
+                </div>
+              </a>
+            </article>
+
+          </div>
+
+          <!-- Bottom Cinematic Sequence Cue -->
+          <div class="greviews-stage-bottom-bar">
+            <span class="greviews-scroll-cue" id="greviewsScrollCue">
+              Scroll to move through verified Google guest memories &bull; Click any review to open on Google Maps
+            </span>
+            <a
+              href="https://www.google.com/maps/place/Gabbu's+Cafe,+Clubhouse+Rd,+Old+Manali,+Manali,+Himachal+Pradesh+175131,+India/@32.2522276,77.1825287,17z/data=!4m2!3m1!1s0x3904873a743bbe25:0x24148cc7acd15b5f"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="greviews-bottom-all-link"
+            >
+              All 264 Google Reviews &nearr;
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="footer-sleeping-gabbu-bg" aria-hidden="true">
+      <img
+        src="assets/gabbu/gabbu-sleeping-footer.jpg"
+        alt="Gabbu the German Shepherd sleeping peacefully in the warm evening glow"
+        class="footer-sleeping-gabbu-img"
+        loading="lazy"
+        decoding="async"
+      />
+      <div class="footer-sleeping-gabbu-scrim"></div>
+    </div>
+    <div class="section-container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-logo" aria-label="GABBU'S Home">
+            <img
+              src="assets/logo/gabbus-official-logo-nav.svg"
+              alt="GABBU’S — Kitchen | Bar | Bakery"
+              class="brand-logo-img"
+             width="150" height="42" />
+          </a>
+          <p data-editable-tagline>&ldquo;A Dog Behind the Good Times.&rdquo;</p>
+          <p style="margin-top: 0.65rem; font-size: 0.84rem; color: var(--ivory-muted);">
+            A mountain sanctuary in the hills of Manali inspired by our German Shepherd, Gabbar (&ldquo;Gabbu&rdquo;).
+          </p>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">Destinations</h4>
+          <ul class="footer-nav-list">
+            <li><a href="brewing.html">What’s Brewing</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="locations.html">Stores</a></li>
+            <li><a href="passport.html">Gabbu’s Passport &#10022;</a></li>
+            <li><a href="blog.html">Gabbu’s Journal (Blog)</a></li>
+            <li><a href="live.html">Gabbu’s Live</a></li>
+            <li><a href="story.html">Gabbu’s Story</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">Sanctuary Hours &amp; Pin</h4>
+          <ul class="footer-hours-list">
+            <li>
+              <span>Manali Branch (Open Now)</span>
+              09:00 AM – 11:30 PM Daily
+            </li>
+            <li>
+              <span>Zirakpur Highway</span>
+              Upcoming Sanctuary (In Progress)
+            </li>
+            <li style="margin-top: 0.45rem;">
+              <a href="https://share.google/vINamWOS2OMTypzUA" target="_blank" rel="noopener" class="link-editorial">
+                Google Maps Pin &nearr;
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <span>&copy; 2026 GABBU’S — Kitchen | Bar | Bakery. Built with love &amp; loyalty for Gabbar (&ldquo;Gabbu&rdquo;).</span>
+        <span>Deep Navy #0F1E3F &bull; Blue #213A56 &bull; Warm Beige #CDAA80 &bull; Brown/Taupe #997953</span>
+      </div>
+      <div class="footer-developer-credit">
+        <span class="dev-credit-prefix">Crafted with creativity by</span>
+        <a href="https://www.linkedin.com/in/samarth123/" target="_blank" rel="noopener noreferrer" class="dev-credit-link" aria-label="Samarth Shukla on LinkedIn">
+          <svg class="dev-linkedin-icon" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+          </svg>
+          <span class="dev-author-name">Samarth Shukla</span>
+        </a>
+        <span class="dev-credit-dot" aria-hidden="true">&bull;</span>
+        <span class="dev-credit-role">Web Developer</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="menu-data.js"></script>
+  <script src="app.js?v=20261001_v5"></script>
+</body>
+</html>

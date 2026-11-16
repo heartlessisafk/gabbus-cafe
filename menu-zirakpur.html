@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Zirakpur Restaurant Menu — Highway Sanctuary Curation &bull; GABBU’S</title>
+  <meta
+    name="description"
+    content="Gabbu’s Zirakpur Highway Sanctuary Food Menu — Wood-fired sourdough pizzas, smoky clay tandoori skewers, artisan burgers, copper-pot highway curries, handmade pasta, hearth desserts, and Gabbu’s pet bowls."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css?v=20261002_v6" />
+</head>
+<body class="menu-page-body standalone-restaurant-body">
+
+  <!-- Grain Overlay -->
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- Shared Brand Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="nav-inner">
+      <a href="index.html" class="brand-logo" aria-label="Return to Gabbu's Cafe Home">
+        <img
+          src="assets/logo/gabbus-official-logo-nav.svg"
+          alt="GABBU’S — Kitchen | Bar | Bakery"
+          class="brand-logo-img"
+          width="150" height="42" />
+      </a>
+
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="brewing.html">What’s Brewing</a></li>
+          <li><a href="locations.html">Stores</a></li>
+          <li><a href="passport.html">Gabbu’s Passport</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="live.html">Gabbu’s Live</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="assets/menu/gabbus-food-menu.pdf" target="_blank" rel="noopener" class="btn btn-outline nav-reserve-btn">
+          PDF MENU &rarr;
+        </a>
+        <button type="button" class="menu-toggle" id="menuToggle" aria-label="Toggle Menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Global Top-Left Back Control -> Returns to Menu Location Selector -->
+  <a href="menu.html" class="global-back-btn" id="globalBackBtn" data-back-fallback="menu.html" aria-label="Back to Location Selection">
+    <span class="global-back-arrow" aria-hidden="true">&larr;</span>
+    <span class="global-back-text">LOCATIONS</span>
+  </a>
+
+  <!-- Mobile Navigation Overlay -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay" aria-hidden="true">
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link"><span>Home</span><span class="nav-idx">01</span></a></li>
+      <li><a href="brewing.html" class="mobile-nav-link"><span>What’s Brewing</span><span class="nav-idx">02</span></a></li>
+      <li><a href="menu.html" class="mobile-nav-link active"><span>Menu</span><span class="nav-idx">03</span></a></li>
+      <li><a href="locations.html" class="mobile-nav-link"><span>Stores</span><span class="nav-idx">04</span></a></li>
+      <li><a href="passport.html" class="mobile-nav-link"><span>Gabbu’s Passport</span><span class="nav-idx">05</span></a></li>
+      <li><a href="blog.html" class="mobile-nav-link"><span>Blog</span><span class="nav-idx">06</span></a></li>
+      <li><a href="live.html" class="mobile-nav-link"><span>Gabbu’s Live</span><span class="nav-idx">07</span></a></li>
+      <li><a href="story.html" class="mobile-nav-link"><span>Gabbu’s Story</span><span class="nav-idx">08</span></a></li>
+    </ul>
+
+    <div style="margin: 1.5rem 0;">
+      <a href="menu.html" class="btn btn-primary" style="width: 100%; display: flex; justify-content: center;">
+        CHANGE LOCATION &rarr;
+      </a>
+    </div>
+
+    <div class="mobile-nav-footer">
+      <div>
+        <h5>Gabbu’s Zirakpur Outpost</h5>
+        <p>Highway Sanctuary &bull; Kitchen | Bar | Bakery<br/><span style="color: var(--warm-beige);">Gateway to the Himalayas</span></p>
+      </div>
+      <div>
+        <h5>Working Tagline</h5>
+        <p>&ldquo;A Dog Behind the Good Times.&rdquo;</p>
+      </div>
+    </div>
+  </div>
+
+  <main id="restaurantStandaloneRoot">
+
+
+
+    <!-- ======================================================================
+         ACT II: 4-PRODUCTS-PER-ROW RESTAURANT FOOD CATALOGUE
+         ====================================================================== -->
+    <section class="catalogue-grid-section restaurant-catalogue-section" id="zirakpurCatalogueAnchor" aria-label="Gabbu's Zirakpur Restaurant Food Menu">
+      <div class="catalogue-container">
+
+        <!-- Editorial White & Deep Blue Section Intro Banner -->
+        <div class="editorial-white-accent-strip">
+          <div class="white-strip-left">
+            <span class="white-strip-kicker">ZIRAKPUR HIGHWAY &bull; FOOD LEDGER</span>
+            <h2 class="white-strip-title">Highway Hearth &amp; Kitchen Curation</h2>
+          </div>
+          <div class="white-strip-right">
+            <p class="white-strip-copy">
+              Specially curated for road-trippers, family journeys, and dog companions heading toward the Himalayas. Featuring stone-baked sourdough pizzas, smoky Bhatti grills, slow-simmered handi curries, and clean pet meals.
+            </p>
+          </div>
+        </div>
+
+        <!-- Sticky Filter & Search Header -->
+        <div class="catalogue-sticky-toolbar" id="zirakpurStickyToolbar">
+          <div class="toolbar-top-row">
+            <div class="toolbar-brand-col">
+              <span class="toolbar-domain-badge restaurant-badge">ZIRAKPUR HIGHWAY</span>
+              <h3 class="toolbar-domain-heading">Restaurant Food Menu</h3>
+              <span class="toolbar-result-count" id="zirakpurResultCount">Curation &bull; 7 Chapters</span>
+            </div>
+
+            <div class="toolbar-controls-col">
+              <div class="toolbar-search-wrap">
+                <input
+                  type="search"
+                  id="zirakpurSearchInput"
+                  class="toolbar-search-input"
+                  placeholder="Search Zirakpur dishes (Pizza, Tandoori, Burger, Dal, Pet Bowl)..."
+                  aria-label="Search Gabbu's Zirakpur Food Menu"
+                />
+                <button type="button" id="zirakpurSearchClear" class="toolbar-search-clear" hidden>&times;</button>
+              </div>
+
+              <!-- Diet Filter Buttons -->
+              <div class="toolbar-diet-filters" role="group" aria-label="Filter Dishes by Diet">
+                <button type="button" class="toolbar-diet-btn active" data-zirakpur-diet="all">All Dishes</button>
+                <button type="button" class="toolbar-diet-btn" data-zirakpur-diet="veg">Veg Only</button>
+                <button type="button" class="toolbar-diet-btn" data-zirakpur-diet="non-veg">Non-Veg</button>
+                <button type="button" class="toolbar-diet-btn" data-zirakpur-diet="pet">Pet Bowls</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="toolbar-category-ribbon" id="zirakpurCategoryRibbon" role="tablist" aria-label="Zirakpur Food Chapters">
+            <!-- Populated dynamically with ALL + 7 Culinary Chapters -->
+          </div>
+        </div>
+
+        <!-- 4-Column Food Product Grid Container -->
+        <div class="catalogue-chapters-mount" id="zirakpurChaptersDeck">
+          <!-- Populated dynamically: 4 dishes per row on desktop -->
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Shared Footer with Sleeping Gabbu Background -->
+  <footer class="site-footer">
+    <div class="footer-sleeping-gabbu-bg" aria-hidden="true">
+      <img
+        src="assets/gabbu/gabbu-sleeping-footer.jpg"
+        alt=""
+        class="footer-sleeping-gabbu-img"
+        loading="lazy"
+        decoding="async"
+      />
+      <div class="footer-sleeping-gabbu-scrim"></div>
+    </div>
+    <div class="section-container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-logo" aria-label="GABBU'S Home">
+            <img src="assets/logo/gabbus-official-logo-nav.svg" alt="Gabbu's Logo" class="brand-logo-img" width="150" height="42" />
+          </a>
+          <p data-editable-tagline>&ldquo;A Dog Behind the Good Times.&rdquo;</p>
+        </div>
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">Destinations</h4>
+          <ul class="footer-nav-list">
+            <li><a href="brewing.html">What’s Brewing</a></li>
+            <li><a href="menu.html" class="active">Menu</a></li>
+            <li><a href="locations.html">Stores</a></li>
+            <li><a href="passport.html">Gabbu’s Passport &#10022;</a></li>
+            <li><a href="blog.html">Gabbu’s Journal (Blog)</a></li>
+            <li><a href="live.html">Gabbu’s Live</a></li>
+            <li><a href="story.html">Gabbu’s Story</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">Highway Sanctuary</h4>
+          <ul class="footer-hours-list">
+            <li><span>Zirakpur Branch</span>Opening Soon &bull; Highway Haven</li>
+            <li style="margin-top: 0.45rem;">
+              <span style="color: var(--warm-beige, #CDAA80); font-size: 0.85rem;">Pet-Friendly Dining &amp; Traveler Rest</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom-bar">
+        <span>&copy; 2026 GABBU’S — Kitchen | Bar | Bakery. Built with love for Gabbu.</span>
+        <span>Gateway to the Hills &bull; Zirakpur Highway Sanctuary</span>
+      </div>
+      <div class="footer-developer-credit">
+        <span class="dev-credit-prefix">Crafted with creativity by</span>
+        <a href="https://www.linkedin.com/in/samarth123/" target="_blank" rel="noopener noreferrer" class="dev-credit-link" aria-label="Samarth Shukla on LinkedIn">
+          <svg class="dev-linkedin-icon" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+          </svg>
+          <span class="dev-author-name">Samarth Shukla</span>
+        </a>
+        <span class="dev-credit-dot" aria-hidden="true">&bull;</span>
+        <span class="dev-credit-role">Web Developer</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="menu-data.js?v=7"></script>
+  <script src="app.js?v=20261002_v6"></script>
+</body>
+</html>
