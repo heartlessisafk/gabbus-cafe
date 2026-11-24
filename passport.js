@@ -222,6 +222,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const stampJourneyStart = document.getElementById("stamp-journey");
 
   const triggerOpenPassport = (scrollToJourney = false) => {
+    if (typeof window.openPassportBook === "function") {
+      window.openPassportBook();
+      return;
+    }
     if (openedSpreadModal) {
       openedSpreadModal.classList.add("is-open");
     }

@@ -1,0 +1,19 @@
+/* 3D passport flipbook (inside pages of Gabbu's Passport) */
+.pp-wrap{scroll-margin-top:6rem;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;display:flex;flex-direction:column;align-items:center;gap:1.5rem;margin-top:3.5rem}
+.pp-stage{--w:min(40vw,520px);perspective:2600px;width:calc(var(--w)*2);height:calc(var(--w)*1.41);max-width:100%}
+.pp-book{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform 1s cubic-bezier(.4,.1,.2,1);transform:translateX(-25%)}
+.pp-book.is-open{transform:translateX(0)}
+.pp-page,.pp-leaf{position:absolute;top:0;width:50%;height:100%}
+.pp-right,.pp-leaf{left:50%}
+.pp-page,.pp-face{background-size:100% 100%;background-repeat:no-repeat}
+.pp-right{box-shadow:0 6px 16px rgba(0,0,0,.25)}
+.pp-leaf{transform-origin:left center;transform-style:preserve-3d;transition:transform 1s cubic-bezier(.45,.05,.25,1),z-index 0s .5s;cursor:pointer}
+.pp-leaf.is-flipped{transform:rotateY(-180deg)}
+.pp-face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.pp-back{transform:rotateY(180deg)}
+.pp-controls{display:flex;gap:1.25rem;align-items:center;color:#e8c98f;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase}
+.pp-controls button{width:2.25rem;height:2.25rem;padding:0;display:inline-flex;align-items:center;justify-content:center;background:transparent;border:1px solid rgba(201,165,106,.6);border-radius:50%;color:#e8c98f;font-size:1rem;line-height:1;cursor:pointer;transition:background .2s,border-color .2s}
+.pp-controls button:hover:not(:disabled){background:rgba(201,165,106,.15);border-color:#c9a56a}
+.pp-controls button:disabled{opacity:.3;cursor:default}
+@media print{.pp-wrap{display:none!important}}
+@media (max-width:700px){.pp-stage{--w:44vw}}
