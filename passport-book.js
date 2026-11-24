@@ -6,7 +6,10 @@
 
   var SPREADS = 12;
   var LEAVES = SPREADS - 1; // leaf k: front = right half of spread k, back = left half of spread k+1
-  var img = function (side, n) { return "assets/passport/" + side + n + ".jpg"; };
+  // Spread n shows [left, right] source images. The Terms & Conditions pages (l3 = clauses 1-6, r2 = clauses 7-9)
+  // are moved to the last spread; Customer Details (r3) takes their place after the cover.
+  var SPREAD_PAGES = [[1, 1], [2, 3], [4, 4], [5, 5], [6, 6], [7, 7], [8, 8], [9, 9], [10, 10], [11, 11], [12, 12], [3, 2]];
+  var img = function (side, n) { return "assets/passport/" + side + SPREAD_PAGES[n - 1][side === "l" ? 0 : 1] + ".jpg"; };
 
   /* ---- page-turn sound: real public-domain recordings, alternated so turns do not sound looped ---- */
   var TURN_FILES = ["assets/passport/turn-1.mp3", "assets/passport/turn-2.mp3", "assets/passport/turn-3.mp3", "assets/passport/turn-4.mp3"];
