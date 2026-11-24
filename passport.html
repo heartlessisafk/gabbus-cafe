@@ -13,6 +13,7 @@
 
   <link rel="stylesheet" href="styles.css?v=20261001_v5" />
   <link rel="stylesheet" href="passport.css" />
+  <link rel="stylesheet" href="passport-book.css" />
 </head>
 <body>
 
@@ -159,112 +160,8 @@
           </div>
         </div>
 
-        <!-- ====================================================================
-             UNFOLDED INSIDE PASSPORT SPREAD (REVEALED ON "OPEN PASSPORT ->")
-             ==================================================================== -->
-        <div class="opened-passport-spread-modal is-open" id="openedPassportSpread" aria-label="Inside Pages of Gabbu's Passport">
-          <!-- Left Page: Page 01 — Bearer & Gabbu's Blessing -->
-          <div class="passport-page-left">
-            <div class="passport-page-header">
-              <span>PAGE 01 &mdash; OFFICIAL BEARER PAGE</span>
-              <span>GABBU’S &bull; KITCHEN | BAR | BAKERY</span>
-            </div>
-
-            <div class="passport-id-card-grid">
-              <div class="passport-bearer-photo">
-                <img
-                  src="assets/gabbu/gabbu-portrait-garden.jpg"
-                  alt="Authentic photograph of Gabbu, the German Shepherd soul of Gabbu's Cafe"
-                />
-                <div class="passport-rubber-seal">
-                  APPROVED<br/>BY<br/>GABBU
-                </div>
-              </div>
-
-              <div class="passport-metadata-fields">
-                <div class="passport-field-row">
-                  <span class="passport-field-label">Chief Host &amp; Guardian</span>
-                  <span class="passport-field-val">Gabbar (&ldquo;Gabbu&rdquo;)</span>
-                </div>
-                <div class="passport-field-row">
-                  <span class="passport-field-label">Sanctuary of Issue</span>
-                  <span class="passport-field-val">Gabbu’s Manali, Himachal Pradesh</span>
-                </div>
-                <div class="passport-field-row">
-                  <span class="passport-field-label">Confirmed Milestones</span>
-                  <span class="passport-field-val">5th Beverage &bull; 7th Dessert &bull; 10th Starter</span>
-                </div>
-                <p class="handwritten-note">
-                  &ldquo;Good times, approved by Gabbu.&rdquo;
-                </p>
-              </div>
-            </div>
-
-            <p style="font-size: 0.84rem; line-height: 1.65; color: #5A4334; border-top: 1px solid rgba(78, 54, 41, 0.2); padding-top: 0.9rem;">
-              This Passport belongs to a friend of the house. Bring it along whenever you visit Gabbu’s for coffee, bakery mornings, all-day kitchen plates, or evening bar pours.
-            </p>
-          </div>
-
-          <!-- Right Page: Page 02 — Live 10-Stamp Ledger Overview -->
-          <div class="passport-page-right">
-            <div class="passport-page-header">
-              <span>PAGE 02 &mdash; THE 10-STAMP LEDGER</span>
-              <span>STAMPED WITH A LITTLE GABBU LUCK</span>
-            </div>
-
-            <div class="mini-stamp-grid-10">
-              <div class="mini-stamp-cell" data-mini-stamp="1">
-                <span class="mini-stamp-num">01</span>
-                <span class="mini-stamp-tag">Visit</span>
-              </div>
-              <div class="mini-stamp-cell" data-mini-stamp="2">
-                <span class="mini-stamp-num">02</span>
-                <span class="mini-stamp-tag">Visit</span>
-              </div>
-              <div class="mini-stamp-cell" data-mini-stamp="3">
-                <span class="mini-stamp-num">03</span>
-                <span class="mini-stamp-tag">Visit</span>
-              </div>
-              <div class="mini-stamp-cell" data-mini-stamp="4">
-                <span class="mini-stamp-num">04</span>
-                <span class="mini-stamp-tag">Visit</span>
-              </div>
-              <div class="mini-stamp-cell is-milestone" data-mini-stamp="5">
-                <span class="mini-stamp-num">05</span>
-                <span class="mini-stamp-tag">Beverage</span>
-              </div>
-              <div class="mini-stamp-cell" data-mini-stamp="6">
-                <span class="mini-stamp-num">06</span>
-                <span class="mini-stamp-tag">Visit</span>
-              </div>
-              <div class="mini-stamp-cell is-milestone" data-mini-stamp="7">
-                <span class="mini-stamp-num">07</span>
-                <span class="mini-stamp-tag">Dessert</span>
-              </div>
-              <div class="mini-stamp-cell" data-mini-stamp="8">
-                <span class="mini-stamp-num">08</span>
-                <span class="mini-stamp-tag">Visit</span>
-              </div>
-              <div class="mini-stamp-cell" data-mini-stamp="9">
-                <span class="mini-stamp-num">09</span>
-                <span class="mini-stamp-tag">Visit</span>
-              </div>
-              <div class="mini-stamp-cell is-milestone" data-mini-stamp="10">
-                <span class="mini-stamp-num">10</span>
-                <span class="mini-stamp-tag">Starter</span>
-              </div>
-            </div>
-
-            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; border-top: 1px solid rgba(78, 54, 41, 0.2); padding-top: 0.9rem;">
-              <span style="font-family: var(--font-display); font-style: italic; font-size: 1.05rem; color: var(--passport-ink-crimson);">
-                &ldquo;Stamped with a little Gabbu luck.&rdquo;
-              </span>
-              <a href="#stamp-journey" style="font-size: 0.68rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--passport-ink-brown); text-decoration: none;">
-                Scroll Down to Watch Stamps Ink &darr;
-              </a>
-            </div>
-          </div>
-        </div>
+        <!-- 3D passport flipbook (assets/passport, see passport-book.js) -->
+        <div id="passportBook"></div>
       </div>
     </section>
 
@@ -840,6 +737,7 @@
   </footer>
 
   <script src="passport.js"></script>
+  <script src="passport-book.js"></script>
   <script src="app.js?v=20261001_v5"></script>
 </body>
 </html>
