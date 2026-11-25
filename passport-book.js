@@ -6,9 +6,10 @@
 
   var SPREADS = 12;
   var LEAVES = SPREADS - 1; // leaf k: front = right half of spread k, back = left half of spread k+1
-  // Spread n shows [left, right] source images. The Terms & Conditions pages (l3 = clauses 1-6, r2 = clauses 7-9)
-  // are moved to the last spread; Customer Details (r3) takes their place after the cover.
-  var SPREAD_PAGES = [[1, 1], [2, 3], [4, 4], [5, 5], [6, 6], [7, 7], [8, 8], [9, 9], [10, 10], [11, 11], [12, 12], [3, 2]];
+  // The PDF is a printer-imposed booklet, so its l/r halves are not in reading order. Spread n shows
+  // [left, right] source images in true reading order: cover, customer details, story, stamps 01-32 each
+  // facing its offers page, then Terms & Conditions.
+  var SPREAD_PAGES = [[1, 1], [2, 3], [4, 5], [6, 7], [8, 9], [10, 11], [12, 12], [11, 10], [9, 8], [7, 6], [5, 4], [3, 2]];
   var img = function (side, n) { return "assets/passport/" + side + SPREAD_PAGES[n - 1][side === "l" ? 0 : 1] + ".jpg"; };
 
   /* ---- page-turn sound: real public-domain recordings, alternated so turns do not sound looped ---- */
